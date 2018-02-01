@@ -1,0 +1,89 @@
+<html>
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="style.css">
+<meta http-equiv="x-ua-compatible" content="IE=10">
+</head>
+<BODY bgcolor=#FFFFFF>
+
+<SCRIPT LANGUAGE="JavaScript" FOR="Chart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+<SCRIPT LANGUAGE="VBScript">
+<!--
+
+Sub Window_Onload()
+ 'sets up Chart to print from IE's print option
+ TChart1.Environment.IEPrintWithPage=True
+End sub
+
+Sub TChart1_OnTimer()
+if TChart1.SeriesCount > 0 then
+ SomePoint=Int((TChart1.Series(0).Count -1) * Rnd(1))
+ SomeValue=TChart1.Series(0).YValues.Value( SomePoint )
+ TChart1.Series(0).YValues.Value( SomePoint )=SomeValue+160*Rnd(1)-80
+
+ SomePoint=Int((TChart1.Series(4).Count -1) * Rnd(1))
+ SomeValue=TChart1.Series(4).YValues.Value( SomePoint )
+ TChart1.Series(4).YValues.Value( SomePoint )=SomeValue+160*Rnd(1)-80
+
+ SomePoint=Int((TChart1.Series(3).Count -1) * Rnd(1))
+ SomeValue=TChart1.Series(3).YValues.Value( SomePoint )
+ TChart1.Series(3).YValues.Value( SomePoint )=SomeValue+160*Rnd(1)-80
+end if
+end sub
+
+Sub LoadFile()
+
+ path=window.location.pathname
+
+ while instr(1,path,"%20") > 0
+  path=replace(path,"%20"," ")
+ wend
+
+ path=Left(path,len(path)-12)  ' 12 - length of Animated.htm
+
+ path=right(path,len(path)-1) 
+
+ TChart1.Import.LoadFromFile(path & "demo.tee")
+ TChart1.Left=10
+ TChart1.Top=280
+ TChart1.TimerEnabled=True
+ TChart1.TimerInterval=1
+end sub
+
+Sub LoadURL()
+ TChart1.Import.LoadFromURL("http://www.steema.com/demo.tee")
+ TChart1.TimerEnabled=True
+ TChart1.TimerInterval=1
+end sub
+
+Sub TogglaAnimate
+ TChart1.TimerEnabled=not TChart1.TimerEnabled
+end sub
+
+-->
+</SCRIPT>
+
+<p>
+<font face="Arial" color="#004080"><em><big><strong>Animated TeeChart Pro Example</strong></big></em></font></h3>
+</p>
+
+<a href="../Start Local examples.htm">Return to Examples</a>&nbsp;
+<a href="barseries.htm">Next Example</a>
+<hr>
+
+<p>
+Click on the buttons below to retrieve a Chart and start animation !
+</p>
+
+<p><input type="button" value="Retrieve a Chart from the local demo.tee file" onclick="LoadFile()" name="cdmChart1"> </p> 
+<p><input type="button" value="Retrieve a Chart from the remote www.steema.com/demo.tee" onclick="LoadURL()" name="cdmChart2"> </p>
+<p><input type="button" value="Stop/Start animation !" onclick="TogglaAnimate()"
+name="cdmChart3"> </p>
+
+<OBJECT ID="TChart1" WIDTH=450 HEIGHT=290
+ CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+</OBJECT>
+
+</BODY>
+</html>

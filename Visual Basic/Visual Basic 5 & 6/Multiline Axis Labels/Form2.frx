@@ -1,0 +1,44 @@
+ÿó
+c	Displays the date using the format given by the ShortDateFormat, followed 
+	by the time using the format given by the LongTimeFormat. The time is not 
+	displayed if the fractional part of the DateTime value is zero.
+d	Displays the day as a number without a leading zero (1-31).
+dd	Displays the day as a number with a leading zero (01-31).
+ddd	Displays the day as an abbreviation (Sun-Sat) using the strings given by the ShortDayNames
+dddd	Displays the day as a full name (Sunday-Saturday) using the strings given by the 
+	LongDayNames.
+ddddd	Displays the date using the format given by the ShortDateFormat.
+dddddd	Displays the date using the format given by the LongDateFormat.
+m	Displays the month as a number without a leading zero (1-12). If the m specifier 
+	immediately follows an h or hh specifier, the minute rather than the month is displayed.
+mm	Displays the month as a number with a leading zero (01-12). If the mm specifier
+	immediately follows an h or hh specifier, the minute rather than the month is displayed.
+mmm	Displays the month as an abbreviation (Jan-Dec) using the strings given by the 
+	ShortMonthNames.
+mmmm	Displays the month as a full name (January-December) using the strings given by the 
+	LongMonthNames.
+yy	Displays the year as a two-digit number (00-99).
+yyyy	Displays the year as a four-digit number (0000-9999).
+h	Displays the hour without a leading zero (0-23).
+hh	Displays the hour with a leading zero (00-23).
+n	Displays the minute without a leading zero (0-59).
+nn	Displays the minute with a leading zero (00-59).
+s	Displays the second without a leading zero (0-59).
+ss	Displays the second with a leading zero (00-59).
+t	Displays the time using the format given by the ShortTimeFormat.
+tt	Displays the time using the format given by the LongTimeFormat.
+
+am/pm	Uses the 12-hour clock for the preceding h or hh specifier, and displays 'am' for any hour 
+	before noon, and 'pm' for any hour after noon. The am/pm specifier can use lower, upper, or 
+	mixed case, and the result is displayed accordingly.
+a/p	Uses the 12-hour clock for the preceding h or hh specifier, and displays 'a' for any hour 
+	before noon, and 'p' for any hour after noon. The a/p specifier can use lower, upper, or mixed 
+	case, and the result is displayed accordingly.
+
+ampm	Uses the 12-hour clock for the preceding h or hh specifier, and displays the contents of the 
+	TimeAMString global variable for any hour before noon, and the contents of the 
+	TimePMString global variable for any hour after noon.
+/	Displays the date separator character given by the DateSeparator.
+:	Displays the time separator character given by the TimeSeparator.
+'xx'/"xx" Characters enclosed in single or double quotes are displayed as-is, and do not affect 
+formatting.

@@ -1,0 +1,32 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "SeriesTxtSrc"=".\SeriesTxtSrc.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+    {CC0427C7-2124-4770-8847-F9EF4C50CDC2}
+    {56BDE518-E5A6-4F70-8ADC-DDC1CA07BD7A}
+    {EBFFF3FC-8805-42F8-8FFB-975AE3F5CE46}
+}}}
+
+###############################################################################
+

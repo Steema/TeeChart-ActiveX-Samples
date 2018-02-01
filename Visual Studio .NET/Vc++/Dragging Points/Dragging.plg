@@ -1,0 +1,117 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Dragging - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo"Debug/Dragging.res" /d "_DEBUG" /d "_AFXDLL" "C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\Dragging.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD6.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/Dragging.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\aspect.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\barseries.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\brush.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\canvas.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\Dragging.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\DraggingDlg.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\lineseries.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\marks.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\pen.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\pointer.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\pointseries.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\scroll.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\series.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\tchart.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\teefunction.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\titles.cpp"
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\zoom.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD6.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD7.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/Dragging.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Program Files\Steema Software\TeeChart Pro v6 ActiveX Control Beta\Examples\Visual C++\Version 6\Dragging Points\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD7.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD8.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Dragging.pdb" /debug /machine:I386 /out:"Debug/Dragging.exe" /pdbtype:sept 
+".\Debug\aspect.obj"
+".\Debug\barseries.obj"
+".\Debug\brush.obj"
+".\Debug\canvas.obj"
+".\Debug\Dragging.obj"
+".\Debug\DraggingDlg.obj"
+".\Debug\lineseries.obj"
+".\Debug\marks.obj"
+".\Debug\pen.obj"
+".\Debug\pointer.obj"
+".\Debug\pointseries.obj"
+".\Debug\scroll.obj"
+".\Debug\series.obj"
+".\Debug\StdAfx.obj"
+".\Debug\tchart.obj"
+".\Debug\teefunction.obj"
+".\Debug\titles.obj"
+".\Debug\zoom.obj"
+".\Debug\Dragging.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPD8.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+aspect.cpp
+barseries.cpp
+brush.cpp
+canvas.cpp
+Dragging.cpp
+DraggingDlg.cpp
+lineseries.cpp
+marks.cpp
+pen.cpp
+pointer.cpp
+pointseries.cpp
+scroll.cpp
+series.cpp
+tchart.cpp
+teefunction.cpp
+titles.cpp
+zoom.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDA.tmp" with contents
+[
+/nologo /o"Debug/Dragging.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\aspect.sbr"
+".\Debug\barseries.sbr"
+".\Debug\brush.sbr"
+".\Debug\canvas.sbr"
+".\Debug\Dragging.sbr"
+".\Debug\DraggingDlg.sbr"
+".\Debug\lineseries.sbr"
+".\Debug\marks.sbr"
+".\Debug\pen.sbr"
+".\Debug\pointer.sbr"
+".\Debug\pointseries.sbr"
+".\Debug\scroll.sbr"
+".\Debug\series.sbr"
+".\Debug\tchart.sbr"
+".\Debug\teefunction.sbr"
+".\Debug\titles.sbr"
+".\Debug\zoom.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDA.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Dragging.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

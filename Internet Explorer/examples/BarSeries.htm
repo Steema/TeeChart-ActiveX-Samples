@@ -1,0 +1,184 @@
+<html>
+<head><LINK REL=STYLESHEET TYPE="text/css" HREF="style.css">
+<meta http-equiv="x-ua-compatible" content="IE=10">
+</head>
+<BODY bgcolor=#FFFFFF onload="Window_onload()">
+<SCRIPT LANGUAGE="JavaScript" FOR="Chart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+<SCRIPT LANGUAGE="VBScript">
+<!--
+dim TempDelta
+
+Sub Window_onload()
+
+ 'sets up Chart to print from IE's print option
+ TChart1.Environment.IEPrintWithPage=True
+
+ 'Change some appearance characteristics
+ TChart1.Aspect.Orthogonal=False
+ TChart1.Aspect.Perspective=35
+ TChart1.Aspect.HorizOffset=-20
+
+ TempDelta=1
+ TChart1.AddSeries(1)
+ set s=TChart1.Series(0)
+ s.FillSampleValues(7)
+ s.Title="Winter"
+ s.Cursor=2020
+
+ TChart1.AddSeries(1)
+ set s=TChart1.Series(1)
+ s.FillSampleValues(7)
+ s.Title="Spring"
+ s.Cursor=2020
+
+ TChart1.AddSeries(1)
+ set s=TChart1.Series(2)
+ s.FillSampleValues(7)
+ s.Title="Summer"
+ s.Cursor=2020
+ s.asBar.BarStyle=1
+
+ TChart1.AddSeries(1)
+ set s=TChart1.Series(3)
+ s.FillSampleValues(7)
+ s.Title="Autumn"
+ s.Cursor=2020
+
+ s.AsBar.MultiBar=0
+
+ TChart1.Header.Text.Add("Several Bar Series with different styles")
+ TChart1.Header.Font.Bold=True
+ TChart1.Header.Font.Color=vbBlack
+ TChart1.Header.Font.Size=12
+
+ TChart1.Axis.Left.Labels.Font.Color=&HCCBBAA
+ TChart1.Axis.Bottom.Labels.Font.Color=&HFFEEDD
+
+ TChart1.Panel.Gradient.Visible=True
+ TChart1.Panel.Gradient.StartColor=&HEE2922
+ TChart1.Panel.Gradient.EndColor=&H22EE99
+
+ TChart1.Legend.Alignment=3
+
+ TChart1.Walls.Left.Size=10
+ TChart1.Walls.Bottom.Size=10
+ 
+ TChart1.TimerEnabled=True
+ TChart1.TimerInterval=1
+end sub
+
+sub ShowMarks()
+ for t=0 to TChart1.SeriesCount -1
+   TChart1.Series(t).Marks.Visible=not TChart1.Series(t).Marks.Visible
+ next 
+end sub
+
+
+sub TChart1_OnTimer()
+  SomeSeries=Int(TChart1.SeriesCount*Rnd(1))
+  set y=TChart1.Series(SomeSeries).YValues
+  SomePoint=Int(TChart1.Series(SomeSeries).Count*Rnd(1))
+  temp=y.Value(SomePoint)
+  y.Value(SomePoint)=temp - SomeSeries*10
+
+  TChart1.Aspect.Chart3DPercent= TChart1.Aspect.Chart3DPercent+TempDelta
+  if (TChart1.Aspect.Chart3DPercent<10) or (TChart1.Aspect.Chart3DPercent>30) then
+    TempDelta= -1 * TempDelta
+  end if
+end sub
+
+sub ChangeStyles()
+  if TChart1.Series(0).asBar.BarStyle=0 then 
+     TChart1.Series(0).asBar.BarStyle=1
+     TChart1.Series(1).asBar.BarStyle=3
+     TChart1.Series(2).asBar.BarStyle=4
+     TChart1.Series(3).asBar.BarStyle=2
+  else
+     TChart1.Series(0).asBar.BarStyle=0
+     TChart1.Series(1).asBar.BarStyle=0
+     TChart1.Series(2).asBar.BarStyle=0
+     TChart1.Series(3).asBar.BarStyle=0
+  end if
+end sub
+
+sub View3D()
+  b=TChart1.Aspect.View3D
+  TChart1.Aspect.View3D=not b
+end sub
+
+sub SideMargins()
+  TChart1.Series(0).asBar.SideMargins=not TChart1.Series(0).asBar.SideMargins
+end sub
+
+sub ShowGradient()
+  TChart1.Panel.Gradient.Visible=not TChart1.Panel.Gradient.Visible
+end sub
+
+sub TChart1_OnClickSeries(SeriesIndex, ValueIndex, Button, Shift, X, Y)
+  msgBox "Clicked Series: "+CStr(SeriesIndex)+" at point: "+CStr(ValueIndex)+". Point Value: "+CStr(TChart1.Series(SeriesIndex).PointValue(ValueIndex))
+  TChart1.StopMouse
+end sub
+
+sub ScrollLeft()
+  TChart1.Axis.Bottom.Scroll 0.5, False 
+end sub
+
+sub ScrollRight()
+  TChart1.Axis.Bottom.Scroll -0.5, False 
+end sub
+
+sub LegendPos(SomePos)
+  TChart1.Legend.Alignment=SomePos
+end sub
+-->
+</SCRIPT>
+<p>
+<font face="Arial" color="#004080"><em><big><strong>Bar Series Example</strong></big></em></font></h3>
+</p>
+
+<a href="../Start Local examples.htm">Return to Examples</a>
+<a href="mixedseries.htm">Next Example</a>
+<hr>
+
+<p>
+<input type="button" value="Show / Hide Marks" onclick="ShowMarks()">
+<input type="button" value="Show Editor..." onclick="TChart1.ShowEditor()">
+</p>
+
+<p>
+<b>Multi-Bar type:</b>
+<input type="radio" name="multibar" onclick="TChart1.Series(0).asBar.Multibar=1">Side to Side
+<input type="radio" checked name="multibar"  onclick="TChart1.Series(0).asBar.Multibar=0">Behind
+<input type="radio" name="multibar"  onclick="TChart1.Series(0).asBar.Multibar=2">Stacked
+<input type="radio" name="multibar"  onclick="TChart1.Series(0).asBar.Multibar=3">Stacked 100%
+</p>
+
+<OBJECT ID="TChart1" WIDTH=550 HEIGHT=290
+ CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+</OBJECT>
+
+<p><input type="button" value="Change Styles" onclick="ChangeStyles()">
+<input type="checkbox" checked name="View3" onclick="View3D()">View 3D
+<input type="checkbox" checked name="Margins" onclick="SideMargins()">Side Margins
+<input type="checkbox" checked name="gradient" onclick="ShowGradient()">Show/Hide Gradient
+</p>
+
+
+<p>
+<input type="button" value="<- Scroll Left" onclick="ScrollLeft()">
+<input type="button" value="Scroll Right ->" onclick="ScrollRight()">
+</p>
+
+<p>
+<b>Legend position:</b>
+<input type="radio" name="legpos"  onclick="LegendPos(0)">Left
+<input type="radio" name="legpos"  onclick="LegendPos(1)">Right
+<input type="radio" name="legpos"  onclick="LegendPos(2)">Top
+<input type="radio" checked name="legpos"  onclick="LegendPos(3)">Bottom
+</p>
+
+
+</BODY>
+</html>

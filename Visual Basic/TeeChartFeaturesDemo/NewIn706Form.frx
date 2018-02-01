@@ -1,0 +1,15 @@
+ÿ>* Changes and additions in version 7.0.0.6 :
+----------------------------------------------------------------------
+
+# TA05010095 - Added the CalculateTrend for TrendFunction.
+# TA05010443 - Added properties and methods and its events of IRectangleTool interface. 
+# TA05010600 - Added the CalcZPos method for 3D Series.
+# Added ExportNative property of ITeeEditorShowPages to allow to hide the Export Native 
+  tab.
+# Added Transparent property of ILegentTitle interface.
+# TV52010985 - New option at TeeEditor1.Options :
+  TeeEditor1.Options.OrderSeries=False
+  When disabling ordering, the editor ChartListBox is also set to "EnableDragSeries=False"
+# TV52011065 - Added a new boolean property to both all Series and Tools: 
+  tChart1.Series(0).ShowInEditor = False
+  tChart1.Tools.Items(0).ShowInEditor = False

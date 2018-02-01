@@ -1,0 +1,594 @@
+Welcome !,TWelcomeForm,Main
+ Basic Features,TBasic_FeaturesForm,Basic_FeaturesForm
+ Chart Styles
+  Standard
+   Line(Strip),TSeriesType_LineForm, SeriesType_LineForm
+    Line Outline,TLineOutline,LineOutline
+    Stack and Overlap,TLineStack,LineStack
+    ClickableLine,TLineClickableForm,LineClickableForm
+    Image Patterns,TLinePatternForm,LinePatternForm
+    Color Each Line,TLineColorEachLine,LineColorEachLine
+    Gradient,TSeries_LineGradient,Series_LineGradient
+   Bar,TSeriesType_BarForm,SeriesType_BarForm
+    Side All layout,TBarSideAll,BarSideAll
+    Stack Groups,TBarStackGroup,BarStackGroup
+    Negative stacked,TBarStackNegative,BarStackNegative
+    Cone Bar style,TConesForm,ConesForm
+    Brush Image,TBarImage,BarImage
+    Gradient,TBarGradientForm,BarGradientForm
+    Self Stacked,TBarSelfStackForm,BarSelfStackForm
+    Bar Tick Lines,TBar_TickLinesForm,Bar_TickLinesForm
+    Shadow,TSeries_BarShadow,Series_BarShadow
+   Area,TSeriesType_AreaForm,SeriesType_AreaForm
+    Area Transparency,TAreaTransparency,AreaTransparency
+    Area Gradient,TAreaGradient,AreaGradient 
+    Y Origin,TAreaOriginForm,AreaOriginForm
+    Area Stairs,TArea_StairsForm,Area_StairsForm
+    Area TreatNulls,TArea_TreatNulls,Area_TreatNulls
+    Stack Groups,TSeries_AreaStackGroups,Series_AreaStackGroups
+   Pie
+    Multiple Pies,TPieMultiple,PieMultiple
+    Shadow,TChartShadowForm,ChartShadowForm
+    Semi-pie,TPieSemi,PieSemi
+    Auto Mark position,TPieAutoMarkPositionForm,PieAutoMarkPositionForm
+    Other Legend,TPieOtherLegendForm,PieOtherLegendForm
+    Pie Shadow,TPie_ShadowEllipseForm,Pie_ShadowEllipseForm
+    Slice Heights,TPie_SliceHeightsForm,Pie_SliceHeightsForm
+    Marks Vert. Center,TPie_MarksVertCenter,Pie_MarksVertCenter
+    Marks Callout leg size,TPie_MarksLegSize,Pie_MarksLegSize
+   Fast Line
+    Fast Line Speed DrawAll,TFastLineDrawAll,FastLineDrawAll
+    Nulls and Stairs,TFastLineNullsForm,FastLineNullsForm
+    FastLine Stairs & VertAxis Scaling,TFastLineStairsVertAxis,FastLine_StairsVertAxis
+    Fast Line TreatNulls,TFastLine_TreatNulls,FastLine_TreatNulls
+   Horiz.Line,THorizLineForm,HorizLineForm
+   Horiz.Area,TSeriesTypeHorizAreaForm,SeriesTypeHorizAreaForm
+   Horiz.Bar,TSeriesType_HorizBarForm,SeriesType_HorizBarForm
+   Point (Scatter)
+    Drawing pointers on custom Canvas,TPointerDrawCanvas,PointerDrawCanvas
+    Point TreatNulls,TPoint_TreatNulls,Point_TreatNulls
+    Pointer Style Hexagon,TSeries_PointsHexagon,Series_PointsHexagon
+   Bubble
+    Bubble Gradient,TBubbleGradientForm,BubbleGradientForm
+    Bubble Transparency,TBubbleTransparencyForm,BubbleTransparencyForm
+   Arrow,TSeriesType_ArrowForm,SeriesType_ArrowForm
+    Arrow Percent,TSeries_ArrowPercent,Series_ArrowPercent
+   Gantt
+    Mouse dragging,TGanttMouseDragForm,GanttMouseDragForm
+   Shape
+    Brush image,TShapeImage,ShapeImage
+    Vertical text align,TShapeVertAlign,ShapeVertAlign
+    Shape Transparency,TSeries_ShapeTransparency,Series_ShapeTransparency
+  Financial
+   Candle (OHLC)
+    Axis Labels no Weekends,TCandleAxisLabels,CandleAxisLabels
+    Candle OnGetPointer event,TCandleOnGetPointer,CandleOnGetPointer
+    Custom Candle colors,TCandleCustomColors,CandleCustomColors
+    Open Close style,TCandleOpenClose,CandleOpenClose
+    Candle HighLow pen,TCandle_HighLowPenForm,Candle_HighLowPenForm
+   Point & Figure,TSeriesPointFigureForm,SeriesPointFigureForm
+   Volume
+    Volume Origin,TVolumeOrigin,VolumeOrigin
+   Volume Pipe,TSeriesType_VolumePipe,SeriesType_VolumePipe
+   Darvas Boxes,TSeriesType_Darvas,SeriesType_Darvas
+  Extended
+   Surface
+    With holes,TSurfaceHoleForm,SurfaceHoleForm
+    Sides,TSurfaceSides,SurfaceSides
+    Smooth palette,TSurfaceSmooth,SurfaceSmooth
+    XYZ floating point,TSurfaceFloat,SurfaceFloat
+    Wireframe and palette,TSurfaceWire,SurfaceWire
+    Strong palette colors,TSurfacePaletteForm,SurfacePaletteForm
+    Transparency,TSurfaceTransparencyForm,SurfaceTransparencyForm
+    Surface Speed,TSurface_FastBrushForm,Surface_FastBrushForm
+    Surface Rainbow,TSurface_PaletteForm,Surface_PaletteForm
+    Surface Smoothing,TSurface_SmoothingForm,Surface_SmoothingForm
+    Iso-Surface,TSeriesType_IsoSurface,SeriesType_IsoSurface
+    Surface HideCells,TSurface_HideCells,Surface_HideCells
+   Contour
+    Custom Levels,TContourLevels,ContourLevels
+    2D drawing,TContourView2D,ContourView2D
+    Palette and Color range,TContourPaletteForm,ContourPaletteForm
+    Smooth segments,TContourSmoothSegmentsForm,ContourSmoothSegmentsForm
+    OnBeforeDrawLevel event,TContourOnBeforeDrawForm,ContourOnBeforeDrawForm
+    Filled,TSeries_ContourFilled,Series_ContourFilled
+    Level Marks,TSeries_ContourLevelMarks,Series_ContourLevelMarks
+     Antioverlap,TSeries_ContourLevelMarksOverlap,Series_ContourLevelMarksOverlap
+    Pointer,TSeries_ContourPointer,Series_ContourPointer
+   Polar
+    Polar and Radar Transparency,TPolarRadarTransp,PolarRadarTransp
+    ClockWise labels,TPolarClockWise,PolarClockWise
+    Circle Labels inside,TPolarLabelsInside,PolarLabelsInside
+    Gradient,TCircledGradientForm,CircledGradientForm
+    Zones,TPolarZonesForm,PolarZonesForm
+    Polar Bar,TSeries_PolarBarForm,Series_PolarBarForm
+    Polar Smooth,TPolar_SmoothForm,Polar_SmoothForm
+   Radar,TSeriesType_RadarForm,SeriesType_RadarForm
+   Donut,TDonutSeriesForm,DonutSeriesForm
+    Donut and Pie Gradients,TPie_GradientForm,Pie_GradientForm
+   Smith,TSmithForm,SmithSeries
+   Pyramid,TPyramidForm,PyramidForm
+   Tri Surface
+    TriSurface Hiding,TTriSurfaceHiding,TriSurfaceHiding
+   Vector 3D,TSeriesVector3DForm,SeriesVector3DForm
+   Tower 3D
+     Tower 3D,TSeriesTowerForm,SeriesTowerForm
+     Click detection,TSeries_TowerClick,Series_TowerClick
+   Point 3D
+    Pointer style event,TPoint3DEvent,Point3DEvent
+    Point3D base lines,TPoint3D_BaseLineForm,Point3D_BaseLineForm
+   Bezier,TBezierSeriesForm,BezierSeriesForm
+   Map GIS,TMapSeriesForm,MapSeriesForm
+   GIS / Mapping,TSeriesType_GISMaps,SeriesType_GISMaps
+   3D Series and Range as palette,TSeries3DRangePalette,Series3DRangePalette
+   Depth 3D,TSeriesDepth,SeriesDepth
+   AddArray procedure,TSeries3DAddArrayForm,Series3DAddArrayForm
+   XYZ Gridding,TXYZGriddingForm,XYZGriddingForm
+   Organizational,TSeriesType_OrgChart,SeriesType_OrgChart
+   Polar/Radar/WindRose/Clock
+    OnGetCircleLabel event,TSeries_GetCircleLabelEvent,Series_GetCircleLabelEvent
+   Treemap Series,TTreemapSeriesForm,SeriesType_Treemap
+  Statistical
+   Ternary Series,TTernarySeriesForm,SeriesType_Ternary
+   High-Low Line,TSeriesType_HighLowLine,SeriesType_HighLowLine
+   Waterfall,TWaterFallForm,WaterFallForm
+   ColorGrid
+    Mouse Hits,TColorGridClicked,ColorGridClicked
+    ColorGrid Marks,TColorGridMarksForm,ColorGridMarksForm
+    ColorGrid Bitmap,TColorGridBitmapForm,ColorGridBitmapForm
+    ColorGrid RealTime,TColorGrid_RealtimeForm,ColorGrid_RealtimeForm
+    Plane3D Position,TSeries_ColorGridPlane3D,Series_ColorGridPlane3D
+    Transparency,TSeries_ColorGridTransparency,Series_ColorGridTransparency
+   Histogram
+    Histogram Transparency,THistogramTransp,HistogramTransp
+   Horiz. Histogram,TSeries_HorizHistoForm,Series_HorizHistoForm
+   Error Bar,TErrorBarNegativeForm,ErrorBarNegativeForm
+   Error,TSeries_ErrorForm,Series_ErrorForm
+   High-Low,THighLowForm,HighLowForm
+   BoxPlot
+    Custom values,TBoxPlotCustom,BoxPlotCustom 
+   Funnel (Pipeline),TFunnelSeriesForm,FunnelSeriesForm
+  Other
+   Rose,TRose_Series,Rose_Series
+   Polar Grid,TSeriesType_PolarGrid,SeriesType_PolarGrid
+   WindRose
+    Angle increment,TWindAngleInc,WindAngleInc
+    MirrorAngles,TSeries_WindRoseMirrorAngles,Series_WindRoseMirrorAngles
+    OnGetPointerStyle event,TSeries_WindRosePointerStyle,Series_WindRosePointerStyle
+   Clock
+    Editor dialogs,TClockEdi,ClockEdi
+   Bar 3D
+    Bar 3D,TSeries_Bar3DForm,Series_Bar3DForm
+    Bar 3D Depth,TBar_3DDepthForm,Bar_3DDepthForm
+   Bar Join,TBarJoinForm,BarJoinForm
+   Image Bar,TBarImage,BarImage
+   BigCandle,TBigCandleForm,BigCandleForm
+   Calendar,TCalendarSeriesForm,CalendarSeriesForm
+    Calendar buttons,TCalendarButtons,CalendarButtons
+    Calendar ClickedDate,TSeries_CalendarClicked,Series_CalendarClicked
+   Gauges,TSeriesGaugeForm,SeriesGaugeForm
+    LED and Linear Gauges,TSeries_LCDGauges,Series_LCDGauges
+    Circular Gauge,TSeriesType_CircularGauge,SeriesType_CircularGauge
+   KnobGauge series,TKnobGauge_SeriesForm,KnobGauge_Series 
+   Bubble 3D,TSeries_Bubble3DForm,Series_Bubble3DForm
+   Tag Cloud,TSeriesType_TagCloud,SeriesType_TagCloud
+  CustomSeries
+   Pointer Style Hexagon,TSeries_PointsHexagon,Series_PointsHexagon
+   OnClickPointer,TSeries_ClickPointer,Series_ClickPointer
+   TreatNulls,TCustomSeries_TreatNulls,CustomSeries_TreatNulls
+  Custom3DPalette
+   InvertPalette,TSeries_InvertPalette,Series_InvertPalette
+ DataBase Charts
+  Sort Order,TDBChartOrder,DBChartOrder
+  Single Record,TDBChartSingleRecord,DBChartSingleRecord 
+  Single Record by Code,TDBChartSingleRecordBycode,DBChartSingleRecordByCode  
+  DB CrossTab source,TDBChartCrossTabSourceForm,DBChartCrossTabSourceForm
+ Printing
+  Print Preview,TChartPrintMarginsForm,ChartPrintMarginsForm
+   Custom Drawing,TPreviewCustomDrawForm,PreviewCustomDrawForm
+  Multiple Pages,TPrintPagesForm,PrintPagesForm
+  Navigate Pages,TPrintPreviewNavigate,PrintPreviewNavigate
+  Multiple Charts,TPrintPreviewMulti,PrintPreviewMulti
+ Exporting
+  Chart Picture
+   Adobe Acrobat PDF,TExportPDFForm,ExportPDFForm
+   JPEG,TJPEGExportForm,JPEGExportForm
+   Metafile WMF
+    Transparent Background,TChartTransparent,ChartTransparent
+   PNG,TPNGExportForm,PNGExportForm
+   GIF,TGIFExportForm,GIFExportForm
+   PCX,TPCXExportForm,PCXExportForm
+   SVG Format,TExport_SVGForm,Export_SVGForm
+   PostScript Export,TPostScript_DemoForm,PostScript_DemoForm 
+   XAML (Windows Presentation Foundation),TExport_XAML,Export_XAML
+  Chart Data
+   Text,TExportTextForm,ExportTextForm
+   HTML,TExportHTMLForm,ExportHTMLForm
+   XML,TExportXMLForm,ExportXMLForm
+    XML from Web,TSeriesXMLSourceWebForm,SeriesXMLSourceWebForm
+   Excel,TExportExcelForm,ExportExcelForm
+  Email,TExportEmailForm,ExportEmailForm
+  Native binary format
+   Templates,TTemplateChart,TemplateChart
+  DPI,TDPIExportForm,Export_DPI  
+  Flash / Flex Chart,TCanvas_CompactChartForm,Canvas_CompactChart
+ Functions
+  MoneyFlow,TMoneyFlowFunctionForm,Function_MoneyFlow
+  Percentage Change,TPercentChangeForm,Function_PercentChange
+  Slope,TSlopeForm,Function_Slope
+  Skewness,TSkewnessForm,Function_Skewness
+  Kurtosis,TKurtosisForm,Function_Kurtosis
+  Smoothed Moving Average,TSMMAFunctionForm,Function_SMMA
+  ATR (Average True Range),TATRFunctionForm,Function_ATR
+  RVI (Relative Vigor Index),TRVIFunctionForm,Function_RVI
+  AO (Awesome Oscillator),TAOFunctionForm,Function_AO
+  AC (Acclerator/Declerator Oscillator),TACFunctionForm,Function_AC
+  Alligator,TAlligatorFunctionForm,Function_Alligator
+  Gator Oscillator,TGatorFunctionForm,Function_Gator
+  S.A.R.,TFunction_SAR,Function_SAR
+  Subset,TFunction_SubSet,Function_SubSet
+  Histogram,TFunction_Histogram,Function_Histogram
+  y = mx + b,TCurveFittingNormCoef,CurveFitting_NormCoef
+  Slope & Y-Intercept,TCurveFittingSlopeY,CurveFitting_SlopeY
+  SPC (Western Electric Rules),TSPCFunctionForm,Function_SPC
+  Standard
+   Average
+    Average and Nulls,TAverageFunctionNulls,AverageFunctionNulls
+   Mode Function,TFunction_ModeForm,Function_ModeForm
+   Median Function,TFunction_MedianForm,Function_MedianForm
+  Extended
+   Cross Points,TFunctionCrossPointsForm,FunctionCrossPointsForm
+   Custom y=f(x),TFunctionCustomForm,FunctionCustomForm
+   Exponential Trend,TExponentialTrendForm,ExponentialTrendForm
+   Performance,TFunctionPerformanceForm,FunctionPerformanceForm
+   Root Mean Square,TRootMeanSqForm,RootMeanSqForm
+   Smoothing SpLine,TFunctionSmoothingForm,FunctionSmoothingForm
+   Correlation Function,TFunction_CorrelationForm,Function_CorrelationForm
+   Variance Function,TFunction_VarianceForm,Function_VarianceForm
+   Perimeter Function,TFunction_PerimeterForm,Function_PerimeterForm
+   Reducing Number of Points,TFunction_DownSamplingForm,Function_DownSamplingForm
+  Financial
+   ADX,TADXFunctionForm,ADXFunctionForm
+   Weighted Mov.Ave.,TMovAveWeightedForm,MovAveWeightedForm
+   Calculating RSI,TRSICalcForm,RSICalcForm
+   Momentum Div,TMomentumDivForm,MomentumDivForm
+   MACD,TMACDForm,MACDForm
+   Stochastic,TStochasticForm,StochasticForm
+   Bollinger Bands,TBollingerForm,BollingerForm
+   Compression OHLC,TFunctionCompressForm,FunctionCompressForm
+   CLV (Accum/Distrib),TFunctionCLVForm,FunctionCLVForm
+   OBV (On Balance Volume),TFunctionOBVForm,FunctionOBVForm
+   CCI (Commodity Channel Index),TFunctionCCIForm,FunctionCCIForm
+   PVO (Percentage Volume Oscillator),TFunctionPVOForm,FunctionPVOForm
+  All TeeMoving functions
+   Period Allign,TFunctions_PeriodAlign,Functions_PeriodAlign
+  Exp.Mov.Average
+   Ignore Nulls,TFunction_ExpMovAveNulls,Function_ExpMovAveNulls
+ Tools
+  AxisArrow SizePercent,TTool_AxisArrowSize,Tool_AxisArrowSize
+  Axis Breaks,TTool_AxisBreaksForm,Tool_AxisBreaks
+  ColorBand
+   Picture,TTool_ColorBandPicture,Tool_ColorBandPicture
+   OnResized event,TTool_ColorBandResize,Tool_ColorBandResize
+  Cursor
+   Click Tolerance,TTool_CursorTolerance,Tool_CursorTolerance
+   Snap Style,TTool_CursorSnapStyle,Tool_CursorSnapStyle
+   Horiz. / Vert. size,TTool_CursorSize,Tool_CursorSize
+   Scope style,TTool_CursorScope,Tool_CursorScope
+  DragMarks OnDragged,TTool_DragMarksDragged,Tool_DragMarksDragged
+  DrawLine
+   Tolerance,TTool_DrawLineTolerance,Tool_DrawLineTolerance
+   Style,TTool_DrawLineStyle,Tool_DrawLineStyle
+   AddLine method,TTool_DrawLineAddLine,Tool_DrawLineAddLine
+   Clicked (Tolerance),TTool_DrawLineClickedTolerance,Tool_DrawLineClickedTolerance
+  MarksTip
+   Marks tips,TMarkTipsToolDemo,MarkTipsToolDemo
+   HideDelay,TTool_MarksTipHide,Tool_MarksTipHide
+   OnCancelHint,TTool_MarksTipCancelHint,Tool_MarksTipCancelHint
+  ChartImage Pen,TTool_ImagePen,Tool_ImagePen
+  PageNum ShowButtons,TTool_PageNumShowButtons,Tool_PageNumShowButtons
+  Rectangle Tool
+   AllowDrag and AllowResize,TTool_RectangleAllowDragResize,Tool_RectangleAllowDragResize
+   Drag and Resize Events,TTool_RectangleDraggingResizing,Tool_RectangleDraggingResizing
+  Rotate
+   Inertia and Cursor,TTool_RotateInertia_Cursor,Tool_RotateInertia_Cursor
+  Series Animation
+   Delay,TSeries_AnimationDelay,Series_AnimationDelay
+  Series Band Pen,TTool_SeriesBandPen,Tool_SeriesBandPen
+  TeeScrollbar ThumbGradient,TTool_LegendScrollBarThumb,Tool_LegendScrollBarThumb
+  3D Transpose,TTool3DTransposeForm,Tool3DTransposeForm
+  Annotation,TAnnotationToolForm,AnnotationToolForm
+   Annotation Callout,TToolAnnotationCalloutForm,ToolAnnotationCalloutForm
+   Annotation Click,TToolAnnotationClickForm,ToolAnnotationClickForm
+  Axis arrows,TAxisArrowToolDemo,AxisArrowToolDemo
+  Cursor
+   Moving programatically,TCursorToolProg,CursorToolProg
+  Drag Point,TTool_DragPointForm,Tool_DragPointForm
+  Draw Line,TDrawLineToolDemo,DrawLineToolDemo
+   DrawLine Tool,TDrawLineOnDragged,DrawLineOnDragged
+  Color Band,TColorBandToolForm,ColorBandToolForm
+   ColorBand Clicks,TColorBand_ClickedForm,ColorBand_ClickedFom
+   ColorBand Drag,TColorBand_DragForm,ColorBand_DragForm
+   Transparency,TColorBandTransp,ColorBandTransp
+  Color Line,TColorLineForm,ColorLineForm
+   ColorLine Drag repaint,TColorLineDragRepaint,ColorLineDragRepaint
+   ColorLine Draw Behind,TColorLine_DrawBehind3D,ColorLine_DrawBehind3D
+  Drag Marks,TDragMarksToolDemo,DragMarksToolDemo
+  Extra Legend tool,TToolExtraLegendForm,ToolExtraLegendForm
+  Gantt Mouse dragging,TGanttMouseDragForm,GanttMouseDragForm
+  Grid bands,TAxesGridBandsForm,AxesGridBandsForm
+  Image,TImageToolForm,ImageToolForm
+  Nearest Point,TNearestToolDemo,NearestToolDemo
+  Page Number,TPageNumToolDemo,PageNumToolDemo
+  Pie focus,TToolPieForm,ToolPieForm
+  Rotate,TRotateToolForm,RotateToolForm
+   Rotate Outline,TToolRotateOutlineForm,ToolRotateOutlineForm
+  Series Animation,TToolSeriesAnimationForm,ToolSeriesAnimationForm
+  Series Band,TToolSeriesBandForm,ToolSeriesBandForm
+  Selector,TToolSelectorForm,ToolSelectorForm
+  Lighting,TTool_LightingForm,Tool_LightingForm
+  Surface Nearest,TTool_SurfaceNearestForm,Tool_SurfaceNearestForm
+  Axis Scroll,TTool_AxisScrollForm,Tool_AxisScrollForm
+  Rectangle Tool - MouseOVerHints,TMouseOverHints,MouseOverHints
+  Antialias Filter,TTool_Antialias,Tool_Antialias
+  Fader,TTool_Fader,Tool_Fader
+  Frames,TTool_Frame,Tool_Frame
+  Data Table,TTool_DataTable,Tool_DataTable
+  Legend Palette,TTool_LegendPalette,Tool_LegendPalette
+  Magnify,TTool_Magnify,Tool_Magnify
+  Scrolling Banner,TTool_Banner,Tool_Banner
+  Series Region,TTool_SeriesRegion,Tool_SeriesRegion
+  Series Stats,TTool_SeriesStats,Tool_SeriesStats
+  SubCharts,TTool_SubChart,Tool_SubChart
+  Text3D,TTool_Text3D,Tool_Text3D
+  Transpose Series,TTool_TransposeSeries,Tool_TransposeSeries
+  Video Creator,TTool_Video,Tool_Video
+  Video Player,TTool_VideoPlayer,Tool_VideoPlayer
+  Fibonacci Retracement,TToolsFibonacci,Tools_Fibonacci
+  New Stats,TMoreSeriesStatsToolForm,Tool_MoreSeriesStats
+  Series Band Stairs,TToolSeriesBandStairs,Tool_SeriesBandStairs
+  SubCharts
+   Drag & Resize,TTool_SubChartEventsForm,Tool_SubChartEvents
+   Events,TSubChartEvents,SubChart_Events
+ Speed
+  Fast Dynamic Arrays,TDynArrays,DynArrays
+  Fast Line Speed DrawAll,TFastLineDrawAll,FastLineDrawAll
+  Dynamic Arrays for 3D Series,TDynArrayXYZ,Series_ValueList
+  Delete Point Range,TDeleteRange,DeleteRange
+  Fast Delete and Fast Pen,TFastLine_RealtimeForm,FastLine_RealtimeForm
+ 3D Canvas
+  Flash / Flex Chart,TCanvas_CompactChartForm,Canvas_CompactChart
+  Orthogonal Angle,TOrthoAngle,OrthoAngle
+  Gradient Middle color,TGradientMiddle,GradientMiddle
+  Rotation center,TRotationCenter,RotationCenter
+  Big Dotted lines,TCanvasDotPen,CanvasDotPen
+  Brush Styles,TBrushStyleForm,BrushStyleForm
+  Cone shapes,TConesForm,ConesForm
+  Transparency,TTransparencyForm,TransparencyForm
+  Gray Scale,TGrayScaleForm,GrayScaleForm
+  Radial Gradient,TGradientRadialForm,GradientRadialForm
+  AntiAlias,TAntiAliasForm,AntiAliasForm
+  Rotated Ellipses,TRotatedEllipseForm,RotatedEllipseForm
+  Canvas Polygon,TCanvasPolygon,CanvasPolygon
+  Font Picture,TCanvas_FontPicture,Canvas_FontPicture
+  CustomShape
+   Picture,TCanvas_CustomShapePicture,Canvas_CustomShapePicture
+   Round border size,TCanvas_CustomShapeRoundSize,Canvas_CustomShapeRoundSize
+  Gradient
+   Rotation angle,TGradient_RotationAngle,Gradient_RotationAngle
+   Sub gradient,TGradient_SubGradient,Gradient_SubGradient
+ Components
+  GDI +,TGDIPlusComponentForm,TeeGDIPlusComponent
+  Chart Editor
+   PixelsPerInch,TEditor_PixelsPerInch,Editor_PixelsPerInch
+   Embedded,TChartEditorPanelForm,Chart_EditorPanel
+   Editor Page Number,TChartEditorPageNum,ChartEditorPageNum
+   Chart Editor dialog,TChartEditorForm,ChartEditorForm
+  Chart Grid,TChartGridForm,ChartGridForm
+   AllowAppend,TChartGrid_AllowAppend,ChartGrid_AllowAppend
+   ReadOnly,TChartGrid_ReadOnly,ChartGrid_ReadOnly
+   AllowInsertSeries,TChartGrid_AllowInsertSeries,ChartGrid_AllowInsertSeries
+   ColorsColumn LabelsColum,TChartGrid_VisibleColumns,ChartGrid_VisibleColumns
+   FirstRowNum function,TChartGrid_FirstRowNum,ChartGrid_FirstRowNum
+   Series symbol clickable,TChartGrid_SeriesSymbolClickable,ChartGrid_SeriesSymbolClickable
+   Typing null points,TArea_TreatNulls,Area_TreatNulls
+   Chart Grid Colors,TChartGridColors,ChartGridColors
+   ChartGrid Rows,TChartGridRows,ChartGridRowsForm
+   New Fonts tab,TEditor_FontsTab,Editor_FontsTab
+   TStringsEditor,TEditor_Strings,Editor_Strings
+  OpenGL
+   Editor,TOpenGLEditorForm,OpenGLEditorForm
+   Lights,TOpenGL_LightDirection,OpenGL_LightDirection
+   Anti-Alias,TOpenGL_AntiAlias,OpenGL_AntiAlias
+  Page Navigator,TPageNavigatorForm,PageNavigatorForm
+  XML Import source
+   XML from File,TSeriesXMLSourceForm,SeriesXMLSourceForm
+   XML from Web,TSeriesXMLSourceWebForm,SeriesXMLSourceWebForm
+  TeeListBox
+   Radio Buttons,TChartListBox_RadioForm,ChartListBox_RadioForm
+   InLine Editor,TChartListBox_EditorForm,ChartListBox_EditorForm
+   FontSeriesColor,TChartListBox_FontSeriesColor,ChartListBox_FontSeriesColor
+ ToolBar 
+  Custom buttons,TCommanderCustom,CommanderCustom
+  TeeCommander,TTeeCommanderForm,TeeCommanderForm
+  Custom Editor and Previewer,TCommander_CustomEditorForm,Commander_CustomEditorForm
+  Gradient,TCommander_Gradient,Commander_Gradient
+  FullRotation,TCommander_FullRotation,Commander_FullRotation
+ Axes
+  Axis Breaks,TTool_AxisBreaksForm,Tool_AxisBreaks
+  Axis Grid zones,TAxisGridZoning,Axis_GridZoning
+  GridCentered with GridBand,TAxis_GridBandCenteredForm,Axis_GridBandCentered
+  Axis pen LineMode,TAxis_LineMode,Axis_LineMode
+  Grid pen
+   Draw Every,TAxis_GridDrawEvery,Axis_GridDrawEvery
+  Max/Min Rounded,TAxis_MaxMinRounded,Axis_MaxMinRounded
+  Custom,TCustomAxisEvent,CustomAxisEvent
+  Axis behind Series,TAxisBehind,AxisBehind
+  Persistent custom axes,TAxisCustom,AxisCustom
+  Opaque zones,TAxisOpaqueZone,AxisOpaqueZone
+  Scrolling multiple,TMultiAxisScroll,MultiAxisScroll
+  Title
+   Visible property,TAxisTitleVisible,AxisTitleVisible
+  Labels
+   Axis Labels behind,TAxisLabelsBehind,Axis_LabelsBehind
+   Axis Retrieve old Labels,TAxis_RetrieveOldLabelsForm,Axis_RetrieveOldLabels
+   Custom Labels,TAxisItemsForm,AxisItemsForm
+   Labels Format,TAxisLabelsFormatForm,AxisLabelsFormatForm
+   Millseconds,TAxisMillisec,AxisMillisec
+   Exponent super-script,TAxisLabelExp,AxisLabelExp
+   Alignment,TAxisLabelAlignForm,AxisLabelAlignForm
+  Minor grid,TAxisMinorGrid,AxisMinorGrid
+  Multiple at Runtime,TAxisMultiRuntime,AxisMultiRuntime
+  Z(Depth) position,TAxisZPositionForm,AxisZPositionForm
+  Min and Max Offsets,TAxisOffsetsForm,AxisOffsetsForm
+  Alternate Labels,TAxis_LabelsAlternateForm,Axis_LabelsAlternateForm
+  Depth Top Axis,TAxis_DepthTopForm,Axis_DepthTopForm
+  Isometric Axis,TAxis_IsometricForm,Axis_IsometricForm
+  Beveled Axes,TAxes_DrawBevelsForm,Axes_DrawBevelsForm
+  Datetime Depth,TAxis_DepthDateTimeForm,Axis_DepthDateTimeForm
+  First and Last labels,TAxis_FirstLastLabelsForm,Axis_FirstLastLabelsForm
+ Aspect
+  New Chart Themes,TNewChartThemes,New_Chart_Themes
+  Speed Theme,TSpeedThemeDemo,Speed_Theme_Demo
+  Chart Themes,TChart_ThemesForm,Chart_ThemesForm
+  Custom Palettes,TChart_PalettesForm,Chart_PalettesForm
+ Miscellaneous
+  Multi Language,TMultiLanguageForm,MultiLanguageForm
+  Emboss Property,TTeeEmbossForm,TeeEmboss
+  HTML Text Format,THTMLTextFormatForm,HTMLTextFormat
+  Zoom History,TZoomHistory,Zoom_History
+  Events
+   OnBeforeDrawChart,TChartBeforeDraw,ChartOnBeforeDraw
+   OnAddSeries and OnRemoveSeries,TSeries_AddRemoveEvents,Series_AddRemoveEvents
+   ChartGrid: OnTopLeftChanged,TChartGridTopLeftChanged,ChartGrid_TopLeftChanged
+  Color Palettes
+   MacOs palette,TColorPalettes_MacOS,ColorPalettes_MacOS
+  Image Filters
+   AntiAlias,TTool_Antialias,Tool_Antialias
+   Bevel,TFilter_Bevel,Filter_Bevel
+   Blur,TFilter_Blur,Filter_Blur
+   Brightness,TFilter_Brightness,Filter_Brightness
+   Color ( RGB ),TFilter_ColorRGB,Filter_ColorRGB
+   Contrast,TFilter_Contrast,Filter_Contrast
+   Crop,TFilter_Crop,Filter_Crop
+   Emboss,TFilter_Emboss,Filter_Emboss
+   Flip,TFilter_Flip,Filter_Flip
+   GammaCorrection,TFilter_GammaCorrection,Filter_GammaCorrection
+   GrayScale,TFilter_GrayScale,Filter_GrayScale
+   HueLumSat  ( HLS ),TFilter_HueLumSat,Filter_HueLumSat
+   Invert,TFilter_Invert,Filter_Invert
+   Light,TFilter_Light,Filter_Light
+   Mirror,TFilter_Mirror,Filter_Mirror
+   Mosaic,TFilter_Mosaic,Filter_Mosaic
+   Resize,TFilter_Resize,Filter_Resize
+   Reverse,TFilter_Reverse,Filter_Reverse
+   Rotate,TFilter_Rotate,Filter_Rotate
+   Sharpen,TFilter_Sharpen,Filter_Sharpen
+   Tile,TFilter_Tile,Filter_Tile
+   Zoom,TFilter_Zoom,Filter_Zoom
+  Zoom and Scroll
+   Pen and Brush,TZoomPen,ZoomPen
+   Minimum pixels,TZoomMinPixel,ZoomMinPix
+   Direction,TZoomDirection,ZoomDirection
+   Mouse wheel scrolling,TScrollButtonForm,ScrollButtonForm
+  Legend
+   Text-Symbol gap,TLegendTextSymbolGapForm,Legend_TextSymbolGap
+   Legend max. rows,TLegendMaxRowsForm,Legend_MaxRows
+   Custom position,TLegendCustomPos,LegendCustomPos
+   Text alignment and columns,TLegendWidths,LegendWidths
+   Check boxes,TLegendCheckBox,LegendCheckBox
+   Brush image,TLegendImage,LegendImage
+   Vertical spacing,TLegendVertSpa,LegendVertSpa
+   New Styles,TLegendStyle,LegendStyle
+   Current page only,TLegendCurrentPage,LegendCurrentPage
+   Font Series color,TLegendFontColor,LegendFontColor
+   Series property,TLegendSeriesForm,LegendSeriesForm
+   Multiple Legends,TMultiLegendForm,MultiLegendForm
+   Drawing more text,TLegendAddText,LegendAddText
+   Symbols Border,TLegendSymbol,LegendSymbol
+   Legend Title,TLegend_TitleForm,Legend_TitleForm
+   Legend Scrollbar,TLegend_ScrollbarForm,Legend_ScrollbarForm
+   Symbol OnDraw,TLegend_SymbolFlagsForm,Legend_SymbolFlagsForm
+   Items property,TLegend_Items,Legend_Items
+   Series Groups,TLegend_SeriesGroups,Legend_SeriesGroups
+   Position Percent,TLegend_PositionPercent,Legend_PositionPercent
+   Symbol Gradient,TLegend_SymbolsGradient,Legend_SymbolsGradient
+   Symbol Shadow,TLegend_SymbolsShadow,Legend_SymbolsShadow
+  Series
+   OnMouseEnter/Leave events,TSeriesMouseEnterForm,SeriesMouseEnterForm
+   Sort by Labels,TSeriesSortByLabelsForm,SeriesSortByLabelsForm
+   Series Groups,TSeries_GroupsForm,Series_GroupsForm
+   Series Order,TEditorSeriesOrder,Editor_SeriesOrder
+  Custom
+   Smoothed,TSeriesCustomSmoothedForm,Series_CustomSmoothed  
+   Polar Zoom,TPolarZoom,Series_PolarZoom
+   DrawAll Style,TFastLineDrawAllStyle,FastLine_DrawAllStyle
+   Marks Font Series Color,TMarksFontSeriesColor,Marks_FontSeriesColor
+   Marks on Bar,TBarMarksOnBarForm,Bar_MarksOnBar
+   Rounded Bars,TBar_RoundedForm,Bar_Rounded
+   YOrigin for Histogram,THistogramYOriginForm,HistogramYOrigin
+   Org Series with HTML Format,TOrgHtmlFormatForm,Org_HtmlFormat
+   Candle Open Close Pen,TCandleOpenClosePen,Candle_OpenClosePen
+   Pie Lighting,TPieLightingForm,Pie_Lighting
+   Gauges
+    Embedded Numeric Gauge,TCircularGaugeNGaugeForm,CircularGauge_NGauge  
+    Embedded Linear Gauge,TCircularGaugeLGaugeForm,CircularGauge_LGauge  
+    Custom Embedding,TCircularGaugeEmbeddedForm,CircularGauge_Embedded 
+    CircularGauge DisplayTotalAngle,TCircularGauge_DisplayAngleForm,CircularGauge_DisplayAngle
+    CircularGauge Frame Edit,TCircularGauge_SeriesForm,CircularGauge_Series
+  Series Marks
+   Border shadow,TMarksShadow,MarksShadow
+   Rotation angle,TMarksAngle,MarksAngle
+   Draw every,TMarksEvery,MarksEvery
+   XY style,TMarksXYStyle,MarksXYStyle
+   Multi-line,TMarksMulti,MarksMulti
+   Persistent custom positions,TMarksPositions,MarksPositions
+   Marks Callouts,TMarksCalloutForm,MarksCalloutForm
+   Custom per point,TMarksPerPointForm,MarksPerPointForm
+   Mark Symbols,TMarks_SymbolsForm,Marks_SymbolsForm
+   New Styles,TMarks_Styles,Marks_Styles
+   TextAlign (when MultiLine),TMarks_TextAlign,Marks_TextAlign
+  Titles and Footers
+   SubTitle and SubFoot,TSubTitles,SubTitles
+   Custom position,TTitleCustomPos,TitleCustomPos
+  Walls
+   Picture,TWalls_Picture,Walls_Picture
+   Right Wall,TRightWallForm,RightWallForm
+   Back Wall
+    Gradient,TBackWallGradient,BackWallGradient
+    Brush image,TBackWallImage,BackWallImage
+   Wall Transparency,TWallTransparencyForm,WallTransparencyForm
+   Wall AutoHide,TWall_AutoHideForm,Wall_AutoHideForm
+  Chart Panel
+   Margins in pixels,TMarginUnitsForm,MarginUnitsForm
+   Shadow,TChartShadowForm,ChartShadowForm
+   Round borders,TChartRoundPanelForm,ChartRoundPanelForm
+  Chart CustomChartRect,TChart_CustomChartRect,Chart_CustomChartRect
+  Chart Title
+   VertMargin,TTitle_VertMargin,Title_VertMargin
+   Clear,TTitle_Clear,Title_Clear
+  Chart Axes
+   Hide method,TAxes_Hide,Axes_Hide
+  Chart Pages,TChartPages_AutoScale,ChartPages_AutoScale
+   NextPage PreviousPage methods,TPages_NextPreviousMethods,Pages_NextPreviousMethods
+  View3DOptions Rotation float,TChart_RotationFloat,Chart_RotationFloat
+  CloneChartTool global procedure,TTools_CloneChartTool,Tools_CloneChartTool
+  Tools Gallery Demos,TTools_Gallery,Tools_Gallery
+  DBCrosstab HideSeries,TDBChart_CrossTabSource_HideSeries,DBChart_CrossTabSource_HideSeries
+  SeriesSource LoadMode,TSeriesSource_LoadMode,SeriesSource_LoadMode
+  ShowInEditor,TSeries_ShowInEditor,Series_ShowInEditor
+  SeriesGroups
+   Chart SeriesGroups property,TChart_SeriesGroups,Chart_SeriesGroups
+   FindByName,TChart_SeriesGroupsFindByName,Chart_SeriesGroupsFindByName
+  MarksItem Text,TMarks_ItemText,Marks_ItemText
+ Version 8 Releases
+  Other changes,TOther_ChangesV8Form,Other_ChangesV8Form
+ Version 7 Releases
+  New in v7.06,TNewIn706Form,NewIn706Form
+  New in v7.05,TNewIn705Form,NewIn705Form
+  New in v7.04,TNewIn704Form,NewIn704Form
+  New in v7.03,TNewIn703Form,NewIn703Form
+  Other changes,TOther_changesForm,Other_ChangesForm
+  Fixed Defects,TFixed_DefectsForm,Fixed_DefectsForm
+ Customers,TCustomersForm,CustomersForm
+ Upgrading and Ordering,TUpgrading_and_OrderingForm,Upgrading_and_OrderingForm

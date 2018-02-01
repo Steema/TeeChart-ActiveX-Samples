@@ -1,0 +1,1135 @@
+# Microsoft Developer Studio Project File - Name="VCExample" - Package Owner=<4>
+# Microsoft Developer Studio Generated Build File, Format Version 5.00
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (x86) Application" 0x0101
+
+CFG=VCExample - Win32 Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "VCExample.mak".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "VCExample.mak" CFG="VCExample - Win32 Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "VCExample - Win32 Release" (based on "Win32 (x86) Application")
+!MESSAGE "VCExample - Win32 Debug" (based on "Win32 (x86) Application")
+!MESSAGE 
+
+# Begin Project
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+CPP=cl.exe
+MTL=midl.exe
+RSC=rc.exe
+
+!IF  "$(CFG)" == "VCExample - Win32 Release"
+
+# PROP BASE Use_MFC 5
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "Release"
+# PROP BASE Intermediate_Dir "Release"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 5
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "Release"
+# PROP Intermediate_Dir "Release"
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Yu"stdafx.h" /FD /c
+# ADD CPP /nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Yu"stdafx.h" /FD /c
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o NUL /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o NUL /win32
+# ADD BASE RSC /l 0x809 /d "NDEBUG"
+# ADD RSC /l 0x809 /d "NDEBUG"
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /subsystem:windows /machine:I386
+# ADD LINK32 /nologo /subsystem:windows /machine:I386
+
+!ELSEIF  "$(CFG)" == "VCExample - Win32 Debug"
+
+# PROP BASE Use_MFC 5
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "Debug"
+# PROP BASE Intermediate_Dir "Debug"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 5
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "Debug"
+# PROP Intermediate_Dir "Debug"
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Yu"stdafx.h" /FD /c
+# ADD CPP /nologo /MTd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Yu"stdafx.h" /FD /c
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o NUL /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o NUL /win32
+# ADD BASE RSC /l 0x809 /d "_DEBUG"
+# ADD RSC /l 0x809 /d "_DEBUG"
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
+# ADD LINK32 /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
+
+!ENDIF 
+
+# Begin Target
+
+# Name "VCExample - Win32 Release"
+# Name "VCExample - Win32 Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=.\areaseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\arrowseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\aspect.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\axes.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\axis.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\axislabels.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\axistitle.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\bar3dseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\barseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\bezierseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\brush.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\bubbleseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\candleseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\canvas.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\chartfont.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\circlelabels.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\clockseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\contourseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\curvefittingfunction.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\customseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\environment.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\errorbarseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\errorseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\expavgfunction.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\explodedslices.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\export.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\fastlineseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\ganttseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\gradient.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\horizbarseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\imagebarseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\import.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\legend.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\marks.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\movingavgfunction.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\page.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\panel.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\pen.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\pieotherslice.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\pieseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\point.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\point3dseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\pointer.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\pointseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\polarseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\printer.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\radarseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\scroll.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\series.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\seriesmarkposition.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\seriesmarkspositions.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\shapeseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\StdAfx.cpp
+# ADD CPP /Yc"stdafx.h"
+# End Source File
+# Begin Source File
+
+SOURCE=.\stddeviationfunction.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\strings.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\surfaceseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\tchart.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\teecommander.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\teeeditor.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\teeeditoroptions.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\teeeditorshowpages.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\teefunction.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\teelistbox.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\teeopengl.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\teepoint2d.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\teepoint3d.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\teepreviewer.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\teeprevieweroptions.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\titles.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\valuelist.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\VCExample.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\VCExample.rc
+
+!IF  "$(CFG)" == "VCExample - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "VCExample - Win32 Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\VCExampleDlg.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\volumeseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\wall.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\walls.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\windroseseries.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\zoom.cpp
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=.\areaseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\arrowseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\aspect.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\axes.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\axis.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\axislabels.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\axistitle.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\bar3dseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\barseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\bezierseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\brush.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\bubbleseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\candleseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\canvas.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\chartfont.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\circlelabels.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\clockseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\contourseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\curvefittingfunction.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\customseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\environment.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\errorbarseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\errorseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\expavgfunction.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\explodedslices.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\export.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\fastlineseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\ganttseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\gradient.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\horizbarseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\imagebarseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\import.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\legend.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\marks.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\movingavgfunction.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\page.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\panel.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\pen.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\pieotherslice.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\pieseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\point.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\point3dseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\pointer.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\pointseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\polarseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\printer.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\radarseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Resource.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\scroll.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\series.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\seriesmarkposition.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\seriesmarkspositions.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\shapeseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\StdAfx.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\stddeviationfunction.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\strings.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\surfaceseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\tchart.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\teecommander.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\teeeditor.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\teeeditoroptions.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\teeeditorshowpages.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\teefunction.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\teelistbox.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\teeopengl.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\teepoint2d.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\teepoint3d.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\teepreviewer.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\teeprevieweroptions.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\titles.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\valuelist.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\VCExample.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\VCExampleDlg.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\volumeseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\wall.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\walls.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\windroseseries.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\zoom.h
+# End Source File
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe"
+# Begin Source File
+
+SOURCE=.\res\VCExample.ico
+# End Source File
+# Begin Source File
+
+SOURCE=.\res\VCExample.rc2
+# End Source File
+# End Group
+# Begin Source File
+
+SOURCE=.\ReadMe.txt
+# End Source File
+# End Target
+# End Project
+# Section VCExample : {B6C1053C-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CBar3DSeries
+# 	2:10:HeaderFile:bar3dseries.h
+# 	2:8:ImplFile:bar3dseries.cpp
+# End Section
+# Section VCExample : {B6C104A4-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CZoom
+# 	2:10:HeaderFile:zoom.h
+# 	2:8:ImplFile:zoom.cpp
+# End Section
+# Section VCExample : {B6C104AC-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CSeries
+# 	2:10:HeaderFile:series.h
+# 	2:8:ImplFile:series.cpp
+# End Section
+# Section VCExample : {B6C10536-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTeeEditorOptions
+# 	2:10:HeaderFile:teeeditoroptions.h
+# 	2:8:ImplFile:teeeditoroptions.cpp
+# End Section
+# Section VCExample : {B6C10532-FB89-11D4-93C9-006008A7EED4}
+# 	2:21:DefaultSinkHeaderFile:teecommander.h
+# 	2:16:DefaultSinkClass:CTeeCommander
+# End Section
+# Section VCExample : {B6C104C0-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CPointSeries
+# 	2:10:HeaderFile:pointseries.h
+# 	2:8:ImplFile:pointseries.cpp
+# End Section
+# Section VCExample : {B6C1052D-FB89-11D4-93C9-006008A7EED4}
+# 	2:21:DefaultSinkHeaderFile:teelistbox.h
+# 	2:16:DefaultSinkClass:CTeeListBox
+# End Section
+# Section VCExample : {B6C1053A-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CWindRoseSeries
+# 	2:10:HeaderFile:windroseseries.h
+# 	2:8:ImplFile:windroseseries.cpp
+# End Section
+# Section VCExample : {B6C104EA-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CMovingAvgFunction
+# 	2:10:HeaderFile:movingavgfunction.h
+# 	2:8:ImplFile:movingavgfunction.cpp
+# End Section
+# Section VCExample : {B6C104A9-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CGradient
+# 	2:10:HeaderFile:gradient.h
+# 	2:8:ImplFile:gradient.cpp
+# End Section
+# Section VCExample : {B6C1050A-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CSeriesMarkPosition
+# 	2:10:HeaderFile:seriesmarkposition.h
+# 	2:8:ImplFile:seriesmarkposition.cpp
+# End Section
+# Section VCExample : {B6C10538-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTeeOpenGL
+# 	2:10:HeaderFile:teeopengl.h
+# 	2:8:ImplFile:teeopengl.cpp
+# End Section
+# Section VCExample : {B6C10485-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTChart
+# 	2:10:HeaderFile:tchart.h
+# 	2:8:ImplFile:tchart.cpp
+# End Section
+# Section VCExample : {B6C104A7-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CWalls
+# 	2:10:HeaderFile:walls.h
+# 	2:8:ImplFile:walls.cpp
+# End Section
+# Section VCExample : {B6C104BF-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CAreaSeries
+# 	2:10:HeaderFile:areaseries.h
+# 	2:8:ImplFile:areaseries.cpp
+# End Section
+# Section VCExample : {B6C10501-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CExplodedSlices
+# 	2:10:HeaderFile:explodedslices.h
+# 	2:8:ImplFile:explodedslices.cpp
+# End Section
+# Section VCExample : {B6C1052E-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTeeEditor
+# 	2:10:HeaderFile:teeeditor.h
+# 	2:8:ImplFile:teeeditor.cpp
+# End Section
+# Section VCExample : {B6C10534-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTeePoint3D
+# 	2:10:HeaderFile:teepoint3d.h
+# 	2:8:ImplFile:teepoint3d.cpp
+# End Section
+# Section VCExample : {B6C104AA-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CPage
+# 	2:10:HeaderFile:page.h
+# 	2:8:ImplFile:page.cpp
+# End Section
+# Section VCExample : {B6C104C2-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CFastLineSeries
+# 	2:10:HeaderFile:fastlineseries.h
+# 	2:8:ImplFile:fastlineseries.cpp
+# End Section
+# Section VCExample : {B6C1050E-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CStdDeviationFunction
+# 	2:10:HeaderFile:stddeviationfunction.h
+# 	2:8:ImplFile:stddeviationfunction.cpp
+# End Section
+# Section VCExample : {B6C10491-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CAxes
+# 	2:10:HeaderFile:axes.h
+# 	2:8:ImplFile:axes.cpp
+# End Section
+# Section VCExample : {B6C10507-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CPoint3DSeries
+# 	2:10:HeaderFile:point3dseries.h
+# 	2:8:ImplFile:point3dseries.cpp
+# End Section
+# Section VCExample : {B6C10497-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CImport
+# 	2:10:HeaderFile:import.h
+# 	2:8:ImplFile:import.cpp
+# End Section
+# Section VCExample : {B6C10530-FB89-11D4-93C9-006008A7EED4}
+# 	2:21:DefaultSinkHeaderFile:teeeditor.h
+# 	2:16:DefaultSinkClass:CTeeEditor
+# End Section
+# Section VCExample : {B6C10494-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CAxisTitle
+# 	2:10:HeaderFile:axistitle.h
+# 	2:8:ImplFile:axistitle.cpp
+# End Section
+# Section VCExample : {B6C104A8-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CLegend
+# 	2:10:HeaderFile:legend.h
+# 	2:8:ImplFile:legend.cpp
+# End Section
+# Section VCExample : {B6C104C6-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CAxis
+# 	2:10:HeaderFile:axis.h
+# 	2:8:ImplFile:axis.cpp
+# End Section
+# Section VCExample : {B6C1048E-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CStrings
+# 	2:10:HeaderFile:strings.h
+# 	2:8:ImplFile:strings.cpp
+# End Section
+# Section VCExample : {3B2B9817-FBBF-11D4-93CA-006008A7EED4}
+# 	2:5:Class:CTitles
+# 	2:10:HeaderFile:titles.h
+# 	2:8:ImplFile:titles.cpp
+# End Section
+# Section VCExample : {B6C104DB-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CHorizBarSeries
+# 	2:10:HeaderFile:horizbarseries.h
+# 	2:8:ImplFile:horizbarseries.cpp
+# End Section
+# Section VCExample : {B6C104E0-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CVolumeSeries
+# 	2:10:HeaderFile:volumeseries.h
+# 	2:8:ImplFile:volumeseries.cpp
+# End Section
+# Section VCExample : {B6C104E8-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CCurveFittingFunction
+# 	2:10:HeaderFile:curvefittingfunction.h
+# 	2:8:ImplFile:curvefittingfunction.cpp
+# End Section
+# Section VCExample : {B6C1048F-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CCanvas
+# 	2:10:HeaderFile:canvas.h
+# 	2:8:ImplFile:canvas.cpp
+# End Section
+# Section VCExample : {B6C10535-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTeeEditorShowPages
+# 	2:10:HeaderFile:teeeditorshowpages.h
+# 	2:8:ImplFile:teeeditorshowpages.cpp
+# End Section
+# Section VCExample : {B6C104C4-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CPieSeries
+# 	2:10:HeaderFile:pieseries.h
+# 	2:8:ImplFile:pieseries.cpp
+# End Section
+# Section VCExample : {B6C1052B-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTeeListBox
+# 	2:10:HeaderFile:teelistbox.h
+# 	2:8:ImplFile:teelistbox.cpp
+# End Section
+# Section VCExample : {B6C10508-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CSurfaceSeries
+# 	2:10:HeaderFile:surfaceseries.h
+# 	2:8:ImplFile:surfaceseries.cpp
+# End Section
+# Section VCExample : {B6C104EB-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CChartFont
+# 	2:10:HeaderFile:chartfont.h
+# 	2:8:ImplFile:chartfont.cpp
+# End Section
+# Section VCExample : {B6C104C9-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CArrowSeries
+# 	2:10:HeaderFile:arrowseries.h
+# 	2:8:ImplFile:arrowseries.cpp
+# End Section
+# Section VCExample : {B6C1050B-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CPolarSeries
+# 	2:10:HeaderFile:polarseries.h
+# 	2:8:ImplFile:polarseries.cpp
+# End Section
+# Section VCExample : {B6C10505-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CRadarSeries
+# 	2:10:HeaderFile:radarseries.h
+# 	2:8:ImplFile:radarseries.cpp
+# End Section
+# Section VCExample : {B6C10509-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CSeriesMarksPositions
+# 	2:10:HeaderFile:seriesmarkspositions.h
+# 	2:8:ImplFile:seriesmarkspositions.cpp
+# End Section
+# Section VCExample : {B6C1050C-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CCircleLabels
+# 	2:10:HeaderFile:circlelabels.h
+# 	2:8:ImplFile:circlelabels.cpp
+# End Section
+# Section VCExample : {B6C10539-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CClockSeries
+# 	2:10:HeaderFile:clockseries.h
+# 	2:8:ImplFile:clockseries.cpp
+# End Section
+# Section VCExample : {B6C104CB-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CBarSeries
+# 	2:10:HeaderFile:barseries.h
+# 	2:8:ImplFile:barseries.cpp
+# End Section
+# Section VCExample : {B6C10506-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CErrorSeries
+# 	2:10:HeaderFile:errorseries.h
+# 	2:8:ImplFile:errorseries.cpp
+# End Section
+# Section VCExample : {B6C104A3-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CScroll
+# 	2:10:HeaderFile:scroll.h
+# 	2:8:ImplFile:scroll.cpp
+# End Section
+# Section VCExample : {B6C104BD-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CPointer
+# 	2:10:HeaderFile:pointer.h
+# 	2:8:ImplFile:pointer.cpp
+# End Section
+# Section VCExample : {B6C104E9-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CExpAvgFunction
+# 	2:10:HeaderFile:expavgfunction.h
+# 	2:8:ImplFile:expavgfunction.cpp
+# End Section
+# Section VCExample : {B6C10537-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTeePreviewerOptions
+# 	2:10:HeaderFile:teeprevieweroptions.h
+# 	2:8:ImplFile:teeprevieweroptions.cpp
+# End Section
+# Section VCExample : {B6C1053B-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CImageBarSeries
+# 	2:10:HeaderFile:imagebarseries.h
+# 	2:8:ImplFile:imagebarseries.cpp
+# End Section
+# Section VCExample : {B6C1048D-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CBrush1
+# 	2:10:HeaderFile:brush.h
+# 	2:8:ImplFile:brush.cpp
+# End Section
+# Section VCExample : {B6C104AD-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTeeFunction
+# 	2:10:HeaderFile:teefunction.h
+# 	2:8:ImplFile:teefunction.cpp
+# End Section
+# Section VCExample : {B6C10489-FB89-11D4-93C9-006008A7EED4}
+# 	2:21:DefaultSinkHeaderFile:tchart.h
+# 	2:16:DefaultSinkClass:CTChart
+# End Section
+# Section VCExample : {B6C104A5-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CPrinter
+# 	2:10:HeaderFile:printer.h
+# 	2:8:ImplFile:printer.cpp
+# End Section
+# Section VCExample : {B6C1048B-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CPen1
+# 	2:10:HeaderFile:pen.h
+# 	2:8:ImplFile:pen.cpp
+# End Section
+# Section VCExample : {B6C104C8-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CShapeSeries
+# 	2:10:HeaderFile:shapeseries.h
+# 	2:8:ImplFile:shapeseries.cpp
+# End Section
+# Section VCExample : {554B3035-47C5-11D2-AEC7-00400141862D}
+# 	2:5:Class:CPoint1
+# 	2:10:HeaderFile:point.h
+# 	2:8:ImplFile:point.cpp
+# End Section
+# Section VCExample : {B6C104C1-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CCustomSeries
+# 	2:10:HeaderFile:customseries.h
+# 	2:8:ImplFile:customseries.cpp
+# End Section
+# Section VCExample : {DFBF9393-46FD-11D2-AEC3-00400141862D}
+# 	2:5:Class:CContourSeries
+# 	2:10:HeaderFile:contourseries.h
+# 	2:8:ImplFile:contourseries.cpp
+# End Section
+# Section VCExample : {B6C104AE-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CMarks
+# 	2:10:HeaderFile:marks.h
+# 	2:8:ImplFile:marks.cpp
+# End Section
+# Section VCExample : {B6C104C5-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CBubbleSeries
+# 	2:10:HeaderFile:bubbleseries.h
+# 	2:8:ImplFile:bubbleseries.cpp
+# End Section
+# Section VCExample : {B6C10533-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTeePoint2D
+# 	2:10:HeaderFile:teepoint2d.h
+# 	2:8:ImplFile:teepoint2d.cpp
+# End Section
+# Section VCExample : {B6C104DF-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CErrorBarSeries
+# 	2:10:HeaderFile:errorbarseries.h
+# 	2:8:ImplFile:errorbarseries.cpp
+# End Section
+# Section VCExample : {B6C10512-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CEnvironment
+# 	2:10:HeaderFile:environment.h
+# 	2:8:ImplFile:environment.cpp
+# End Section
+# Section VCExample : {B6C10496-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CExport
+# 	2:10:HeaderFile:export.h
+# 	2:8:ImplFile:export.cpp
+# End Section
+# Section VCExample : {B6C1052F-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTeePreviewer
+# 	2:10:HeaderFile:teepreviewer.h
+# 	2:8:ImplFile:teepreviewer.cpp
+# End Section
+# Section VCExample : {B6C104A6-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CWall
+# 	2:10:HeaderFile:wall.h
+# 	2:8:ImplFile:wall.cpp
+# End Section
+# Section VCExample : {B6C1052A-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CTeeCommander
+# 	2:10:HeaderFile:teecommander.h
+# 	2:8:ImplFile:teecommander.cpp
+# End Section
+# Section VCExample : {B6C104AB-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CPanel
+# 	2:10:HeaderFile:panel.h
+# 	2:8:ImplFile:panel.cpp
+# End Section
+# Section VCExample : {B6C104DC-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CCandleSeries
+# 	2:10:HeaderFile:candleseries.h
+# 	2:8:ImplFile:candleseries.cpp
+# End Section
+# Section VCExample : {B6C104ED-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CPieOtherSlice
+# 	2:10:HeaderFile:pieotherslice.h
+# 	2:8:ImplFile:pieotherslice.cpp
+# End Section
+# Section VCExample : {B6C104AF-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CValueList
+# 	2:10:HeaderFile:valuelist.h
+# 	2:8:ImplFile:valuelist.cpp
+# End Section
+# Section VCExample : {B6C10493-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CAxisLabels
+# 	2:10:HeaderFile:axislabels.h
+# 	2:8:ImplFile:axislabels.cpp
+# End Section
+# Section VCExample : {B6C10490-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CAspect
+# 	2:10:HeaderFile:aspect.h
+# 	2:8:ImplFile:aspect.cpp
+# End Section
+# Section VCExample : {B6C104C7-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CGanttSeries
+# 	2:10:HeaderFile:ganttseries.h
+# 	2:8:ImplFile:ganttseries.cpp
+# End Section
+# Section VCExample : {B6C10504-FB89-11D4-93C9-006008A7EED4}
+# 	2:5:Class:CBezierSeries
+# 	2:10:HeaderFile:bezierseries.h
+# 	2:8:ImplFile:bezierseries.cpp
+# End Section
+# Section VCExample : {B6C10531-FB89-11D4-93C9-006008A7EED4}
+# 	2:21:DefaultSinkHeaderFile:teepreviewer.h
+# 	2:16:DefaultSinkClass:CTeePreviewer
+# End Section
+

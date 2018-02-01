@@ -1,0 +1,104 @@
+/* CSS Sheet for HTML helpfile */
+
+body{font-size: 75%; font-family: Verdana,Arial, Helvetica, Sans-Serif;}
+a:link	{background: transparent; color: #0000FF;} 
+a:visited {color: #0000FF;}
+
+
+H1 {
+        font-family: Arial;
+        font-size: 24pt;
+        font-weight: bold;
+        line-height: 28pt;
+        margin-left: 0%;
+        margin-right: 0%
+}
+
+H2 {
+        font-family: Verdana;
+        font-size: 14pt;
+        color: #36366D;
+        margin-left: 0%;
+        margin-right: 5%
+}
+
+H3 {
+        font-family: Arial;
+        font-size: 12pt;
+        font-weight: bold;
+        margin-right: 5%
+}
+
+H4 {
+        font-family: Verdana;
+        font-size: 11pt;
+        color: #484891;
+        margin-left: 0%;
+        margin-right: 5%
+}
+
+P {
+        font-family: Verdana;
+        font-size: 9pt;
+        color: #000000;
+        margin-left: 0%;
+        margin-right: 0%
+}
+
+
+TABLE {
+        font-family: Verdana;
+        font-size: 9pt;
+        color: #000000;
+        margin-left: 0%;
+        margin-right: 5%
+}
+
+TD {
+        margin-left: 0%
+}
+
+OL {
+        font-family: "Verdana";
+        font-size: 9pt;
+        color: #000000;
+        margin-left: 2%;
+        margin-right: 12%
+}
+
+UL {
+        font-family: "Verdana";
+        font-size: 9pt;
+        color: #000000;
+        margin-left: 2%;
+        margin-right: 12%
+}
+
+PRE {
+        font-family: "Courier";
+        font-size: 8pt;
+	color: #000066;
+        margin-left: 2%;
+        margin-right: 12%
+}
+
+CODE {
+        font-family: "Courier";
+        font-size: 8pt;
+	color: #000066;
+        margin-left: 2%;
+        margin-right: 12%
+}
+
+ADDRESS {
+        font-size: 10pt;
+        line-height: 12pt;
+        font-family: "Verdana";
+        font-style: italic;
+        color: #000000;
+        text-align: right;
+        margin-left: 30%;
+        margin-right: 12%
+        background: white
+}
+

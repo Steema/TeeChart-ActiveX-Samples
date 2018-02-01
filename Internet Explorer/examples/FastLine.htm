@@ -1,0 +1,110 @@
+<html>
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="style.css">
+<meta http-equiv="x-ua-compatible" content="IE=10">
+</head>
+<BODY bgcolor=#FFFFFF onload="Window_onload()">
+<SCRIPT LANGUAGE="JavaScript" FOR="Chart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+<SCRIPT LANGUAGE="VBScript">
+<!--
+
+Sub Window_onload()
+ 'sets up Chart to print from IE's print option
+ TChart1.Environment.IEPrintWithPage=True
+
+ TChart1.AddSeries(6)
+ set s=TChart1.Series(0)
+ s.FillSampleValues(70)
+ s.Title="Stock 1"
+
+ TChart1.AddSeries(6)
+ set s=TChart1.Series(1)
+ s.FillSampleValues(70)
+ s.Title="Stock 2"
+
+ TChart1.AddSeries(6)
+ set s=TChart1.Series(2)
+ s.FillSampleValues(70)
+ s.Title="Stock 3"
+
+
+ TChart1.Header.Text.Add("Animated Fast Line Series")
+ TChart1.Header.Font.Bold=True
+ TChart1.Header.Font.Color=vbBlack
+ TChart1.Header.Font.Size=12
+
+ TChart1.Legend.Visible=False
+
+ TChart1.Walls.Left.Size=10
+ TChart1.Walls.Bottom.Size=10
+
+ TChart1.Zoom.Animated=True
+ 
+ TChart1.TimerEnabled=True
+ TChart1.TimerInterval=1
+end sub
+
+sub TChart1_OnTimer()
+  for t=0 to TChart1.SeriesCount -1
+      set s=TChart1.Series(t)
+      s.Delete(0)
+      SomeValue=s.PointValue(s.Count-1)
+      s.AddXY s.XValues.Value(s.Count-1)+1, SomeValue+100*Rnd(1)-50, "", 536870912
+  next
+end sub
+
+sub View3D()
+  TChart1.Aspect.View3D = not TChart1.Aspect.View3D
+end sub
+
+sub EnableTimer()
+  TChart1.TimerEnabled = not TChart1.TimerEnabled
+end sub
+-->
+</SCRIPT>
+
+<p>
+<font face="Arial" color="#004080"><em><big><strong>Animated Fast Line Series Example</strong></big></em></font></h3>
+</p>
+
+<a href="../Start Local examples.htm">Return to Examples</a>
+<a href="pieseries.htm">Next Example</a>
+
+<hr>
+
+<p>
+<input type="checkbox" checked onclick="View3D()" name="View3">View 3D
+<input type="checkbox" checked onclick="EnableTimer()" name="Anim">Animated
+<input type="button" value="Edit Chart..." onclick="TChart1.ShowEditor()" name="ShowEd">
+</p> 
+
+<OBJECT ID="TChart1" WIDTH=550 HEIGHT=290
+ CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+</OBJECT>
+
+<p>
+Stop the animation with the above "Animate" check box and try the
+following:
+</p>
+<p>
+<li>
+<b>Zoom</b> dragging a rectangle with the <b>LEFT</b> mouse button in Top-Left
+to Bottom-Right direction.
+</li>
+</p>
+<p>
+<li>
+<b>Scroll</b> dragging with the <b>RIGHT</b> mouse button.
+</li>
+</p>
+<p>
+<li>
+<b>UnZoom</b> dragging a rectangle with the <b>LEFT</b> mouse button in Bottom-Right 
+to Top-Left direction.
+</li>
+</p>
+
+</BODY>
+</html>

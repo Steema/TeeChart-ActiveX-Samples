@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<TITLE>Sample:  TeeChart Scriptlet</TITLE>
+</head>
+<body topmargin=7 leftmargin=40>
+<SCRIPT LANGUAGE="JavaScript" FOR="Chart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+
+<script language="JavaScript">
+<!--
+function SeriesTypes()
+{
+  this[0]="Line"
+  this[1]="Bar"
+  this[2]="HorizBar"
+  this[3]="Area"
+  this[4]="Point"
+  this[5]="Pie"
+  this[6]="Fastline"
+  this[7]="Shape"
+  this[8]="Gantt"
+  this[9]="Bubble"
+  this[10]="Arrow"
+  this[11]="Candle"
+  this[12]="Polar"
+  this[13]="Surface"
+  this[14]="Volume"
+  this[15]="ErrorBar"
+  this[16]="Bezier"
+  this[17]="Contour"
+  this[18]="Error"
+  this[19]="Point3D"
+  this[20]="Radar"
+}
+
+function public_AddSeries(_SeriesType)
+{
+	var SList = new SeriesTypes();
+	if (Chart1.SeriesCount > 0)
+	{
+		Chart1.RemoveAllSeries();		
+	}
+	Chart1.Aspect.Orthogonal=true;
+	Chart1.Axis.Bottom.Automatic=true;
+	Chart1.AddSeries(_SeriesType);
+	Chart1.Series(0).FillSampleValues(15);
+	Chart1.Header.Text.Clear();
+	Chart1.Header.Text.Add(SList[_SeriesType]);
+}
+
+function public_ChangeTitle(_Title)
+{
+	Chart1.Header.Text.Clear();
+	Chart1.Header.Text.Add(_Title);
+}
+
+ -->
+</script>
+<SCRIPT LANGUAGE="JavaScript" FOR="Chart1" EVENT="OnAfterDraw()">
+<!--
+// TeeChart coded with Javascript requires that the Chart has at 
+// least one event on the page although it can be added 'empty'. 
+// This enables TeeChart Zoom and Scroll drag events.
+-->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" FOR="window" EVENT="onLoad()">
+<!--
+ Chart1.Panel.Gradient.Visible=true;
+-->
+</SCRIPT>
+
+<OBJECT  classid="clsid:CC0427C7-2124-4770-8847-F9EF4C50CDC2"
+  id=Chart1
+  TYPE="application/x-oleobject"  width=500  height=250  align=center  hspace=0
+  vspace=0  VIEWASTEXT></OBJECT>
+
+</body>
+</html>

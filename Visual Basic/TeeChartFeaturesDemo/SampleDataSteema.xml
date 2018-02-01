@@ -1,0 +1,91 @@
+  <?xml version="1.0" ?> 
+<chart>
+ <series title="USA" type="Bar" color="#0000FF">
+ <points count="6">
+  <point X="0" Bar="252" /> 
+  <point X="4,8" Bar="341" /> 
+  <point X="9,6" Bar="303" /> 
+  <point X="14,4" Bar="391" /> 
+  <point X="19,2" Bar="479" /> 
+  <point X="24" Bar="439" /> 
+  </points>
+  </series>
+ <series title="Europe" type="Bar" color="#008000">
+ <points count="6">
+  <point X="0" Bar="620" /> 
+  <point X="4,8" Bar="661" /> 
+  <point X="9,6" Bar="708" /> 
+  <point X="14,4" Bar="666" /> 
+  <point X="19,2" Bar="676" /> 
+  <point X="24" Bar="658" /> 
+  </points>
+  </series>
+ <series title="Asia" type="Bar" color="#FFFF00">
+ <points count="6">
+  <point X="0" Bar="224" /> 
+  <point X="4,8" Bar="269" /> 
+  <point X="9,6" Bar="337" /> 
+  <point X="14,4" Bar="273" /> 
+  <point X="19,2" Bar="366" /> 
+  <point X="24" Bar="345" /> 
+  </points>
+  </series>
+ <series title="Revenue" type="Line" color="#FF0000">
+ <points count="25">
+  <point X="0" Y="386" /> 
+  <point X="1" Y="480" /> 
+  <point X="2" Y="593" /> 
+  <point X="3" Y="523" /> 
+  <point X="4" Y="448" /> 
+  <point X="5" Y="517" /> 
+  <point X="6" Y="512" /> 
+  <point X="7" Y="448" /> 
+  <point X="8" Y="465" /> 
+  <point X="9" Y="393" /> 
+  <point X="10" Y="326" /> 
+  <point X="11" Y="433" /> 
+  <point X="12" Y="557" /> 
+  <point X="13" Y="522" /> 
+  <point X="14" Y="422" /> 
+  <point X="15" Y="446" /> 
+  <point X="16" Y="387" /> 
+  <point X="17" Y="481" /> 
+  <point X="18" Y="585" /> 
+  <point X="19" Y="687" /> 
+  <point X="20" Y="786" /> 
+  <point X="21" Y="678" /> 
+  <point X="22" Y="680" /> 
+  <point X="23" Y="558" /> 
+  <point X="24" Y="553" /> 
+  </points>
+  </series>
+ <series title="Expenses" type="Point" color="#FFFFFF">
+ <points count="25">
+  <point X="0" Y="295" /> 
+  <point X="1" Y="299" /> 
+  <point X="2" Y="278" /> 
+  <point X="3" Y="155" /> 
+  <point X="4" Y="1" /> 
+  <point X="5" Y="178" /> 
+  <point X="6" Y="276" /> 
+  <point X="7" Y="319" /> 
+  <point X="8" Y="179" /> 
+  <point X="9" Y="342" /> 
+  <point X="10" Y="241" /> 
+  <point X="11" Y="109" /> 
+  <point X="12" Y="235" /> 
+  <point X="13" Y="261" /> 
+  <point X="14" Y="252" /> 
+  <point X="15" Y="185" /> 
+  <point X="16" Y="40" /> 
+  <point X="17" Y="26" /> 
+  <point X="18" Y="203" /> 
+  <point X="19" Y="105" /> 
+  <point X="20" Y="290" /> 
+  <point X="21" Y="301" /> 
+  <point X="22" Y="369" /> 
+  <point X="23" Y="362" /> 
+  <point X="24" Y="313" /> 
+  </points>
+  </series>
+  </chart>

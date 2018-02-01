@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<TITLE>Sample: TeeChart Scriptlet Example</TITLE>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="style.css"></head>
+<BODY LEFTMARGIN=40>
+<STYLE>
+<!--
+.head  {font-family:Verdana; font-size:11pt; font-weight:bold}
+.para  {font-family:Verdana; font-size:9pt; font-weight:normal}
+-->
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript" FOR="window" EVENT="onLoad()">
+<!--
+ Add();
+-->
+</SCRIPT>
+<SCRIPT LANGUAGE=VBSCRIPT>
+SUB ModTitle()
+  Dim Title
+  Title = inputbox("Type in new Chart Title")
+  if Title <> "" Then
+    scriptlet.ChangeTitle(Title)
+  End if
+END SUB
+</SCRIPT>
+<SCRIPT LANGUAGE=JAVASCRIPT>
+var SeriesType
+function Add(){
+		SeriesType = document.Form1.Target1.options(document.Form1.Target1.selectedIndex).value;
+		scriptlet.AddSeries(SeriesType);
+}
+</SCRIPT>
+<font face="Arial" color="#004080"><em><big><strong> TeeChart Scriptlet Example</strong></big></em></font></h3>
+</p>
+
+<a href="../Start Local examples.htm">Return to Examples</a>&nbsp;
+<hr>
+The example shows placement of TeeChart in a scriptlet object, uses VBScript and Javascript.<br>
+<b>This example will only function correctly with Internet Explorer v4 and later.</b>
+<FONT FACE="verdana,arial,helvetica" SIZE=2>
+
+<OBJECT id=scriptlet style="LEFT: 0px; WIDTH: 600px; POSITION: absolute; TOP: 160px; HEIGHT: 270px" type=text/x-scriptlet data=teescrip.htm VIEWASTEXT>
+</OBJECT>
+
+<FORM NAME="Form1" ACTION="">
+<SELECT NAME="Target1" STYLE="position:absolute; top:430; left:0 language="JavaScript" onchange="Add()">
+<OPTION SELECTED VALUE="0">Line</option>
+<OPTION VALUE="1">Bar
+<OPTION VALUE="2">HorizBar
+<OPTION VALUE="3">Area
+<OPTION VALUE="4">Point
+<OPTION VALUE="5">Pie
+<OPTION VALUE="6">FastLine
+<OPTION VALUE="7">Shape
+<OPTION VALUE="8">Gantt
+<OPTION VALUE="9">Bubble
+<OPTION VALUE="10">Arrow
+<OPTION VALUE="11">Candle
+<OPTION VALUE="12">Polar
+<OPTION VALUE="13">Surface
+<OPTION VALUE="14">Volume
+<OPTION VALUE="15">ErrorBar
+<OPTION VALUE="16">Bezier
+<OPTION VALUE="17">Contour
+<OPTION VALUE="18">Error
+<OPTION VALUE="19">Point3D
+<OPTION VALUE="20">Radar
+<OPTION VALUE="21">Clock
+<OPTION VALUE="22">WindRose
+<OPTION VALUE="23">Bar3D
+<OPTION VALUE="24">ImageBar
+<OPTION VALUE="25">Donut
+<OPTION VALUE="26">TriSurface
+<OPTION VALUE="27">Box
+<OPTION VALUE="28">HorizBox
+<OPTION VALUE="29">Histogram
+<OPTION VALUE="30">ColorGrid
+<OPTION VALUE="31">BarJoin
+<OPTION VALUE="32">HighLow
+<OPTION VALUE="33">Waterfall
+<OPTION VALUE="34">Smith
+<OPTION VALUE="35">Pyramid
+<OPTION VALUE="36">Map
+<OPTION VALUE="37">HorizLine
+<OPTION VALUE="38">Funnel
+<OPTION VALUE="39">Calendar
+<OPTION VALUE="40">HorizArea
+<OPTION VALUE="41">PointFigure
+<OPTION VALUE="42">Gauge
+<OPTION VALUE="43">Vector3D
+<OPTION VALUE="44">Tower
+<OPTION VALUE="45">PolarBar
+<OPTION VALUE="46">Bubble3D
+<OPTION VALUE="47">HorizHistogram
+<OPTION VALUE="48">VolumePipe
+<OPTION VALUE="49">IsoSurface
+<OPTION VALUE="50">Darvas
+<OPTION VALUE="51">HighLowLine
+<OPTION VALUE="52">PolarGrid
+<OPTION VALUE="53">DeltaPoint
+<OPTION VALUE="54">ImagePoint
+<OPTION VALUE="55">Organizational
+<OPTION VALUE="56">World
+<OPTION VALUE="57">TagCloud
+<OPTION VALUE="58">Kagi
+<OPTION VALUE="59">Renko
+<OPTION VALUE="60">NumericGauge
+<OPTION VALUE="61">LinearGauge
+<OPTION VALUE="62">CircularGauge
+<OPTION VALUE="63">BigCandle
+<OPTION VALUE="64">LinePoint
+</SELECT></FORM>
+<BUTTON onclick="ModTitle()" STYLE="position:absolute; top:430; left:200">Change Chart Title</BUTTON>
+<div STYLE="position:absolute; top:455; left:40"><b>Select Series Type</b></div>
+
+</BODY>
+</HTML>

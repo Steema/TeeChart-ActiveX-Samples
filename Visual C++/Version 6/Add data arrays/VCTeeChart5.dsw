@@ -1,0 +1,39 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "VCTeeChart5"=".\VCTeeChart5.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+    {CC0427C7-2124-4770-8847-F9EF4C50CDC2}
+    {13E80FA9-EB06-4BFC-91B5-620EB7BEF4CD}
+    {D2DADDAE-4167-499C-9153-7480986E91A5}
+    {0ECE333F-C18E-49A9-BE39-82A9342A83BB}
+    {95384BDF-373D-4FBE-AFA3-B4339CE9D32B}
+    {EBFFF3FC-8805-42F8-8FFB-975AE3F5CE46}
+    {CEA04253-EC73-49FA-BA73-449C2377FF54}
+    {D578A6A4-2EF2-489D-8738-D1E2C73EFFF6}
+    {CE6D7FF1-8A92-4CD4-9947-F3D1DAED730F}
+    {43C0DAF8-B613-4027-94A6-6F97F2472540}
+}}}
+
+###############################################################################
+

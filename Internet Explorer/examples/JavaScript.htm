@@ -1,0 +1,275 @@
+
+<SCRIPT LANGUAGE="JavaScript" FOR="window" EVENT="onLoad()">
+<!--
+  //sets up Chart to print from IE's print option
+  //only necessary up to IE v4
+  TChart0.Environment.IEPrintWithPage=true
+  TChart1.Environment.IEPrintWithPage=true
+  TChart2.Environment.IEPrintWithPage=true
+  TChart3.Environment.IEPrintWithPage=true
+  TChart4.Environment.IEPrintWithPage=true
+  TChart5.Environment.IEPrintWithPage=true
+  TChart6.Environment.IEPrintWithPage=true
+  TChart7.Environment.IEPrintWithPage=true
+  TChart8.Environment.IEPrintWithPage=true
+  TChart9.Environment.IEPrintWithPage=true
+  TChart10.Environment.IEPrintWithPage=true
+  TChart11.Environment.IEPrintWithPage=true
+
+  TChart0.AddSeries(0)
+  TChart0.Series(0).FillSampleValues(8)
+  TChart0.Header.Text.Clear()
+  TChart0.Header.Text.Add("Line")  
+
+  TChart1.AddSeries(1)
+  TChart1.Series(0).FillSampleValues(8)
+  TChart1.Header.Text.Clear()
+  TChart1.Header.Text.Add("Bar")
+  TChart1.Series(0).Color=0xCCD148
+
+  TChart2.AddSeries(2)
+  TChart2.Series(0).FillSampleValues(8)
+  TChart2.Header.Text.Clear()
+  TChart2.Header.Text.Add("Horiz. Bar")
+
+  TChart3.AddSeries(3)
+  TChart3.Series(0).FillSampleValues(8)
+  TChart3.Header.Text.Clear()
+  TChart3.Header.Text.Add("Area")
+
+  TChart4.AddSeries(4)
+  TChart4.Series(0).FillSampleValues(8)
+  TChart4.Header.Text.Clear()
+  TChart4.Header.Text.Add("Point - Scatter")
+
+  TChart5.AddSeries(5)
+  TChart5.Series(0).FillSampleValues(8)
+  TChart5.Series(0).Marks.Visible = false
+  TChart5.Header.Text.Clear()
+  TChart5.Header.Text.Add("Pie")
+
+  TChart6.AddSeries(6)
+  TChart6.Series(0).FillSampleValues(8)
+  TChart6.Header.Text.Clear()
+  TChart6.Header.Text.Add("Fast Line")
+
+  TChart7.AddSeries(7)
+  TChart7.Series(0).asShape.Style=1
+  TChart7.Series(0).Color=0x238E6B
+  TChart7.AddSeries(7)
+  TChart7.Series(1).asShape.Style=4
+  TChart7.Header.Text.Clear()
+  TChart7.Header.Text.Add("Shapes")
+
+  TChart8.AddSeries(8)
+  TChart8.Series(0).FillSampleValues(8)
+  TChart8.Header.Text.Clear()
+  TChart8.Header.Text.Add("Gantt - Scheduling")
+  TChart8.Legend.Visible = false
+
+  TChart9.AddSeries(9)
+  TChart9.Series(0).FillSampleValues(8)
+  TChart9.Header.Text.Clear()
+  TChart9.Header.Text.Add("Bubble")
+
+  TChart10.AddSeries(10)
+  TChart10.Series(0).FillSampleValues(8)
+  TChart10.Header.Text.Clear()
+  TChart10.Header.Text.Add("Arrow")
+  TChart10.Series(0).asArrow.ArrowWidth=10
+  TChart10.Series(0).asArrow.ArrowHeight=10
+
+  TChart11.AddSeries(11)
+  TChart11.Series(0).FillSampleValues(8)
+  TChart11.Header.Text.Clear()
+  TChart11.Header.Text.Add("Candle Stick")
+
+  TChart12.AddSeries(12)
+  TChart12.Series(0).FillSampleValues(8)
+  TChart12.Header.Text.Clear()
+  TChart12.Header.Text.Add("Polar")
+
+  TChart13.AddSeries(13)
+  TChart13.Series(0).FillSampleValues(8)
+  TChart13.Header.Text.Clear()
+  TChart13.Header.Text.Add("Surface 3D")
+  TChart13.Aspect.Chart3DPercent=80
+
+  TChart14.AddSeries(14)
+  TChart14.Series(0).FillSampleValues(8)
+  TChart14.Header.Text.Clear()
+  TChart14.Header.Text.Add("Volume")
+
+  TChart15.AddSeries(15)
+  TChart15.Series(0).FillSampleValues(8)
+  TChart15.Header.Text.Clear()
+  TChart15.Header.Text.Add("ErrorBar")
+
+  TChart16.AddSeries(16)
+  TChart16.Series(0).FillSampleValues(8)
+  TChart16.Header.Text.Clear()
+  TChart16.Header.Text.Add("Bezier")
+
+  TChart17.AddSeries(17)
+  TChart17.Series(0).FillSampleValues(8)
+  TChart17.Header.Text.Clear()
+  TChart17.Header.Text.Add("Contour")
+  TChart17.Aspect.Orthogonal=0
+  TChart17.Aspect.Chart3DPercent=70
+  TChart17.Aspect.Elevation=270
+  TChart17.Aspect.Rotation=360
+  TChart17.Aspect.Perspective=0
+
+  TChart18.AddSeries(18)
+  TChart18.Series(0).FillSampleValues(8)
+  TChart18.Header.Text.Clear()
+  TChart18.Header.Text.Add("Error")
+
+  TChart19.AddSeries(19)
+  TChart19.Series(0).FillSampleValues(30)
+  TChart19.Header.Text.Clear()
+  TChart19.Header.Text.Add("Point 3D")
+
+  TChart20.AddSeries(20)
+  TChart20.Series(0).FillSampleValues(8)
+  TChart20.Header.Text.Clear()
+  TChart20.Header.Text.Add("Radar")
+-->
+</SCRIPT>
+<html><head><LINK REL=STYLESHEET TYPE="text/css" HREF="style.css"></head>
+<BODY bgcolor=#FFFFFF>
+<p>
+<font face="Arial" color="#004080"><em><big><strong>JavaScript and TeeChart Pro  Example</strong></big></em></font></h3>
+</p>
+
+<a href="../Start Local examples.htm">Return to Examples</a>&nbsp;
+<a href="ADO.htm">Next Example</a><hr>
+<p>
+<font size="-1">
+<b>Warning: You need the JavaScript implementation of<br>
+Microsoft Internet Explorer 4.0 or greater to run this demo.
+</font>
+</p>
+
+<SCRIPT LANGUAGE="JavaScript" FOR="TChart0" EVENT="OnAfterDraw()">
+<!--
+ // IE requires an event (can be empty) for Chart
+ // to enable mousedrag zoom and scroll
+-->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" FOR="TChart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" FOR="TChart2" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" FOR="TChart3" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" FOR="TChart4" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" FOR="TChart5" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" FOR="TChart6" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+<hr>
+<p>
+    <OBJECT ID="TChart0" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+    <OBJECT ID="TChart1" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+</p>
+
+    <OBJECT ID="TChart2" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+    <OBJECT ID="TChart3" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+    <OBJECT ID="TChart4" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+<p>
+    <OBJECT ID="TChart5" WIDTH=400 HEIGHT=200
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+    <OBJECT ID="TChart6" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+</p>
+
+<p>
+    <OBJECT ID="TChart7" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+    <OBJECT ID="TChart8" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+</p>
+
+<p>
+    <OBJECT ID="TChart9" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+    <OBJECT ID="TChart18" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+</p>
+
+<p>
+    <OBJECT ID="TChart15" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+    <OBJECT ID="TChart10" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+</p>
+
+<p>
+    <OBJECT ID="TChart11" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+    <OBJECT ID="TChart14" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+</p>
+<p>
+    <OBJECT ID="TChart20" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+    <OBJECT ID="TChart12" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+</p>
+<p>
+    <OBJECT ID="TChart17" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+    <OBJECT ID="TChart13" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+</p>
+<p>
+    <OBJECT ID="TChart16" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+
+    <OBJECT ID="TChart19" WIDTH=400 HEIGHT=300
+     CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+    </OBJECT>
+</p>
+
+
+</BODY>
+</html>

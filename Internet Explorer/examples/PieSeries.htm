@@ -1,0 +1,158 @@
+<html>
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="style.css">
+<meta http-equiv="x-ua-compatible" content="IE=10">
+</head>
+<BODY bgcolor=#FFFFFF onload="Window_onload()">
+<SCRIPT LANGUAGE="JavaScript" FOR="Chart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+<SCRIPT LANGUAGE="VBScript">
+<!--
+dim SomePoint
+dim DeltaSlice
+
+Sub Window_onload()
+ 'sets up Chart to print from IE's print option
+ TChart1.Environment.IEPrintWithPage=True
+
+ TChart1.AddSeries(5)
+ set s=TChart1.Series(0)
+ s.FillSampleValues(7)
+ s.Title="Office Stock"
+ s.Marks.Style=3
+
+ TChart1.Header.Text.Add("Pie Series example")
+ TChart1.Header.Font.Bold=True
+ TChart1.Header.Font.Color=vbRed
+ TChart1.Header.Font.Size=12
+
+ TChart1.Legend.Alignment=1
+
+ TChart1.Panel.MarginBottom=10
+
+ TChart1.Panel.Color=&HDDEECC
+ TChart1.Panel.BevelOuter=vbNone
+
+ SomePoint=-1
+ DeltaSlice=1
+
+ TChart1.TimerEnabled=True
+ TChart1.TimerInterval=100
+end sub
+
+sub TChart1_OnTimer()
+  TChart1.Series(0).asPie.RotationAngle=TChart1.Series(0).asPie.RotationAngle+2
+  TChart1.Series(0).asPie.ExplodeBiggest=TChart1.Series(0).asPie.ExplodeBiggest+DeltaSlice
+  if (TChart1.Series(0).asPie.ExplodeBiggest) = 0 or (TChart1.Series(0).asPie.ExplodeBiggest = 30) then
+    DeltaSlice = -DeltaSlice
+  end if
+end sub
+
+sub UsePatterns()
+  TChart1.Series(0).asPie.UsePatterns=not TChart1.Series(0).asPie.UsePatterns
+end sub
+
+sub TChart1_OnMouseMove(Shift, X, Y)
+  if TChart1.SeriesCount >0 then
+     SomeNewPoint=TChart1.Series(0).Clicked( x,y)
+     if SomeNewPoint<>SomePoint then
+        SomePoint=SomeNewPoint
+        if not TChart1.TimerEnabled then
+           TChart1.Repaint
+        end if 
+     end if
+  end if
+end sub
+
+sub TChart1_OnAfterDraw()
+  set c=TChart1.Canvas
+  c.Font.Size=12
+  c.Font.Italic=True
+  c.Font.Bold=True
+
+  if TChart1.SeriesCount > 0 then
+  if SomePoint=-1 then 
+     s="Move the mouse over Pie slices..."
+     c.Font.Color=vbMagenta
+  else
+     s=TChart1.Series(0).PointLabel(SomePoint)
+     c.Font.Color=TChart1.Series(0).PointColor(SomePoint)
+  end if
+  end if
+  c.TextOut TChart1.Canvas.Left+4, TChart1.Canvas.Height-20, s
+end sub
+
+sub setItemTo()
+  TChart1.Series(0).asPie.ExplodeBiggest=0
+  DeltaSlice=1
+  TChart1.Series(0).asPie.OtherSlice.Style=document.Form1.Target2.options(document.Form1.Target2.selectedIndex).value
+  TChart1.Series(0).asPie.OtherSlice.Value=document.Form1.Target1.options(document.Form1.Target1.selectedIndex).value
+end sub
+
+sub View3D()
+  TChart1.Aspect.View3D = not TChart1.Aspect.View3D
+end sub
+
+sub MarksVisible()
+  TChart1.Series(0).Marks.Visible=not TChart1.Series(0).Marks.Visible
+end sub
+
+sub PieCircled()
+  TChart1.Series(0).asPie.Circled=not TChart1.Series(0).asPie.Circled
+end sub
+
+sub TimerEnable()
+  TChart1.TimerEnabled=not TChart1.TimerEnabled
+end sub
+  
+sub HeaderVisible()
+  TChart1.Header.Visible=not TChart1.Header.Visible
+end sub
+
+sub LegendVisible()
+  TChart1.Legend.Visible=not TChart1.Legend.Visible
+end sub
+-->
+</SCRIPT>
+
+<p>
+<font face="Arial" color="#004080"><em><big><strong>Pie Series Example
+</strong></big></em></font></h3>
+</p>
+
+<a href="../Start Local examples.htm">Return to Examples</a>
+<a href="JavaScript.htm">Next Example</a>
+<hr>
+
+
+<p>
+<input type="checkbox" name="PiePatterns" onclick="UsePatterns()">Use Patterns
+<input type="checkbox" checked name="View3D" onclick="View3D()">View 3D
+<input type="checkbox" checked name="ShowMarks" onclick="MarksVisible()">Show Marks
+<input type="checkbox" name="Circled" onclick="PieCircled()">Circled Pie
+<input type="checkbox" checked name="Animate" onclick="TimerEnable()">Animate
+<input type="checkbox" checked name="ViewTitle" onclick="HeaderVisible()">View Header
+<input type="checkbox" checked name="ViewLeg" onclick="LegendVisible()">View Legend
+</p>
+
+<b>Otherslice: </b> <FORM NAME="Form1" ACTION="">
+<SELECT NAME="Target2" language="VBScript" onchange="setItemTo()">
+<OPTION SELECTED VALUE="0">None</option>
+<OPTION VALUE="1">Below percentage
+</SELECT>
+	<SELECT NAME="Target1" language="VBScript" onchange="setItemTo()">
+<OPTION SELECTED VALUE="0">0 %</option>
+<OPTION VALUE="10">10 %
+<OPTION VALUE="15">15 %
+<OPTION VALUE="20">20 %
+<OPTION VALUE="25">25 %
+</SELECT>
+</FORM>
+
+<OBJECT ID="TChart1" WIDTH=900 HEIGHT=490
+ CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+</OBJECT>
+
+</BODY>
+</html>

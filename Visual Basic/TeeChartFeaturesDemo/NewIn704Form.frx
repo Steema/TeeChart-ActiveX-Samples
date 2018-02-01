@@ -1,0 +1,92 @@
+ÿ“* Changes and additions in version 7.04 :
+------------------------------------------------------------------
+
+# New TeeMap demo
+# TA05010169 - Added Cursor property for the Annotation tool.
+# TA05010188 - Added the folllwing events for ColorLineTool : OnBeginDragLine, OnDragLine,OnEndDragLine.
+# TA05010265 - The TSeriesBand Tool has not been implemented into the ActveX version, also adding it at design time does not seems to work fine, once you run the app, does not display the band (repaint problem).
+# TA05010266 - Add the Selector Tool, for the moment it's only available at design time.
+# TA05010280 - Allow to change the Label column title. It's "Text" as defect. In VCL version can be changed via TeeMsg...
+# TA05010287 - Add the Uninstall option for the next installers... as a shortcut..
+# Added DeleteRangeForm example to the Tree.
+# Added FastPen property to tFastLineSeries
+# Added AutoRepaint property to tFastLineSeries
+# Added ISeriesBandTool
+# Added ISelectorTool with its events
+# Added AnnotationToolClick event
+# Added some examples in de demo about AnnotationToolClick, ISeriesBand Tool, ISelectorTool
+# TeeCommanderButton to allow to hide the buttons directly as TeeCommander1.Button3d.hide
+# TeeCommander.RepositionControls property
+# TeeListBox.ItemHeight property
+# TeeListBox.ClearItems method
+# Added LabelHeader property for Export : IExport.LabelHeader
+# Added LabelHeader property for ChartGrid (same as for the Export) : IChartGrid.LabelHeader
+# Added FastPen property for the FastLine Series : IFastLine.FastPen
+# Added Autorepaint property for Series : ISeries.AutoRepaint
+# New interface ISeriesBandTool to allow to add this tool at runtime, via code
+# Added the following properties for the SeriesBandTool : 
+        ISeriesBandTool.Brush
+	ISeriesBandTool.DrawBehindSeries
+	ISeriesBandTool.Gradient
+	ISeriesBandTool.Pen
+	ISeriesBandTool.Series2
+	ISeriesBandTool.Transparency
+# Added asSeriesBand property to access to the SeriesBandTool properties : ITools.asSeriesBand
+# New interface ISelectorTool to allow to add this tool at runtime, via code
+# Added the following properties for the SelectorTool : 
+	ISelectorTool.AllowDrag
+	ISelectorTool.AllowResizeChart
+	ISelectorTool.Brush
+	ISelectorTool.HandleSize
+	ISelectorTool.Pen
+# Added asSelector property to access to the SelectorTool properties : ITools.asSelector
+# Added the following new events :
+	ITChartEvents.OnSelectorToolDragged 
+	ITChartEvents.OnSelectorToolDragging
+	ITChartEvents.OnSelectorToolResized
+	ITChartEvents.OnSelectorToolResizing
+	ITChartEvents.OnSelectorToolSelected
+	ITChartEvents.OnClickAnnotation
+# Added RepositionControls property for TeeCommander component : ITeeCommander.RepositionControls
+# Added the following properties for the TeeListBox component :
+	ITeeListBox.ItemHeight
+	ITeeListBox.ClearItems
+	ITeeListBox.Repaint
+	ITeeListBox.Sorted
+# Added Active property for the Tools to allow to enable/disable all the tools at the same time :IToolList.Active
+# Added the following properties for the tChart component :
+	ITChart.Hint
+	ITChart.ShowHint
+# Added the following properties for the Series type which use Palette :
+	ICustom3DPaletteSeries.UsePaletteMin
+	ICustom3DPaletteSeries.PaletteMin
+	ICustom3DPaletteSeries.PaletteStep
+# Added the following properties and methods for the Map Series type :
+	IMapPolygonList.Count
+	IMapPolygon.GetPoints
+	IMapPolygon.Visible
+	IMapPolygon.Closed
+# Added Shadow property for ICustomSeries (includes ILineSeries, IHorizLine,...) : ICustomSeries.Shadow
+# Added Themes property in TeeEditor to allow to hide the Themes tab : ITeeEditorShowPages.Themes
+# New interface IPointArray which can be used to get the an array of TPoint (used for IMapSeries to get the points IMapPolygon.GetPoints)
+# Added the following properties for IPointArray interface :
+	IPointArray.Count
+	IPointArray.Item
+# New interface ITeeCommanderButton to allow to hide TeeCommander buttons directly
+# Added Hide method : ITeeCommanderButton.Hide
+# Added the following properties for TeeCommander component :
+	ITeeCommander.Button3D
+	ITeeCommander.ButtonCopy
+	ITeeCommander.ButtonDepth
+	ITeeCommander.ButtonEdit
+	ITeeCommander.ButtonMove
+	ITeeCommander.ButtonNormal
+	ITeeCommander.ButtonPrint
+	ITeeCommander.ButtonRotate
+	ITeeCommander.ButtonSave
+	ITeeCommander.ButtonZoom
+#TV52010349 - Added ClickTolerance property for IDrawLineTool.
+#TV52010355 - Added a new button "Clear" to Series DataSource tab which allow to clear the data created by default when you
+	add a new Series.
+#TV52010435 - After painting a new line using IDrawLineTool, this line is not selected. Now, SelectNewLines property has 
+		been added ( default is True )

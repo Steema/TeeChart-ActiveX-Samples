@@ -1,0 +1,86 @@
+<html>
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="style.css">
+<meta http-equiv="x-ua-compatible" content="IE=10">
+</head>
+<BODY bgcolor=#FFFFFF>
+
+<SCRIPT LANGUAGE="JavaScript" FOR="Chart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+<SCRIPT LANGUAGE="VBScript">
+<!--
+Dim DeltaRot
+Dim DeltaElev
+Dim DeltaZoom
+
+DeltaRot=2
+DeltaElev=2
+DeltaZoom=2
+
+Sub TChart1_OnTimer()
+if TChart1.SeriesCount > 0 then
+    TChart1.Aspect.Rotation = TChart1.Aspect.Rotation + DeltaRot
+    If (TChart1.Aspect.Rotation <= 275) Or (TChart1.Aspect.Rotation >= 355) Then
+       DeltaRot = -DeltaRot
+    End If
+    TChart1.Aspect.Elevation = TChart1.Aspect.Elevation + DeltaElev
+    If (TChart1.Aspect.Elevation <= 275) Or (TChart1.Aspect.Elevation >= 355) Then
+       DeltaElev = -DeltaElev
+    End If
+    TChart1.Aspect.Zoom = TChart1.Aspect.Zoom + DeltaZoom
+    If (TChart1.Aspect.Zoom <= 40) Or (TChart1.Aspect.Zoom >= 280) Then
+       DeltaZoom = -DeltaZoom
+    End If
+end if
+end sub
+
+Sub Animate()
+  TChart1.TimerInterval=100
+  TChart1.TimerEnabled=not TChart1.TimerEnabled
+End sub
+
+Sub LoadChart()
+  'sets up Chart to print from IE's print option
+  TChart1.Environment.IEPrintWithPage=True
+
+  TChart1.AddSeries(1)
+  TChart1.AddSeries(0)
+  TChart1.Series(0).FillSampleValues(10)
+  TChart1.Series(1).FillSampleValues(10)
+  TChart1.Series(0).asBar.AutoBarSize=True
+  TChart1.Series(0).asBar.BarPen.Color=RGB(153,0,0)
+  TChart1.Aspect.Orthogonal=False
+  TChart1.Aspect.Chart3DPercent=80
+  TChart1.Aspect.Perspective=50
+  TChart1.Panel.Gradient.Visible=true
+  If TChart1.Canvas.IsScreenHighColor = True then
+   TChart1.Panel.Gradient.EndColor=RGB(0,0,151)
+   TChart1.Header.Font.Color = vbYellow
+  else
+   TChart1.Header.Font.Color = vbBlack
+  end if
+  TChart1.Header.Font.Bold=True
+  TChart1.Header.Font.Size=10
+  TChart1.Header.Text(0)="TeeChart 3D example"
+  cmdChart1.disabled=True
+End sub
+-->
+</SCRIPT>
+<p>
+<font face="Arial" color="#004080"><em><big><strong>3D TeeChart Pro Example</strong></big></em></font></h3>
+</p>
+
+<a href="../Start Local examples.htm">Return to Examples</a>&nbsp;
+<a href="OpenGL.htm">Next Example</a><hr>
+<p>Click on the buttons below to start animation !<p>
+<p><input type="button" value="LoadChart" onclick="LoadChart()" name="cmdChart1" <br> 
+<input type="button" value="Stop/Start animation !" onclick="Animate()"
+name="cmdChart3"> </p>
+
+<OBJECT ID="TChart1" WIDTH=450 HEIGHT=290
+ CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+</OBJECT>
+
+</BODY>
+</html>

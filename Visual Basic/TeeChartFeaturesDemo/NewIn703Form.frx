@@ -1,0 +1,99 @@
+ÿ¨Changes and additions in version 7.03 :
+========================================
+
+- IColorBandTool now have the DrawBehindAxis property.
+
+- Added the property Name which allow you to specifi the Text that will appear as Header exporting
+the data of the Chart, Sample Code :
+
+	Private Sub Form_Load() 
+	With TChart1 
+	    .AddSeries scPoint 
+	    .Series(0).FillSampleValues (5) 
+	    .Series(0).YValues.Name = "YVal" 
+	End With 
+	End Sub 
+
+	Private Sub Command1_Click() 
+	With TChart1.Export.asXLS 
+	    .IncludeHeader = True 
+	    .IncludeLabels = True 
+	    .SaveToFile "c:\Test.xls" 
+	End With 
+	End Sub 
+
+- Added the DragPointToolDragPoint event for the IDragPointTool.
+
+- Added the DrawLineToolSelecting event for the IDrawLineTool.
+
+- New properties and methods added the the ISurfaceNearestTool :
+
+	ISurfaceNearestTool.SelectedCell
+	ISurfaceNearestTool.GetRow
+	ISurfaceNearestTool.GetCol
+
+- Added the Width and Height properties for IAnnotation tool.
+
+- New event OnRotateToolRotate which is fired when the Rotate tool has been added and the Chart is rotated.
+
+- Added IAreaSeries.AreaColor property to allow to set the color for the pattern lines
+
+- Added some events for the ColorLineTool :
+	ColorLineToolBeginDragLine
+	OnColorLineToolDragLine
+	OnColorLineToolEndDragLine
+	OnDragPointToolDragPoint 
+
+
+Added for v6.0.0.6 and above
+----------------------------
+
+New interface elements
+1)   ITeeCommander.DefaultButton
+Other
+1)   New VS.NET ASP WebForm example to 
+     demonstrate multiple Chart events.
+
+
+- Related problem with "Out of system resources error using TeeChart in ASP page"
+
+	1. Resource issue when connecting to file based (mdb) datasources.
+	2. Resource issue when resizing TeeChart in a browser page during
+	   cascade/un-cascade operations whilst having open several/many such pages. 
+
+	Description 
+	
+	1. File based (mdb) datasources 
+	High resource utilisation has proved to be an issue when connecting to file based (mdb) 
+	datasources. Previous tests have shown that the same or greater load when applied to an 
+	integrated dataserver (eg. MS's SQL Server) does not suffer from similar resource l
+	imitations. We recommend the use of that type of database for applications where multiple 
+	access/high load to a database is expected. 
+
+	2. Resizing TeeChart during cascade/un-cascade operations 
+	We can reproduce this issue. The problem occurs as a TeeChart internal bitmap is being 
+	copied and requesting a windows handle during a TeeChart resize operation in a child Internet 
+	Explorer window (here during the cascade/un-cascade tests). In tests to date the problem seems
+	to be limited to IE windows opened, as child windows (ie. Ctrl-N from an existing Window). 
+	In independently opened IE browsers and in Windows Form-based apps the problem doesn't appear 
+	to occur. The problem occurs at a low Windows level that makes it difficult for us to resolve 
+	the problem in TeeChart, not at least without further investigating alternative techniques to 
+	achieve the required result. If the Chart isn't resized the problem shouldn't occur and that 
+	has proved to be the case in tests here to now - feedback on this would be useful. To avoid 
+	resize Charts can be fixed size instead of percentage sized. 
+
+	eg. 
+	<width="400" height="300"> 
+	instead of 
+	<width="100%" height="75%"> 
+
+	For regular TeeChart browser applications, where the need to load and resize multiple child 
+	browser windows at a time is not necessary, the continued use of % sizing shouldn't be a problem. 
+
+	Conclusions 
+
+	1. (mdb files) The issue is long-standing and related to resource use managed outside of TeeChart. 
+	The recommended solution remains the use of a server-based database server. 
+
+	2. (internal bitmaps) We are further investigating a fix to this issue that we feel is related to 
+	an IE resource management deficiency. For the moment we recommend the workaround described above. 

@@ -1,0 +1,114 @@
+<html>
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="style.css"></head>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<BODY bgcolor=#FFFFFF>
+<SCRIPT LANGUAGE="JavaScript" FOR="Chart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+<p>
+<font face="Arial" color="#004080"><em><big><strong>TeeChart Pro ADO and native ODBC access example</strong></big></em></font></h3>
+</p>
+
+<a href="../Start Local examples.htm">Return to Examples</a>&nbsp;
+<a href="TeeCon.htm">Next Example</a><hr>
+<script language="VBScript"><!--
+
+Sub TChart2_OnDblClick()
+  TChart2.ShowEditor
+  TChart2.StopMouse
+end sub
+
+Sub LoadADOIntfData()
+ dim SQLStmt
+ 
+ SQLStmt="select * from stock"
+
+ Set Conn = CreateObject("ADODB.Connection")
+ Set RSt = CreateObject("ADODB.RecordSet")
+ Conn.Open "TeeChart Pro database"
+ Rst.Open SQLStmt, Conn, 1, 1 
+
+ TChart1.Series(0).Datasource =  RSt
+ TChart1.Series(0).asCandle.DateValues.ValueSource = "date"
+ TChart1.Series(0).asCandle.OpenValues.ValueSource = "open"
+ TChart1.Series(0).asCandle.HighValues.ValueSource = "high"
+ TChart1.Series(0).asCandle.LowValues.ValueSource = "low"
+ TChart1.Series(0).asCandle.CloseValues.ValueSource = "close"
+
+ Rst.Close
+ Conn.Close
+End sub
+
+Sub LoadADOData()
+  set Chart = TChart2
+  Chart.Series(0).DataSource = "DSN=TeeChart Pro Database; sql=SELECT * from stock"
+  Chart.Series(0).asCandle.HighValues.ValueSource = "high"
+  Chart.Series(0).asCandle.LowValues.ValueSource = "Low"
+  Chart.Series(0).asCandle.OpenValues.ValueSource = "open"
+  Chart.Series(0).asCandle.CloseValues.ValueSource = "close"
+  Chart.Series(0).asCandle.DateValues.ValueSource = "date"
+  Chart.Series(0).asCandle.Pointer.Pen.Color=vbYellow
+End sub
+
+Sub ADOChart()
+  'Following line would be used with ODBC datasource requiring Username, password
+  'to avoid repeated request for login
+  'TChart2.Environment.NoPromptDBConnect=True
+  'Set increment for labels
+  TChart2.Axis.Bottom.Increment = TChart2.GetDateTimeStep(15)  'dtOneday
+  'Data series
+  TCHART2.ADDSERIES(11)
+  TChart2.Series(0).Title = "Candle Series"
+  TChart2.Series(0).XValues.DateTime=True
+  LoadADOData
+  'Title
+  TChart2.Header.Text.Clear()
+  TChart2.Header.Text.Add("ODBC Candle Series")
+  TChart2.Header.Font.Color=RGB(255,255,255)
+  TChart2.Header.Font.Bold=True
+  'Chart display
+  TChart2.Panel.Color=RGB(0,0,153)
+  TChart2.Aspect.View3D=False
+  TChart2.Walls.Back.Pen.Color=RGB(255,255,255)
+  TChart2.Legend.Visible=False
+  'Axes
+  TChart2.Axis.Left.Labels.Font.Color=RGB(255,255,255)
+  TChart2.Axis.Bottom.Labels.Font.Color=RGB(255,255,255)
+  TChart2.Axis.Bottom.Labels.Angle=90
+  TChart2.Axis.Left.AxisPen.Color=RGB(255,255,255)
+  TChart2.Axis.Bottom.AxisPen.Color=RGB(255,255,255)
+end Sub
+--></script>
+<p><b>Note</b> We recommend you try these examples on your own Server hosted database sources as Microsoft's standard ODBC .DBF driver has displayed some resource size limits on repeated access.</p><hr>
+<p>This Chart was built and saved at design time with MS Frontpage. It uses Microsoft's ADO components to connect to the TeeChart example datasource.</p><p><input type="button" value="Connect to Datasource via Microsoft ADO components" onclick="LoadADOIntfData()" name="cdmChart1"></p>
+<OBJECT ID="TChart1" WIDTH=564 HEIGHT=300 border="0"
+ CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+<param name="Base64" value="VFBGMAtUQ2hhcnRDaGFydAAETGVmdAIAA1RvcAIABVdpZHRoAzQCBkhlaWdodAMsARJCYWNrV2Fs
+bC5QZW4uQ29sb3IHB2NsV2hpdGURR3JhZGllbnQuRW5kQ29sb3IHBmNsTmF2eRBUaXRsZS5Gb250
+LkNvbG9yBwdjbFdoaXRlEFRpdGxlLkZvbnQuU3R5bGULBmZzQm9sZAASVGl0bGUuVGV4dC5TdHJp
+bmdzAQYoVGVlQ2hhcnQgQURPIENvbm5lY3Rpdml0eSAoQmFzZTY0IHNhdmVkKQAVQm90dG9tQXhp
+cy5BeGlzLkNvbG9yBwdjbFdoaXRlFEJvdHRvbUF4aXMuSW5jcmVtZW50BQAAAAAAAACA/z8WQm90
+dG9tQXhpcy5MYWJlbHNBbmdsZQJaG0JvdHRvbUF4aXMuTGFiZWxzRm9udC5Db2xvcgcHY2xXaGl0
+ZQtGcmFtZS5Db2xvcgcHY2xXaGl0ZRNMZWZ0QXhpcy5BeGlzLkNvbG9yBwdjbFdoaXRlGUxlZnRB
+eGlzLkxhYmVsc0ZvbnQuQ29sb3IHB2NsV2hpdGUOTGVnZW5kLlZpc2libGUIBlZpZXczRAgFQ29s
+b3IEAACZAAxQcmludE1hcmdpbnMBAg8CHAIPAhwAAA1UQ2FuZGxlU2VyaWVzB1NlcmllczAUQ2xv
+c2VWYWx1ZXMuRGF0ZVRpbWUIEENsb3NlVmFsdWVzLk5hbWUGBUNsb3NlEUNsb3NlVmFsdWVzLk9y
+ZGVyBwZsb05vbmUTRGF0ZVZhbHVlcy5EYXRlVGltZQkPRGF0ZVZhbHVlcy5OYW1lBgREYXRlEERh
+dGVWYWx1ZXMuT3JkZXIHC2xvQXNjZW5kaW5nE0hpZ2hWYWx1ZXMuRGF0ZVRpbWUID0hpZ2hWYWx1
+ZXMuTmFtZQYESGlnaBBIaWdoVmFsdWVzLk9yZGVyBwZsb05vbmUSTG93VmFsdWVzLkRhdGVUaW1l
+CA5Mb3dWYWx1ZXMuTmFtZQYDTG93D0xvd1ZhbHVlcy5PcmRlcgcGbG9Ob25lE09wZW5WYWx1ZXMu
+RGF0ZVRpbWUID09wZW5WYWx1ZXMuTmFtZQYET3BlbhBPcGVuVmFsdWVzLk9yZGVyBwZsb05vbmUR
+TWFya3MuQXJyb3dMZW5ndGgCCA1NYXJrcy5WaXNpYmxlCAtTZXJpZXNDb2xvcgcFY2xSZWQJUGVu
+LkNvbG9yBwhjbFllbGxvdwAAAAAAAAACAAAAAP////8=">
+</OBJECT>
+
+
+<p>&nbsp;</p>
+<p><input type="button" value="Connect to ADO Datasource via standard DSN string" onclick="ADOChart()" name="cdmChart1"></p>
+<p>This Chart is VBScripted. It uses TeeChart's native ADO connection methods to extract data from the TeeChart example datasource.</p>
+<OBJECT ID="TChart2" WIDTH=564 HEIGHT=300 border="0"
+ CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+</OBJECT>
+
+</body>

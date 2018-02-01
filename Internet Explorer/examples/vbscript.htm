@@ -1,0 +1,56 @@
+<html>
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="style.css">
+<meta http-equiv="x-ua-compatible" content="IE=10">
+</head>
+<body bgcolor=#FFFFFF>
+
+<SCRIPT LANGUAGE="JavaScript" FOR="TChart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+<h2>Important notes about VBScript and Internet Explorer.</h2>
+<a href="../Start Local examples.htm">Return to Examples</a>
+<hr>
+<p>
+<li>The language used in this demos is VBScript. VBScript is
+a subset of the Visual Basic language. Not all things possible with
+Visual Basic can be done with VBScript.</li>
+</p>
+<p>
+<li>Enumerated constants can not be used with the
+current VBScript versions.
+That means you can not use things like color constants like
+vbRed, vbBlue, etc. You should use the equivalent number in 
+hexadecimal format, ie: "Font.Color=&HFF0000", or in RGB format:
+"Font.Color=RGB(0,0,255)" </li>
+</p>
+<p>
+<li>According to the above, TeeChart Pro enumerated constants can
+not be used. For example, you should use "TChart1.AddSeries(0)" instead
+of "TChart1.AddSeries( scLine )".</li>
+</p>
+<p>
+<li>The "With" statment can not be used in clientside VBScript.
+<br>
+You can use "set MyList=TChart1.Series(0).YValues" and use then 
+the "MyList" variable like: "MyList.Value(0)=1234"</li>
+</p>
+<p>
+<li>Use the global "Window_OnLoad()" event procedure to do
+your Chart initialization code. For example:</li>
+</p>
+<pre>
+< SCRIPT LANGUAGE="VBScript">
+< !--
+Sub Window_onload()
+ TChart1.AddSeries(5)
+end Sub
+-->
+< /SCRIPT>
+</pre>
+
+<p>
+
+</p>
+</body>
+</html>

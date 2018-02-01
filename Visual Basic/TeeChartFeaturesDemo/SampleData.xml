@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<chart>
+<series title="Series1" type="Point">
+<points count="6">
+<point  text="a" color="#FF8040" Y="1086"/>
+<point  text="b" color="#008080" Y="1197"/>
+<point  text="c" color="#FF00FF" Y="1126"/>
+<point  text="d" color="#FFFF00" Y="1135"/>
+<point  text="e" color="#000080" Y="1182"/>
+<point  text="f" color="#FF0000" Y="1089"/>
+</points>
+</series>
+</chart>

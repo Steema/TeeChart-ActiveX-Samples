@@ -1,0 +1,29 @@
+Welcome !,TWelcomeForm,Main
+ New in Canvas
+  New RoundRectWithZ,TCanvas_RoundRectWithZ,Canvas_RoundRectWithZ
+ New in Series
+  Draw style,TSeries_DrawStyle,Series_DrawStyle
+  Series Transparency,TSeries_Transparency,Series_Transparency 
+  Marks UseSeriesTransparency,TMarks_UseSeriesTransparency,Marks_UseSeriesTransparency 
+  Marks SoftClip,TMarks_SoftClip,Marks_SoftClip   
+  Filled Pen,TSeries_FilledPen,Series_FilledPen
+  Arrow Fill2D,TArrow_Fill2D,Arrow_Fill2D
+  Bubble InflateMargins,TBubble_InflateMargins,Bubble_InflateMargins
+  Candle RemoveGaps,TCandle_RemoveGaps,Candle_RemoveGaps
+  Clock Hand prop.,TClock_ClockHand,Clock_ClockHand
+  Gantt Callout.,TGantt_Callout,Gantt_Callout
+  Pie Marks,TSeries_PieMarks,Series_PieMarks
+  MultiPie Concentric,TSeries_MultiPie_Concentric,Series_MultiPie_Concentric
+  Donut Pointer style,TSeries_DonutPointer,Series_DonutPointer
+ New in Components
+  Editor Options,TChartEditor_Options,ChartEditor_Options
+ New Export formats
+  JSON,TExport_JSON,Export_JSON  
+  OpenDocument,TExport_OpenDocument,Export_OpenDocument  
+ New Features
+  Aspect
+   Improved Themes editor,TThemes_editor,Themes_editor
+ Miscellaneous
+  Gradient MultiColor,TGradient_MultiColor,Gradient_MultiColor
+ Version Releases
+  TeeChart ActiveX Information,TOther_ChangesV9Form,Other_ChangesV9Form

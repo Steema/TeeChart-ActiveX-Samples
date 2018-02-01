@@ -1,0 +1,417 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TeeFiles - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /fo"Release/TeeFiles.res" /d "NDEBUG" /d "_AFXDLL" "E:\Version 6\TeeFiles\TeeFiles.rc"" 
+Creating temporary file "C:\Users\Pep\AppData\Local\Temp\RSP5BB6.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Release/TeeFiles.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\Version 6\TeeFiles\adxfunction.cpp"
+"E:\Version 6\TeeFiles\areaseries.cpp"
+"E:\Version 6\TeeFiles\arrowseries.cpp"
+"E:\Version 6\TeeFiles\aspect.cpp"
+"E:\Version 6\TeeFiles\axes.cpp"
+"E:\Version 6\TeeFiles\axis.cpp"
+"E:\Version 6\TeeFiles\axisarrowtool.cpp"
+"E:\Version 6\TeeFiles\axislabels.cpp"
+"E:\Version 6\TeeFiles\axistitle.cpp"
+"E:\Version 6\TeeFiles\bar3dseries.cpp"
+"E:\Version 6\TeeFiles\barjoinseries.cpp"
+"E:\Version 6\TeeFiles\barseries.cpp"
+"E:\Version 6\TeeFiles\bezierseries.cpp"
+"E:\Version 6\TeeFiles\bmpexport.cpp"
+"E:\Version 6\TeeFiles\bollingerfunction.cpp"
+"E:\Version 6\TeeFiles\boxplotseries.cpp"
+"E:\Version 6\TeeFiles\brush.cpp"
+"E:\Version 6\TeeFiles\bubbleseries.cpp"
+"E:\Version 6\TeeFiles\calendarseries.cpp"
+"E:\Version 6\TeeFiles\candleseries.cpp"
+"E:\Version 6\TeeFiles\canvas.cpp"
+"E:\Version 6\TeeFiles\chartimagetool.cpp"
+"E:\Version 6\TeeFiles\circlelabels.cpp"
+"E:\Version 6\TeeFiles\clockseries.cpp"
+"E:\Version 6\TeeFiles\colorbandtool.cpp"
+"E:\Version 6\TeeFiles\colorgridseries.cpp"
+"E:\Version 6\TeeFiles\colorlinetool.cpp"
+"E:\Version 6\TeeFiles\contourlevel.cpp"
+"E:\Version 6\TeeFiles\contourlevels.cpp"
+"E:\Version 6\TeeFiles\contourseries.cpp"
+"E:\Version 6\TeeFiles\cursortool.cpp"
+"E:\Version 6\TeeFiles\curvefittingfunction.cpp"
+"E:\Version 6\TeeFiles\donutseries.cpp"
+"E:\Version 6\TeeFiles\dragmarkstool.cpp"
+"E:\Version 6\TeeFiles\drawline.cpp"
+"E:\Version 6\TeeFiles\drawlinelist.cpp"
+"E:\Version 6\TeeFiles\drawlinetool.cpp"
+"E:\Version 6\TeeFiles\environment.cpp"
+"E:\Version 6\TeeFiles\errorbarseries.cpp"
+"E:\Version 6\TeeFiles\errorseries.cpp"
+"E:\Version 6\TeeFiles\expavgfunction.cpp"
+"E:\Version 6\TeeFiles\explodedslices.cpp"
+"E:\Version 6\TeeFiles\export.cpp"
+"E:\Version 6\TeeFiles\fastlineseries.cpp"
+"E:\Version 6\TeeFiles\funnelseries.cpp"
+"E:\Version 6\TeeFiles\ganttseries.cpp"
+"E:\Version 6\TeeFiles\gifexport.cpp"
+"E:\Version 6\TeeFiles\gradient.cpp"
+"E:\Version 6\TeeFiles\highlowseries.cpp"
+"E:\Version 6\TeeFiles\histogramseries.cpp"
+"E:\Version 6\TeeFiles\horizbarseries.cpp"
+"E:\Version 6\TeeFiles\horizboxplotseries.cpp"
+"E:\Version 6\TeeFiles\horizlineseries.cpp"
+"E:\Version 6\TeeFiles\htmlexport.cpp"
+"E:\Version 6\TeeFiles\imagebarseries.cpp"
+"E:\Version 6\TeeFiles\import.cpp"
+"E:\Version 6\TeeFiles\jpegexport.cpp"
+"E:\Version 6\TeeFiles\legend.cpp"
+"E:\Version 6\TeeFiles\legendsymbol.cpp"
+"E:\Version 6\TeeFiles\macdfunction.cpp"
+"E:\Version 6\TeeFiles\MainFrm.cpp"
+"E:\Version 6\TeeFiles\mappolygon.cpp"
+"E:\Version 6\TeeFiles\mappolygonlist.cpp"
+"E:\Version 6\TeeFiles\mapseries.cpp"
+"E:\Version 6\TeeFiles\marks.cpp"
+"E:\Version 6\TeeFiles\markstiptool.cpp"
+"E:\Version 6\TeeFiles\metafileexport.cpp"
+"E:\Version 6\TeeFiles\movingavgfunction.cpp"
+"E:\Version 6\TeeFiles\nativeexport.cpp"
+"E:\Version 6\TeeFiles\nearesttool.cpp"
+"E:\Version 6\TeeFiles\page.cpp"
+"E:\Version 6\TeeFiles\panel.cpp"
+"E:\Version 6\TeeFiles\pcxexport.cpp"
+"E:\Version 6\TeeFiles\pen.cpp"
+"E:\Version 6\TeeFiles\pieotherslice.cpp"
+"E:\Version 6\TeeFiles\pieseries.cpp"
+"E:\Version 6\TeeFiles\pngexport.cpp"
+"E:\Version 6\TeeFiles\point.cpp"
+"E:\Version 6\TeeFiles\point3dseries.cpp"
+"E:\Version 6\TeeFiles\pointer.cpp"
+"E:\Version 6\TeeFiles\pointseries.cpp"
+"E:\Version 6\TeeFiles\polarseries.cpp"
+"E:\Version 6\TeeFiles\printer.cpp"
+"E:\Version 6\TeeFiles\pyramidseries.cpp"
+"E:\Version 6\TeeFiles\radarseries.cpp"
+"E:\Version 6\TeeFiles\rmsfunction.cpp"
+"E:\Version 6\TeeFiles\rotatetool.cpp"
+"E:\Version 6\TeeFiles\rsifunction.cpp"
+"E:\Version 6\TeeFiles\scroll.cpp"
+"E:\Version 6\TeeFiles\series.cpp"
+"E:\Version 6\TeeFiles\seriesmarkposition.cpp"
+"E:\Version 6\TeeFiles\seriesmarkspositions.cpp"
+"E:\Version 6\TeeFiles\shapeseries.cpp"
+"E:\Version 6\TeeFiles\smithseries.cpp"
+"E:\Version 6\TeeFiles\stddeviationfunction.cpp"
+"E:\Version 6\TeeFiles\strings.cpp"
+"E:\Version 6\TeeFiles\surfaceseries.cpp"
+"E:\Version 6\TeeFiles\tchart.cpp"
+"E:\Version 6\TeeFiles\TeeFiles.cpp"
+"E:\Version 6\TeeFiles\TeeFilesDoc.cpp"
+"E:\Version 6\TeeFiles\TeeFilesView.cpp"
+"E:\Version 6\TeeFiles\teefont.cpp"
+"E:\Version 6\TeeFiles\teefunction.cpp"
+"E:\Version 6\TeeFiles\teeopengl.cpp"
+"E:\Version 6\TeeFiles\teepoint2d.cpp"
+"E:\Version 6\TeeFiles\teepoint3d.cpp"
+"E:\Version 6\TeeFiles\teeshadow.cpp"
+"E:\Version 6\TeeFiles\textexport.cpp"
+"E:\Version 6\TeeFiles\titles.cpp"
+"E:\Version 6\TeeFiles\toollist.cpp"
+"E:\Version 6\TeeFiles\tools.cpp"
+"E:\Version 6\TeeFiles\trisurfaceseries.cpp"
+"E:\Version 6\TeeFiles\valuelist.cpp"
+"E:\Version 6\TeeFiles\volumeseries.cpp"
+"E:\Version 6\TeeFiles\wall.cpp"
+"E:\Version 6\TeeFiles\walls.cpp"
+"E:\Version 6\TeeFiles\waterfallseries.cpp"
+"E:\Version 6\TeeFiles\windroseseries.cpp"
+"E:\Version 6\TeeFiles\xlsexport.cpp"
+"E:\Version 6\TeeFiles\xmlexport.cpp"
+"E:\Version 6\TeeFiles\zoom.cpp"
+]
+Creating command line "cl.exe @C:\Users\Pep\AppData\Local\Temp\RSP5BB6.tmp" 
+Creating temporary file "C:\Users\Pep\AppData\Local\Temp\RSP5BB7.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Release/TeeFiles.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\Version 6\TeeFiles\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Pep\AppData\Local\Temp\RSP5BB7.tmp" 
+Creating temporary file "C:\Users\Pep\AppData\Local\Temp\RSP5BB8.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/TeeFiles.pdb" /machine:I386 /out:"Release/TeeFiles.exe" 
+".\Release\adxfunction.obj"
+".\Release\areaseries.obj"
+".\Release\arrowseries.obj"
+".\Release\aspect.obj"
+".\Release\axes.obj"
+".\Release\axis.obj"
+".\Release\axisarrowtool.obj"
+".\Release\axislabels.obj"
+".\Release\axistitle.obj"
+".\Release\bar3dseries.obj"
+".\Release\barjoinseries.obj"
+".\Release\barseries.obj"
+".\Release\bezierseries.obj"
+".\Release\bmpexport.obj"
+".\Release\bollingerfunction.obj"
+".\Release\boxplotseries.obj"
+".\Release\brush.obj"
+".\Release\bubbleseries.obj"
+".\Release\calendarseries.obj"
+".\Release\candleseries.obj"
+".\Release\canvas.obj"
+".\Release\chartimagetool.obj"
+".\Release\circlelabels.obj"
+".\Release\clockseries.obj"
+".\Release\colorbandtool.obj"
+".\Release\colorgridseries.obj"
+".\Release\colorlinetool.obj"
+".\Release\contourlevel.obj"
+".\Release\contourlevels.obj"
+".\Release\contourseries.obj"
+".\Release\cursortool.obj"
+".\Release\curvefittingfunction.obj"
+".\Release\donutseries.obj"
+".\Release\dragmarkstool.obj"
+".\Release\drawline.obj"
+".\Release\drawlinelist.obj"
+".\Release\drawlinetool.obj"
+".\Release\environment.obj"
+".\Release\errorbarseries.obj"
+".\Release\errorseries.obj"
+".\Release\expavgfunction.obj"
+".\Release\explodedslices.obj"
+".\Release\export.obj"
+".\Release\fastlineseries.obj"
+".\Release\funnelseries.obj"
+".\Release\ganttseries.obj"
+".\Release\gifexport.obj"
+".\Release\gradient.obj"
+".\Release\highlowseries.obj"
+".\Release\histogramseries.obj"
+".\Release\horizbarseries.obj"
+".\Release\horizboxplotseries.obj"
+".\Release\horizlineseries.obj"
+".\Release\htmlexport.obj"
+".\Release\imagebarseries.obj"
+".\Release\import.obj"
+".\Release\jpegexport.obj"
+".\Release\legend.obj"
+".\Release\legendsymbol.obj"
+".\Release\macdfunction.obj"
+".\Release\MainFrm.obj"
+".\Release\mappolygon.obj"
+".\Release\mappolygonlist.obj"
+".\Release\mapseries.obj"
+".\Release\marks.obj"
+".\Release\markstiptool.obj"
+".\Release\metafileexport.obj"
+".\Release\movingavgfunction.obj"
+".\Release\nativeexport.obj"
+".\Release\nearesttool.obj"
+".\Release\page.obj"
+".\Release\panel.obj"
+".\Release\pcxexport.obj"
+".\Release\pen.obj"
+".\Release\pieotherslice.obj"
+".\Release\pieseries.obj"
+".\Release\pngexport.obj"
+".\Release\point.obj"
+".\Release\point3dseries.obj"
+".\Release\pointer.obj"
+".\Release\pointseries.obj"
+".\Release\polarseries.obj"
+".\Release\printer.obj"
+".\Release\pyramidseries.obj"
+".\Release\radarseries.obj"
+".\Release\rmsfunction.obj"
+".\Release\rotatetool.obj"
+".\Release\rsifunction.obj"
+".\Release\scroll.obj"
+".\Release\series.obj"
+".\Release\seriesmarkposition.obj"
+".\Release\seriesmarkspositions.obj"
+".\Release\shapeseries.obj"
+".\Release\smithseries.obj"
+".\Release\StdAfx.obj"
+".\Release\stddeviationfunction.obj"
+".\Release\strings.obj"
+".\Release\surfaceseries.obj"
+".\Release\tchart.obj"
+".\Release\TeeFiles.obj"
+".\Release\TeeFilesDoc.obj"
+".\Release\TeeFilesView.obj"
+".\Release\teefont.obj"
+".\Release\teefunction.obj"
+".\Release\teeopengl.obj"
+".\Release\teepoint2d.obj"
+".\Release\teepoint3d.obj"
+".\Release\teeshadow.obj"
+".\Release\textexport.obj"
+".\Release\titles.obj"
+".\Release\toollist.obj"
+".\Release\tools.obj"
+".\Release\trisurfaceseries.obj"
+".\Release\valuelist.obj"
+".\Release\volumeseries.obj"
+".\Release\wall.obj"
+".\Release\walls.obj"
+".\Release\waterfallseries.obj"
+".\Release\windroseseries.obj"
+".\Release\xlsexport.obj"
+".\Release\xmlexport.obj"
+".\Release\zoom.obj"
+".\Release\TeeFiles.res"
+]
+Creating command line "link.exe @C:\Users\Pep\AppData\Local\Temp\RSP5BB8.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+adxfunction.cpp
+areaseries.cpp
+arrowseries.cpp
+aspect.cpp
+axes.cpp
+axis.cpp
+axisarrowtool.cpp
+axislabels.cpp
+axistitle.cpp
+bar3dseries.cpp
+barjoinseries.cpp
+barseries.cpp
+bezierseries.cpp
+bmpexport.cpp
+bollingerfunction.cpp
+boxplotseries.cpp
+brush.cpp
+bubbleseries.cpp
+calendarseries.cpp
+candleseries.cpp
+Generating Code...
+Compiling...
+canvas.cpp
+chartimagetool.cpp
+circlelabels.cpp
+clockseries.cpp
+colorbandtool.cpp
+colorgridseries.cpp
+colorlinetool.cpp
+contourlevel.cpp
+contourlevels.cpp
+contourseries.cpp
+cursortool.cpp
+curvefittingfunction.cpp
+donutseries.cpp
+dragmarkstool.cpp
+drawline.cpp
+drawlinelist.cpp
+drawlinetool.cpp
+environment.cpp
+errorbarseries.cpp
+errorseries.cpp
+Generating Code...
+Compiling...
+expavgfunction.cpp
+explodedslices.cpp
+export.cpp
+fastlineseries.cpp
+funnelseries.cpp
+ganttseries.cpp
+gifexport.cpp
+gradient.cpp
+highlowseries.cpp
+histogramseries.cpp
+horizbarseries.cpp
+horizboxplotseries.cpp
+horizlineseries.cpp
+htmlexport.cpp
+imagebarseries.cpp
+import.cpp
+jpegexport.cpp
+legend.cpp
+legendsymbol.cpp
+macdfunction.cpp
+Generating Code...
+Compiling...
+MainFrm.cpp
+mappolygon.cpp
+mappolygonlist.cpp
+mapseries.cpp
+marks.cpp
+markstiptool.cpp
+metafileexport.cpp
+movingavgfunction.cpp
+nativeexport.cpp
+nearesttool.cpp
+page.cpp
+panel.cpp
+pcxexport.cpp
+pen.cpp
+pieotherslice.cpp
+pieseries.cpp
+pngexport.cpp
+point.cpp
+point3dseries.cpp
+pointer.cpp
+Generating Code...
+Compiling...
+pointseries.cpp
+polarseries.cpp
+printer.cpp
+pyramidseries.cpp
+radarseries.cpp
+rmsfunction.cpp
+rotatetool.cpp
+rsifunction.cpp
+scroll.cpp
+series.cpp
+seriesmarkposition.cpp
+seriesmarkspositions.cpp
+shapeseries.cpp
+smithseries.cpp
+stddeviationfunction.cpp
+strings.cpp
+surfaceseries.cpp
+tchart.cpp
+TeeFiles.cpp
+TeeFilesDoc.cpp
+Generating Code...
+Compiling...
+TeeFilesView.cpp
+teefont.cpp
+teefunction.cpp
+teeopengl.cpp
+teepoint2d.cpp
+teepoint3d.cpp
+teeshadow.cpp
+textexport.cpp
+titles.cpp
+toollist.cpp
+tools.cpp
+trisurfaceseries.cpp
+valuelist.cpp
+volumeseries.cpp
+wall.cpp
+walls.cpp
+waterfallseries.cpp
+windroseseries.cpp
+xlsexport.cpp
+xmlexport.cpp
+Generating Code...
+Compiling...
+zoom.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+TeeFiles.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,102 @@
+Hello David World 10:12
+
+Calgary AP;-114,1;51,10
+Edmonton AP;-113,51;53,56
+Grande Prairie AP;-118,88;55,18
+Jasper;-118,6;52,88
+Lethbridge AP (S);-112,80;49,63
+McMurray AP;-111,21;56,65
+Medicine Hat AP;-110,71;50,1
+Red Deer AP;-113,90;52,18
+Dawson Creek;-120,18;55,73
+Fort Nelson AP (S);-122,58;58,83
+Kamloops Co;-120,41;50,71
+Nanaimo (S);-123,96;49,18
+New Westminster;-122,90;49,21
+Penticton AP;-119,60;49,46
+Prince George AP (S);-122,68;53,88
+Prince Rupert Co;-130,38;54,28
+Trail;-117,73;49,13
+Vancouver AP (S);-123,16;49,18
+Victoria Co;-123,31;48,41
+Brandon;-99,98;49,86
+Churchill AP (S);-94,6;58,75
+Dauphin AP;-100,5;51,10
+Flin Flon;-101,85;54,76
+Portage La Prairie AP;-98,26;49,90
+The Pas AP (S);-101,10;53,96
+Winnipeg AP (S);-97,23;49,90
+Campbellton Co;-66,66;48,0
+Chatham AP;-65,45;47,1
+Edmundston Co;-68,33;47,36
+Fredericton AP (S);-66,53;45,86
+Moncton AP (S);-64,68;46,11
+Saint John AP;-65,88;45,31
+Corner Brook;-57,95;48,96
+Gander AP;-54,56;48,95
+Goose Bay AP (S);-60,41;53,31
+St Johns AP (S);-52,75;47,61
+Stephenville AP;-58,55;48,53
+Fort Smith AP(S);-111,96;60,1
+Frobisher AP (S);-68,55;63,75
+Inuvik (S);-133,48;68,30
+Resolute AP (S);-94,98;74,71
+Yellowknife AP;-114,45;62,46
+Amherst;-64,21;45,81
+Halifax AP (S);-63,56;44,65
+Kentville (S);-64,60;45,5
+New Glasgow;-62,61;45,61
+Sydney AP;-60,5;46,16
+Truro Co;-63,26;45,36
+Yarmouth AP;-66,8;43,83
+Belleville;-77,40;44,15
+Chatham;-82,20;42,40
+Cornwall;-74,75;45,1
+Hamilton;-79,90;43,26
+Kapuskasing AP (S);-82,46;49,41
+Kenora AP;-94,36;49,80
+Kingston;-76,50;44,26
+Kitchener;-80,50;43,43
+London AP;-81,15;43,3
+North Bay AP;-79,41;46,36
+Oshawa;-78,86;43,90
+Ottawa AP (S);-75,66;45,31
+Owen Sound;-80,91;44,56
+Peterborough;-78,31;44,28
+St Catharines;-79,23;43,18
+Sarnia;-82,36;42,96
+Sault Ste Marie AP;-84,50;46,53
+Sudbury AP;-80,80;46,61
+Thunder Bay AP;-89,31;48,36
+Timmins AP;-81,36;48,56
+Toronto AP (S);-79,63;43,68
+Windsor AP;-82,96;42,26
+Charlottetown AP (S);-63,13;46,28
+Summerside AP;-63,83;46,43
+Bagotville AP;-71,0;48,33
+Chicoutimi;-71,8;48,41
+Drummondville;-72,48;45,88
+Granby;-72,70;45,38
+Hull;-75,73;45,43
+Megantic AP;-70,86;45,58
+Montreal AP (S);-73,75;45,46
+Quebec AP;-71,38;46,80
+Rimouski;-68,53;48,45
+St Jean;-73,26;45,30
+St Jerome;-74,1;45,80
+Sept. Iles AP (S);-66,26;50,21
+Shawinigan;-72,71;46,56
+Sherbrooke Co;-71,90;45,40
+Thetford Mines;-71,31;46,6
+Trois Rivieres;-72,58;46,35
+Val Dor AP;-77,78;48,5
+Valleyfield;-74,10;45,26
+Estevan AP;-103,0;49,6
+Moose Jaw AP;-105,55;50,33
+North Battleford AP;-108,25;52,76
+Prince Albert AP;-105,68;53,21
+Regina AP;-104,66;50,43
+Saskatoon AP (S);-106,68;52,16
+Swift Current AP (S);-107,68;50,28
+Yorkton AP;-102,46;51,26
+Whitehorse AP (S);-135,6;60,71

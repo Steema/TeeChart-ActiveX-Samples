@@ -1,0 +1,264 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=iso-8859-1">
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<title>TeeChart Pro Internet Examples</title><LINK REL=STYLESHEET TYPE="text/css" HREF="style.css">
+</head>
+
+<body bgcolor="#ffffff" onload="Window_onload()">
+
+<SCRIPT LANGUAGE="JavaScript" FOR="Chart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+<script LANGUAGE="VBScript">
+dim DeltaRotation,DeltaElevation,DeltaZoom
+
+Sub Window_onload
+  TeeCommander1.Chart=Chart1
+
+  'sets up Chart to print from IE's print option
+  Chart1.Environment.IEPrintWithPage=True
+
+  Chart1.ClipPoints=False
+  Chart1.Aspect.OpenGL.LightPosition.X = 1000
+  Chart1.Aspect.OpenGL.LightPosition.Y = 450
+  Chart1.Aspect.OpenGL.LightPosition.Z = -700
+  Chart1.Aspect.Zoom=75
+  Chart1.Aspect.Orthogonal=false
+  Chart1.Aspect.Perspective=55
+  Chart1.TimerInterval=1
+  Chart1.TimerEnabled=true
+  DeltaRotation=1
+  DeltaElevation=1
+  DeltaZoom=1
+  FillChart()
+End sub
+
+SUB FillChart
+     Chart1.RemoveAllSeries
+     Chart1.AddSeries( 1 )
+
+     Chart1.Series(0).Title="Fruits"
+
+     Chart1.Series(0).Clear
+     Chart1.Series(0).Add 100, "Apples", RGB(255,0,0)
+     Chart1.Series(0).Add 300, "Pears", RGB(0,255,0)
+     Chart1.Series(0).Add 200, "Bananas", RGB(255,255,0)
+     Chart1.Series(0).Add 400, "Limes", RGB(0,255,255)
+     Chart1.Series(0).Add 150, "Pines", RGB(255,255,255)
+     Chart1.Series(0).Add 250, "Oranges", RGB(255,0,255)
+     Chart1.Series(0).Marks.Style = smsValue
+     Chart1.Series(0).Cursor =2020
+
+     Chart1.Header.Text.Clear
+     Chart1.Header.Text.Add("2002 Sales")
+
+     Chart1.Footer.Text.Clear
+     Chart1.Footer.Text.Add("Fruit")
+     Chart1.Footer.Visible=True
+     Chart1.Footer.Font.Color=RGB(0,0,0)
+     Chart1.Footer.Font.Bold=True 
+
+     Chart1.Legend.Alignment=1
+     Chart1.Legend.ColorWidth=40
+
+     Chart1.Panel.Gradient.Visible=True
+     Chart1.Panel.Gradient.Direction=6
+
+     Chart1.Aspect.Chart3DPercent=30
+
+     Chart1.Walls.Left.Pen.Color=RGB(0,0,255)
+     Chart1.Walls.Left.Color=RGB(235,200,225)
+     Chart1.Walls.Left.Dark3D=False
+     Chart1.Walls.Left.Size=8
+     Chart1.Walls.Bottom.Size=8
+     Chart1.Walls.Back.Color=RGB(180,150,200)
+     Chart1.Walls.Back.Size=8
+     Chart1.Walls.Back.Transparent=False
+
+     Chart1.Axis.Left.Title.Caption="Money"
+     Chart1.Axis.Left.Labels.Font.Bold=True
+
+     Chart1.Axis.Left.GridPen.Color=RGB(245,235,225)
+     Chart1.Axis.Left.GridPen.Style=0
+
+     Chart1.Axis.Depth.Visible=true
+
+     Chart1.Axis.Bottom.Labels.Style=2
+     Chart1.Axis.Bottom.Labels.Font.Size=12
+     Chart1.Axis.Bottom.Ticks.Width=3
+     Chart1.Axis.Bottom.Ticks.Color=RGB(200,150,200)
+
+     Chart1.Series(0).Marks.Frame.Color=RGB(240,150,240)
+
+     Chart1.Series(0).AsBar.BarWidth=30  ' 30% bar width
+     Chart1.Series(0).AsBar.BarStyle=3   ' bar cylinder 
+
+     Chart1.AddSeries( 0 )   ' 0 is a line series type
+
+     Chart1.Series(1).FillSampleValues 20
+
+     Chart1.Series(1).asLine.Stairs=True
+
+     Chart1.Panel.BevelOffset=0
+
+     Chart1.Series(1).asLine.LinePen.Color=vbWhite
+
+     Chart1.Series(1).Title="Other"
+
+     Chart1.Panel.Color=Chart1.Panel.Gradient.EndColor
+
+     Chart1.Header.Font.Size=12
+     Chart1.Header.Font.Bold=True
+
+     Chart1.AddSeries( 1 )
+     Chart1.Series(2).Title="Cereals"
+     Chart1.Series(2).FillSampleValues 15
+     Chart1.Series(2).Marks.Visible=false
+     Chart1.Series(2).asBar.BarStyle=2
+     Chart1.Series(2).asBar.MultiBar=0
+
+     Chart1.AddSeries( 1 )
+     Chart1.Series(3).Title="Milk"
+     Chart1.Series(3).FillSampleValues 15
+     Chart1.Series(3).asBar.BarPen.Color=RGB(155,255,155)
+     Chart1.Series(3).Color=RGB(205,5,155)
+
+     Chart1.Series(3).Marks.Visible=false
+     Chart1.Series(3).asBar.MultiBar=0
+     Chart1.Series(3).asBar.BarStyle=3
+
+     Chart1.AddSeries( 4 )   ' 0 is a line series type, 4 is a point series
+
+     Chart1.Series(4).Title="Salads"
+     Chart1.Series(4).asPoint.Pointer.Style=2
+     Chart1.Series(4).FillSampleValues 30
+
+     Chart1.ExchangeSeries 0,4
+    END SUB
+
+    Sub Chart1_OnClickSeries(SeriesIndex, ValueIndex, Button, Shift, X, Y)
+        Chart1.StopMouse
+        msgbox Chart1.Series(SeriesIndex).PointLabel(ValueIndex)
+    end sub
+
+    Sub Chart1_OnTimer()
+      Chart1.TimerEnabled=False
+      Chart1.Aspect.Rotation=Chart1.Aspect.Rotation+DeltaRotation
+      if Chart1.Aspect.OpenGL.Active then
+         MinAngle=0
+      else
+         MinAngle=290
+      end if
+      if Chart1.Aspect.Rotation<MINANGLE then
+        DeltaRotation=1
+        if Chart1.Aspect.OpenGL.Active then
+           Chart1.Aspect.Rotation=360
+        else
+           Chart1.Aspect.Rotation=MinAngle
+        end if
+      end if
+      if Chart1.Aspect.Rotation>360 then
+        DeltaRotation=-1
+        Chart1.Aspect.Rotation=360
+      end if
+      Chart1.Aspect.Elevation=Chart1.Aspect.Elevation+DeltaElevation
+      if Chart1.Aspect.Elevation<MINANGLE then
+        DeltaElevation=1
+        if Chart1.Aspect.OpenGL.Active then
+           Chart1.Aspect.Elevation=360
+        else
+           Chart1.Aspect.Elevation=MinAngle
+        end if
+      end if
+      if Chart1.Aspect.Elevation>360 then
+        DeltaElevation=-1
+        Chart1.Aspect.Elevation=360
+      end if
+      Chart1.Aspect.Zoom=Chart1.Aspect.Zoom+DeltaZoom
+      if Chart1.Aspect.Zoom<10 then
+         DeltaZoom=1
+         Chart1.Aspect.Zoom=11
+      end if
+      if Chart1.Aspect.Zoom>300 then
+         DeltaZoom=-1
+         Chart1.Aspect.Zoom=299
+      end if
+      Chart1.TimerEnabled=True
+    end sub
+
+    Sub Fast_OnClick()
+      if Chart1.TimerInterval=1 then
+         Chart1.TimerInterval=150
+      else
+         Chart1.TimerInterval=1
+      end if
+    end sub
+
+    Sub Animate_OnClick()
+      Chart1.TimerEnabled=not Chart1.TimerEnabled
+    end sub
+
+    Sub GL_OnClick()
+      Chart1.Aspect.OpenGL.Active=GL.Checked
+      Chart1.Series(3).asBar.BarPen.Visible = not GL.Checked
+      Chart1.Axis.Left.GridPen.Visible=not GL.Checked
+      Chart1.Axis.Bottom.GridPen.Visible=not GL.Checked
+      Chart1.Axis.Depth.GridPen.Visible=not GL.Checked
+      If GL.Checked then
+        Chart1.Series(4).asBar.BarPen.Color = RGB(192,192,192)
+      else
+        Chart1.Series(4).asBar.BarPen.Color = RGB(0,0,0)
+      End if
+    end sub
+
+    Sub Gradient_OnClick()
+      Chart1.Panel.Gradient.Visible=Gradient.Checked
+    end sub
+    </script>
+
+
+<p><font face="Arial" color="#004080"><em><big><strong>OpenGL Example</strong></big></em></font> 
+</p>
+<a href="../Start Local examples.htm">
+
+<p>Return to Examples</a>&nbsp; <a href="animated.htm">Next Example</a>
+
+
+</P>
+
+<hr>
+
+<p>
+  See below an embedded TeeChart Pro ActiveX control 
+and a TeeCommander connected to the chart.</p>
+
+<p>
+  Click the toolbar buttons and drag the 
+chart...</p>
+
+<p><input TYPE="checkbox" VALUE="ON" CHECKED ID="Animate" NAME="Animate" > Animate &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input TYPE="checkbox" VALUE="ON" CHECKED
+ ID="Fast" NAME="Fast" tabindex="1"> Fast&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
+ TYPE="checkbox" VALUE="ON" ID="GL" NAME="GL" tabindex="1">OpenGL 
+3D&nbsp;&nbsp;&nbsp; <input
+ TYPE="checkbox" VALUE ="ON" CHECKED ID="Gradient" NAME="Gradient" tabindex="1">Gradient</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">
+            <OBJECT align=textTop 
+            classid=CLSID:EBFFF3FC-8805-42F8-8FFB-975AE3F5CE46 
+            height=32 id=TeeCommander1 width=611 ></OBJECT>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+            <OBJECT classid=CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2 
+            height=268 id=Chart1 type=application/x-oleobject 
+            width=611 ></OBJECT>
+    </td>
+  </tr>
+</table>
+<p>Click on a cylinder Bar point above.</p>
+</body>
+</html>

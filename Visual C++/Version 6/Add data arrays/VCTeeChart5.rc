@@ -1,0 +1,296 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Modern) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 10, 3\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\VCTeeChart5.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.esp\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\VCTeeChart5.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Acerca de VCTeeChart5"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "VCTeeChart5 Versión 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2001",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "Aceptar",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_VCTEECHART5_DIALOG DIALOGEX 0, 0, 519, 258
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "VCTeeChart5"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Aceptar",IDOK,369,233,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,462,233,50,14
+    CONTROL         "",IDC_TCHART1,"{CC0427C7-2124-4770-8847-F9EF4C50CDC2}",
+                    0x0,7,29,307,162
+    CONTROL         "",IDC_TEECOMMANDER1,
+                    "{EBFFF3FC-8805-42F8-8FFB-975AE3F5CE46}",0x0,7,7,505,21
+    CONTROL         "",IDC_TEELISTBOX1,
+                    "{D578A6A4-2EF2-489D-8738-D1E2C73EFFF6}",0x0,317,28,63,
+                    162
+    CONTROL         "",IDC_CHARTGRID1,"{D2DADDAE-4167-499C-9153-7480986E91A5}",
+                    0x0,384,28,128,161
+    CONTROL         "",IDC_CHARTPAGENAVIGATOR1,
+                    "{95384BDF-373D-4FBE-AFA3-B4339CE9D32B}",0x0,7,201,309,
+                    19
+    CONTROL         "",IDC_CHARTGRIDNAVIGATOR1,
+                    "{0ECE333F-C18E-49A9-BE39-82A9342A83BB}",0x0,392,201,120,
+                    16
+    CONTROL         "",IDC_TEEEDITOR1,"{CEA04253-EC73-49FA-BA73-449C2377FF54}",
+                    0x0,319,7,16,15
+    CONTROL         "",IDC_TEEPREVIEWER1,
+                    "{43C0DAF8-B613-4027-94A6-6F97F2472540}",0x0,349,7,16,17
+    PUSHBUTTON      "Conventional 'Add' with Paging",IDC_BUTTON1,7,233,104,
+                    15
+    PUSHBUTTON      "Add arrays (200,000 points)",IDC_BUTTON2,120,233,117,15
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "0C0A04B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Aplicación MFC VCTeeChart5\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "VCTeeChart5\0"
+            VALUE "LegalCopyright", "Copyright (C) 2001\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "VCTeeChart5.EXE\0"
+            VALUE "ProductName", "Aplicación VCTeeChart5\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0xc0a, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_VCTEECHART5_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 512
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_VCTEECHART5_DIALOG DLGINIT
+BEGIN
+    IDC_TCHART1, 0x376, 358, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x540b, 0x6843, 0x7261, 0x4374, 0x6168, 
+0x7472, 0x0400, 0x654c, 0x7466, 0x0002, 0x5403, 0x706f, 0x0002, 0x5705, 
+0x6469, 0x6874, 0xcd03, 0x0601, 0x6548, 0x6769, 0x7468, 0x0703, 0x1401, 
+0x6142, 0x6b63, 0x6157, 0x6c6c, 0x422e, 0x7572, 0x6873, 0x432e, 0x6c6f, 
+0x726f, 0x0707, 0x6c63, 0x6857, 0x7469, 0x1465, 0x6142, 0x6b63, 0x6157, 
+0x6c6c, 0x422e, 0x7572, 0x6873, 0x532e, 0x7974, 0x656c, 0x0707, 0x7362, 
+0x6c43, 0x6165, 0x1272, 0x6954, 0x6c74, 0x2e65, 0x6554, 0x7478, 0x532e, 
+0x7274, 0x6e69, 0x7367, 0x0601, 0x5408, 0x6565, 0x6843, 0x7261, 0x0074, 
+0x5606, 0x6569, 0x3377, 0x0844, 0x0f00, 0x4654, 0x7361, 0x4c74, 0x6e69, 
+0x5365, 0x7265, 0x6569, 0x0773, 0x6553, 0x6972, 0x7365, 0x1130, 0x614d, 
+0x6b72, 0x2e73, 0x7241, 0x6f72, 0x4c77, 0x6e65, 0x7467, 0x0268, 0x0d08, 
+0x614d, 0x6b72, 0x2e73, 0x6956, 0x6973, 0x6c62, 0x0865, 0x530b, 0x7265, 
+0x6569, 0x4373, 0x6c6f, 0x726f, 0x0507, 0x6c63, 0x6552, 0x0c64, 0x6853, 
+0x776f, 0x6e49, 0x654c, 0x6567, 0x646e, 0x0d08, 0x694c, 0x656e, 0x6550, 
+0x2e6e, 0x6f43, 0x6f6c, 0x0772, 0x6305, 0x526c, 0x6465, 0x580c, 0x6156, 
+0x756c, 0x7365, 0x4e2e, 0x6d61, 0x0665, 0x5801, 0x580d, 0x6156, 0x756c, 
+0x7365, 0x4f2e, 0x6472, 0x7265, 0x0607, 0x6f6c, 0x6f4e, 0x656e, 0x590c, 
+0x6156, 0x756c, 0x7365, 0x4e2e, 0x6d61, 0x0665, 0x5901, 0x590d, 0x6156, 
+0x756c, 0x7365, 0x4f2e, 0x6472, 0x7265, 0x0607, 0x6f6c, 0x6f4e, 0x656e, 
+0x0000, 0x0000, 0x0000, 0x0200, 0x0000, 0x0000, 0xffff, 0xffff, 
+    IDC_TEECOMMANDER1, 0x376, 56, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x540d, 0x6554, 0x4365, 0x6d6f, 0x616d, 
+0x646e, 0x7265, 0x0400, 0x654c, 0x7466, 0x0002, 0x5403, 0x706f, 0x0002, 
+0x5705, 0x6469, 0x6874, 0xf603, 0x0602, 0x6548, 0x6769, 0x7468, 0x2202, 
+0x0000, 
+    IDC_TEELISTBOX1, 0x376, 56, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x540d, 0x6843, 0x7261, 0x4c74, 0x7369, 
+0x4274, 0x786f, 0x0400, 0x654c, 0x7466, 0x0002, 0x5403, 0x706f, 0x0002, 
+0x5705, 0x6469, 0x6874, 0x5f02, 0x4806, 0x6965, 0x6867, 0x0374, 0x0107, 
+0x0000, 
+    IDC_CHARTGRID1, 0x376, 177, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x540a, 0x6843, 0x7261, 0x4774, 0x6972, 
+0x0064, 0x4c04, 0x6665, 0x0274, 0x0300, 0x6f54, 0x0270, 0x0500, 0x6957, 
+0x7464, 0x0368, 0x00c0, 0x4806, 0x6965, 0x6867, 0x0374, 0x0106, 0x4f07, 
+0x7470, 0x6f69, 0x736e, 0x0a0b, 0x6f67, 0x6556, 0x7472, 0x694c, 0x656e, 
+0x670a, 0x486f, 0x726f, 0x4c7a, 0x6e69, 0x0d65, 0x6f67, 0x6152, 0x676e, 
+0x5365, 0x6c65, 0x6365, 0x1374, 0x6f67, 0x7244, 0x7761, 0x6f46, 0x7563, 
+0x5373, 0x6c65, 0x6365, 0x6574, 0x0b64, 0x6f67, 0x6f52, 0x5377, 0x7a69, 
+0x6e69, 0x0b67, 0x6f67, 0x6f43, 0x536c, 0x7a69, 0x6e69, 0x0967, 0x6f67, 
+0x6445, 0x7469, 0x6e69, 0x0667, 0x6f67, 0x6154, 0x7362, 0x670f, 0x546f, 
+0x7568, 0x626d, 0x7254, 0x6361, 0x696b, 0x676e, 0x0000, "\000" 
+    IDC_CHARTPAGENAVIGATOR1, 0x376, 62, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x5413, 0x6843, 0x7261, 0x5074, 0x6761, 
+0x4e65, 0x7661, 0x6769, 0x7461, 0x726f, 0x0400, 0x654c, 0x7466, 0x0002, 
+0x5403, 0x706f, 0x0002, 0x5705, 0x6469, 0x6874, 0xd003, 0x0601, 0x6548, 
+0x6769, 0x7468, 0x1f02, 0x0000, 
+    IDC_CHARTGRIDNAVIGATOR1, 0x376, 62, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x5413, 0x6843, 0x7261, 0x4774, 0x6972, 
+0x4e64, 0x7661, 0x6769, 0x7461, 0x726f, 0x0400, 0x654c, 0x7466, 0x0002, 
+0x5403, 0x706f, 0x0002, 0x5705, 0x6469, 0x6874, 0xb403, 0x0600, 0x6548, 
+0x6769, 0x7468, 0x1a02, 0x0000, 
+    IDC_TEEEDITOR1, 0x376, 35, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x540c, 0x6843, 0x7261, 0x4574, 0x6964, 
+0x6f74, 0x0072, 0x4808, 0x6469, 0x5465, 0x6261, 0x0b73, 0x0000, "\000" 
+    IDC_TEEPREVIEWER1, 0x376, 27, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x540f, 0x6843, 0x7261, 0x5074, 0x6572, 
+0x6976, 0x7765, 0x7265, 0x0000, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&Acerca de VCTeeChart5..."
+END
+
+#endif    // Spanish (Modern) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)
+#ifdef _WIN32
+LANGUAGE 10, 3
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\VCTeeChart5.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.esp\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

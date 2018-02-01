@@ -1,0 +1,251 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_VCEXAMPLE_DIALOG DIALOGEX 0, 0, 452, 278
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "TeeChart Pro Activex Control VC++ Example"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,395,257,50,14
+    CONTROL         "",IDC_TCHART1,"{CC0427C7-2124-4770-8847-F9EF4C50CDC2}",
+                    0x0,7,71,302,183
+    PUSHBUTTON      "1) Add Bar Series",IDC_BUTTON1,7,7,66,14
+    PUSHBUTTON      "3) Add Custom axes for StdDeviation Series",IDC_BUTTON2,
+                    165,7,142,14
+    PUSHBUTTON      "Show Panel Gradient",IDC_BUTTON3,372,7,73,14
+    PUSHBUTTON      "2) StdDeviation (3 pointly)",IDC_BUTTON4,76,7,85,14
+    CONTROL         "",IDC_TEECOMMANDER1,
+                    "{EBFFF3FC-8805-42F8-8FFB-975AE3F5CE46}",0x0,7,47,438,20
+    CONTROL         "",IDC_TEELISTBOX1,
+                    "{D578A6A4-2EF2-489D-8738-D1E2C73EFFF6}",0x0,310,71,135,
+                    183
+    CONTROL         "",IDC_TEEEDITOR1,"{CEA04253-EC73-49FA-BA73-449C2377FF54}",
+                    0x0,219,1,15,16
+    CONTROL         "",IDC_TEEPREVIEWER1,
+                    "{43C0DAF8-B613-4027-94A6-6F97F2472540}",0x0,241,1,18,18
+    PUSHBUTTON      "Enable/disable OpenGL (requires Windows OpenGL support)",
+                    IDC_BUTTON5,7,25,300,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "VCExample MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "VCExample\0"
+            VALUE "LegalCopyright", "Copyright (C) 1998\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "VCExample.EXE\0"
+            VALUE "ProductName", "VCExample Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_VCEXAMPLE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 445
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 271
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_VCEXAMPLE_DIALOG DLGINIT
+BEGIN
+    IDC_TCHART1, 0x376, 371, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x540a, 0x444f, 0x4342, 0x6843, 0x7261, 
+0x0074, 0x4c04, 0x6665, 0x0274, 0x0300, 0x6f54, 0x0270, 0x0500, 0x6957, 
+0x7464, 0x0368, 0x01c5, 0x4806, 0x6965, 0x6867, 0x0374, 0x0129, 0x4214, 
+0x6361, 0x576b, 0x6c61, 0x2e6c, 0x7242, 0x7375, 0x2e68, 0x6f43, 0x6f6c, 
+0x0772, 0x6307, 0x576c, 0x6968, 0x6574, 0x4214, 0x6361, 0x576b, 0x6c61, 
+0x2e6c, 0x7242, 0x7375, 0x2e68, 0x7453, 0x6c79, 0x0765, 0x6207, 0x4373, 
+0x656c, 0x7261, 0x5412, 0x7469, 0x656c, 0x542e, 0x7865, 0x2e74, 0x7453, 
+0x6972, 0x676e, 0x0173, 0x1906, 0x6554, 0x4365, 0x6168, 0x7472, 0x7720, 
+0x7469, 0x2068, 0x6570, 0x7372, 0x6570, 0x7463, 0x7669, 0x0065, 0x430e, 
+0x6168, 0x7472, 0x4433, 0x6550, 0x6372, 0x6e65, 0x0274, 0x1737, 0x6956, 
+0x7765, 0x4433, 0x704f, 0x6974, 0x6e6f, 0x2e73, 0x6c45, 0x7665, 0x7461, 
+0x6f69, 0x036e, 0x015a, 0x5619, 0x6569, 0x3377, 0x4f44, 0x7470, 0x6f69, 
+0x736e, 0x482e, 0x726f, 0x7a69, 0x664f, 0x7366, 0x7465, 0xff02, 0x5618, 
+0x6569, 0x3377, 0x4f44, 0x7470, 0x6f69, 0x736e, 0x4f2e, 0x7472, 0x6f68, 
+0x6f67, 0x616e, 0x086c, 0x5619, 0x6569, 0x3377, 0x4f44, 0x7470, 0x6f69, 
+0x736e, 0x502e, 0x7265, 0x7073, 0x6365, 0x6974, 0x6576, 0x1c02, 0x5616, 
+0x6569, 0x3377, 0x4f44, 0x7470, 0x6f69, 0x736e, 0x522e, 0x746f, 0x7461, 
+0x6f69, 0x036e, 0x015a, 0x5618, 0x6569, 0x3377, 0x4f44, 0x7470, 0x6f69, 
+0x736e, 0x562e, 0x7265, 0x4f74, 0x6666, 0x6573, 0x0274, 0x1201, 0x6956, 
+0x7765, 0x4433, 0x704f, 0x6974, 0x6e6f, 0x2e73, 0x6f5a, 0x6d6f, 0x5d02, 
+0x0000, 0x0000, 0x0000, 0x0001, 0x0000, "\000" 
+    IDC_TEECOMMANDER1, 0x376, 56, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x540d, 0x6554, 0x4365, 0x6d6f, 0x616d, 
+0x646e, 0x7265, 0x0400, 0x654c, 0x7466, 0x0002, 0x5403, 0x706f, 0x0002, 
+0x5705, 0x6469, 0x6874, 0x9103, 0x0602, 0x6548, 0x6769, 0x7468, 0x2102, 
+0x0000, 
+    IDC_TEELISTBOX1, 0x376, 70, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x540d, 0x6843, 0x7261, 0x4c74, 0x7369, 
+0x4274, 0x786f, 0x0400, 0x654c, 0x7466, 0x0002, 0x5403, 0x706f, 0x0002, 
+0x5705, 0x6469, 0x6874, 0xcb03, 0x0600, 0x6548, 0x6769, 0x7468, 0x2903, 
+0x0b01, 0x754d, 0x746c, 0x5369, 0x6c65, 0x6365, 0x0974, 0x0000, 
+    IDC_TEEEDITOR1, 0x376, 35, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x540c, 0x6843, 0x7261, 0x4574, 0x6964, 
+0x6f74, 0x0072, 0x4808, 0x6469, 0x5465, 0x6261, 0x0b73, 0x0000, "\000" 
+    IDC_TEEPREVIEWER1, 0x376, 27, 0
+0x0000, 0x0000, 0x5054, 0x3046, 0x540f, 0x6843, 0x7261, 0x5074, 0x6572, 
+0x6976, 0x7765, 0x7265, 0x0000, "\000" 
+    0
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\VCExample.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\VCExample.ico"
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\VCExample.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+

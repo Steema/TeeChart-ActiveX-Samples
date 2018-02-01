@@ -1,0 +1,57 @@
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Web;
+using System.Web.SessionState;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+using System.IO;
+
+namespace CSharpWebForm
+{
+	/// <summary>
+	/// Summary description for genChart.
+	/// </summary>
+	public class genChart : System.Web.UI.Page
+	{
+		private void Page_Load(object sender, System.EventArgs e)
+		{
+			// Put user code to initialize the page here
+			TeeChart.TChartClass TChart1;
+			TChart1 = new TeeChart.TChartClass();
+		    TChart1.AddSeries(TeeChart.ESeriesClass.scBar);
+			TChart1.Series(0).FillSampleValues(10);
+			TChart1.Header.Text.Add("events in .NET example");
+			TChart1.Header.Font.Size = 10;
+	
+			object chObj=TChart1.Export.asNative.SaveToStream(true);
+			byte[] Buffer = new byte[((Array)(chObj)).GetLength(0)];
+			Array.Copy((Array)chObj,Buffer,((Array)(chObj)).GetLength(0));
+			Response.BinaryWrite(Buffer);
+		}
+
+		#region Web Form Designer generated code
+		override protected void OnInit(EventArgs e)
+		{
+			//
+			// CODEGEN: This call is required by the ASP.NET Web Form Designer.
+			//
+			InitializeComponent();
+			base.OnInit(e);
+		}
+		
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{    
+			this.Load += new System.EventHandler(this.Page_Load);
+
+		}
+		#endregion
+	}
+}

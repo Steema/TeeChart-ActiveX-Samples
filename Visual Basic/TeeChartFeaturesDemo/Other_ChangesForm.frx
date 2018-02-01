@@ -1,0 +1,46 @@
+ÿ™Miscellaneous changes and additions in version 7:
+=================================================
+
+- Transparency (blending) now uses Microsoft Windows API
+  when possible (not in Windows 95), to make it faster.
+
+- IChartGradient includes two new gradient modes: gdDiagonalUp and dDiagonalDown,
+and a new gradient gallery with many preset gradient styles like "Sunset".
+
+- IChartBrush editor dialog (TeeBrushDlg) provides several new pattern pictures
+such as fire, clouds, metal, stone, etc.
+
+- ITeeShadow can now draw shadows in "smooth" mode: Shadow.Smooth:=True
+
+- Improvements in 3D clipping supporting 360 degree rotation.
+
+- Chart1.Zoom can be set to zoom on Up Left drag direction.
+
+- Improved OpenGL display in Orthogonal and 2D modes.
+
+- Improved logarithmic axis automatic Increment.
+
+- TSeriesDataText.ValueFormat new property to export Series values
+to text files or streams using this format.
+
+- TCursorTool.UseSeriesZ new property to display cursor at associated
+Series "Z" position.
+
+- TAnnotationTool new PositionUnits property to display annotations
+at specified Left and Top coordinates expressed as percentage of total
+chart width and height.
+
+- Clicked function for TriSurface series now returns the triangle
+under mouse XY position.
+
+- HighLow series support for null values.
+
+- Polar and Radar Series new "LabelsMargin" percent property.
+
+- New option at ITeeEditor to hide the "Export, Native" tab.
+  TeeEditor1.ShowPages.ExportNative = False
+
+- Pie Series support for multi-paging (Chart1.MaxPointsPerPage = 5)
+
+- New Design-Time "Options" editor dialog to configure several
+  Chart gallery and Chart editor options.

@@ -1,0 +1,149 @@
+ÿ”* Fixes in the v7.0.0.6
+----------------------------------------
+
+# TA05010694 - "Range check error" using "volume" Series in a chart. It
+  happens when the mouse pointer is over the chart area. Now Fixed.
+# TA05010624 - TChart1.Canvas.Line method doesn't work. The problem was that
+  Line is a reserved word, this method has been changed to DrawLine.
+# TA05010828 - TeeSplitLines method was removed in VCL but has been fixed to
+  be able to continue using it with ActiveX version.
+# TA05011011 - Access violation exception setting IrregularGrid at design
+  time and passing the mouse over the Series without data. Now Fixed.
+# The VerticalAxisCustom method does not give a currect index, now has been
+  Fixed.
+# TV52010173 - Setting a minimum and maximum for Gauge Series like -10,10 the 
+  axis does not cover the first 10 values, or maybe the labels should move to 
+  place them under the axis. Now Fixed.
+# TV52010449 - In the Contour Series examples, "Palette and Color range",changing
+  the palette has no effect on the chart. It also happens using the editor. Fixed.
+# TV52010944- Exporting to Gif having XP Theme selected gives a "Color table
+  overflow" error. Now Fixed.
+# TV52010945 - The character "T" on top the errorbar is drawn at inappropriate 
+  position when Stacked 100%. Now Fixed.
+# Installation of TeeChart on Excel/VBA Userform not possible in 
+  prior releases of TeeChart AX7. Issue now resolved.
+# TeeChart didn't support full range of Long HDCs sent from
+  recent Windows op systems. Now resolved.
+# Some fixed in Features Demo.
+
+
+* Fixes in the v7.05 (until 28/07/2005)
+------------------------------------------------------------
+
+# Multiple Instancing of Internet Explorer
+  Windows could generate an error when closing
+  if MarkTips tool present. Now resolved.
+
+# Range Check Error appears in some cases. Now resolved
+# Other minor changes..
+
+
+* Fixes in the v7.04 (until 12/04/2005)
+------------------------------------------------------------------
+
+#TA05010154 - Problem adding a Nearest Tool and Saving project Error :"cannot load 
+tchart1" 
+#TA05010157 - ChartEditorPanel with Chart asigned,  buttons greyed out.
+#TA05010283 - It has been fixed witht he TA05010154. aLL THE ADDED tools are 
+identified and saved as ChartTool1
+#TA05010284 - When accessing the Min & Max axis values for a custom axis, every 
+axis index is off by one. For example the 
+		correct Min/Max axis values for Axis.Custom(9) are found at 
+Axis.Custom(10). 
+#TA05010348 - In TeeChartv7FeatureDemo.exe I can't see example of source code in 
+topic "Axis Labels no Weekends"
+#TA05010511 - Saving chart as a native TeeChart 'tee' template Line code : 
+tChart.Export.asNative.SaveToFile lsPathFileName,
+		True Error : -2147418113 Automation error Catastrophic failure 
+#TA05010539 - If you use the tool MarksTip in a color grid, the label of the last 
+row and the last column are never showed. 
+		This is a bug of TeeChart6.ocx, and it is not resolved with the 
+version 7. 
+#TV52010327 - The OnClick event for the TColorGrid series is not fired in some 
+cases.
+#TV52010045 - OnClickSeries event does no work for Pyramid Series.
+#TV52010062 - Changing 2D-3D from the TeeCommander does not refresh the Color Icon 
+on ChartListBox since you click over it.
+#TV52010065 - Changing the increment for DateTime Values from the Editor does not 
+work fine. If you go to 
+	        Chart-> Axis -> Bottom -> Click over the Change Increment Button, 
+select Standard and for example "One Week", 
+		you will notice that the axis changes to "Three days", nor for one 
+Week, 
+#TV52010149 - The button BClose is hidden when showing the preview inside the 
+Print tab in the editor.
+		It shows when using the preview window standalone or the 
+TchartPreview component Show.
+		I've moved the Setup and Print buttons inside a new panel, right 
+aligned and anchored to BClose panel.
+#TV52010177 - Setting the Zoom Direction to tzHorizontal does not work fine. 
+#TV52010193 - The Depth axis is moved but not the Axis labels, ticks and title :
+#TV52010270 - Setting a smaller pattern (like Fill 80%)  for an Area series is not 
+correctly displayed in the legend symbol.
+#TV52010286 - Using ClickeableLine property to true for LineSeries is not fired 
+when the point is outside the Chart area.
+#TV52010293 - Legend with checkboxes with a big number of Series and ScrollBar 
+tool does not check/uncheck a correct Series 
+		when the legend is aligned to the bottom. 
+#TV52010324 - Retrieving the Size of an Annotation tool, it does not give you 
+correct results, you always get 0 as with 
+		and height using the Shape.ShapeBounds properties.
+#TV52010342 - The event OnDrawLineToolDraggedLine is NOT only triggered when a 
+line has been dragged to a new location,
+		it is called everytime you click on a line without dragged it 
+before !
+#TV52010481 - List Index out of bounds clicking over the "Add" button without 
+selecting any tool in the Tool Gallery form. 
+#TV52010172 - Exporting the Chart through the Chart Editor to PCX you get a "range 
+check error"
+
+Fixes in the v7.03
+----------------------------
+ #1505 AV when closing form having TTeeFunction
+ #1499 TRotateTool and OpenGL conflict
+ #1470 TExtraLegendTool now works with automatic position
+ #1465 Missing entry in "Save as" combo at data export dialog
+ #1332 Paging was not working fine when MaxPointsPerPage = 1
+ #1074 ISeries.Marks.MultiLine bug fixed
+ #1238 Changing the Scroll style through the Editor is not saved.
+ 
+ #TA05010138 Placing a ChartListBox into a Net application gives an Exception 
+ #TA05010073 IColorBandTool.DrawBehindAxes missing from AXv7.0.0.2.
+ #TA05010107 In Windows XP, using the TMarkTipsTool (for hints) the shadow of the 
+  Mark still visible.
+ #TA05010121,#TA05010187 Some fixes in the Help Files.  
+
+Fixes for v6.0.0.6 included in the v7.03
+-------------------------------------------------------------
+Bug fixes/changes
+1)   Smoothing function reported an error with Interpolate set to true and more 
+     than 250 data points. Fixed.
+2)   The addition and removal of IAnnotationTools caused a memory leak.
+     Fixed.
+3)   The IvalueList.Order property was not being serialised for both X and Y 
+Values.
+     Fixed.
+4)   OnCursorToolChange event not fired if XVal and YVal properties changed via 
+     code. Fixed.
+5)   Rounding problem with Logarithmic axes attached to certain series types. 
+Fixed.
+6)   TeeCommander with custom buttons allowed panning when no button was 
+     selected. Fixed by implementation of ITeeCommander.DefaultButton.
+7)   Changing the logarithmic base of an axis at designed time caused the Chart 
+Editor
+     to hang. Fixed.
+8)   IHighLowSeries.AddHighLow sometimes returned incorrect index value. Fixed.
+9)   Multiple events could not be assigned to a chart created server-side in 
+ASP.NET
+     For Example of necessary technique see TeeChart example CsharpWebForm.
+10)  The AutoRepaint property has now been set to non-browsable.
+11)  Series Titles which coincided with TeeChart constants were being 
+automatically 
+     translated. Fixed. 
+12)  The database Summary tag in the Chart Editor wasn't being translated. Fixed. 
+13)  Contour Series untrapped error when series emptied of points. Fixed.
+14)  Designtime Shape Series changes not saved. Fixed.
+15)  IE reported an error when unloading TeeChart under some specific 
+circumstances. 
+     Now resolved.
+16)  SeriesXMLSource non-functional with Pie series. Fixed.

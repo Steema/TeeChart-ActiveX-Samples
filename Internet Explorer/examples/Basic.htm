@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>TeeChart Pro Internet Examples</title>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="style.css">
+<meta http-equiv="x-ua-compatible" content="IE=10">
+</head>
+<body bgcolor=#FFFFFF>
+
+<SCRIPT LANGUAGE="JavaScript" FOR="Chart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+<script language="VBScript">
+    SUB FillChart
+     'sets up Chart to print from IE's print option
+     Chart1.Environment.IEPrintWithPage=True
+     Chart1.RemoveAllSeries
+     Chart1.AddSeries( 1 )
+     Chart1.Series(0).Title="Fruits"
+     Chart1.Series(0).Clear  
+     Chart1.Series(0).Add 100, "Apples", RGB(255,0,0)
+     Chart1.Series(0).Add 300, "Pears", RGB(0,255,0)
+     Chart1.Series(0).Add 200, "Bananas", RGB(255,255,0)
+     Chart1.Series(0).Marks.Style = smsValue
+     Chart1.Series(0).Cursor =2020
+     Chart1.Header.Text.Clear
+     Chart1.Header.Text.Add("1997 Sales")
+     Chart1.Footer.Text.Clear
+     Chart1.Footer.Text.Add("Fruit")
+     Chart1.Footer.Visible=True
+     Chart1.Footer.Font.Color=RGB(0,0,0)
+     Chart1.Footer.Font.Bold=True 
+     Chart1.Legend.Alignment=2
+     Chart1.Panel.Gradient.Visible=True
+     Chart1.Aspect.Chart3DPercent=70
+     Chart1.Walls.Left.Pen.Color=RGB(0,0,255)
+     Chart1.Walls.Left.Size=8
+     Chart1.Walls.Bottom.Size=8
+     Chart1.Walls.Back.Color=RGB(200,150,200)
+     Chart1.Axis.Left.Title.Caption="Money"
+     Chart1.Axis.Left.Labels.Font.Bold=True
+     Chart1.Axis.Bottom.Labels.Font.Size=12
+     Chart1.Axis.Bottom.Ticks.Width=2
+     Chart1.Axis.Bottom.Ticks.Color=RGB(200,150,200)
+     Chart1.Series(0).Marks.Frame.Color=RGB(200,150,200)
+     Chart1.Series(0).AsBar.BarWidth=30  ' 30% bar width
+     Chart1.Series(0).AsBar.BarStyle=3   ' bar cylinder 
+     Chart1.AddSeries( 0 )   ' 0 is a line series type
+     Chart1.Series(1).FillSampleValues 20
+     Chart1.Series(1).asLine.Stairs=True
+     Chart1.Panel.BevelOffset=5
+     Chart1.Series(1).asLine.LinePen.Color=vbWhite
+     Chart1.Series(1).Title="Other"
+     Chart1.Header.Font.Size=12
+     Chart1.Header.Font.Bold=True
+    END SUB
+
+    Sub Chart1_OnClickSeries(SeriesIndex, ValueIndex, Button, Shift, X, Y)
+        Chart1.StopMouse
+	if Chart1.Series(SeriesIndex).PointLabel(ValueIndex) <> "" then
+          msgbox Chart1.Series(SeriesIndex).PointLabel(ValueIndex)
+        else
+          msgbox Chart1.Series(SeriesIndex).YValues.Value(ValueIndex)
+        end if
+    end sub
+   </script>
+<p>
+<font face="Arial" color="#004080"><em><big><strong>Basic VBScript Example</strong></big></em></font></h3>
+</p>
+
+<a href="../Start Local examples.htm">Return to Examples</a>&nbsp;
+<a href="3DOptions.htm">Next Example</a>
+<hr>
+
+<p>
+See below an embedded TeeChart Pro ActiveX control using the
+HTML < OBJECT > tag.
+</p>
+<p>
+Click the following buttons to add Chart Series and values to
+the control, as well as to show the Chart editor, print preview
+and export dialogs.
+</p>
+<p>
+Note: The TeeChart Pro ActiveX control file (TEECHART.OCX), should
+be present and registered in this machine to see the embedded object.
+</p>
+
+
+<p>
+<input type="button" value="Add a Series and fill values" onclick="FillChart()"
+name="cdmChart1">
+<input type="button" value="Show TeeChart Editor dialog" onclick="Chart1.ShowEditor()"
+name="cdmChart2"> </p>
+
+<p><input type="BUTTON" value="Show TeeChart Print Preview" onclick="Chart1.Printer.ShowPreview()"
+name="cdmChart3">
+<input type="button" value="Show TeeChart Export dialog" onclick="Chart1.Export.ShowExport()" name="cdmChart4"> </p>
+
+<p>
+<object 
+   id="Chart1" 
+   width="400" 
+   height="268" 
+   type="application/x-oleobject" 
+   hspace="0"
+   vspace="0" 
+   classid="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2" >
+</object>
+&nbsp; </p>
+<p>
+Click on a cylinder Bar point above.
+</p>
+</body>
+</html>

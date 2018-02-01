@@ -1,0 +1,444 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SeriesTxtSrc - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0xc0a /fo"Release/SeriesTxtSrc.res" /d "NDEBUG" /d "_AFXDLL" "E:\Version 6\SeriesTextSource\SeriesTxtSrc.rc"" 
+Creating temporary file "C:\Users\Pep\AppData\Local\Temp\RSP57DA.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/SeriesTxtSrc.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\Version 6\SeriesTextSource\adxfunction.cpp"
+"E:\Version 6\SeriesTextSource\annotationtool.cpp"
+"E:\Version 6\SeriesTextSource\areaseries.cpp"
+"E:\Version 6\SeriesTextSource\arrowseries.cpp"
+"E:\Version 6\SeriesTextSource\aspect.cpp"
+"E:\Version 6\SeriesTextSource\averagefunction.cpp"
+"E:\Version 6\SeriesTextSource\axes.cpp"
+"E:\Version 6\SeriesTextSource\axis.cpp"
+"E:\Version 6\SeriesTextSource\axisarrowtool.cpp"
+"E:\Version 6\SeriesTextSource\axislabels.cpp"
+"E:\Version 6\SeriesTextSource\axistitle.cpp"
+"E:\Version 6\SeriesTextSource\bar3dseries.cpp"
+"E:\Version 6\SeriesTextSource\barjoinseries.cpp"
+"E:\Version 6\SeriesTextSource\barseries.cpp"
+"E:\Version 6\SeriesTextSource\bezierseries.cpp"
+"E:\Version 6\SeriesTextSource\bmpexport.cpp"
+"E:\Version 6\SeriesTextSource\bollingerfunction.cpp"
+"E:\Version 6\SeriesTextSource\boxplotseries.cpp"
+"E:\Version 6\SeriesTextSource\brush.cpp"
+"E:\Version 6\SeriesTextSource\bubbleseries.cpp"
+"E:\Version 6\SeriesTextSource\calendarcell.cpp"
+"E:\Version 6\SeriesTextSource\calendarcellupper.cpp"
+"E:\Version 6\SeriesTextSource\calendarseries.cpp"
+"E:\Version 6\SeriesTextSource\candleseries.cpp"
+"E:\Version 6\SeriesTextSource\canvas.cpp"
+"E:\Version 6\SeriesTextSource\chartfont.cpp"
+"E:\Version 6\SeriesTextSource\chartimagetool.cpp"
+"E:\Version 6\SeriesTextSource\circlelabels.cpp"
+"E:\Version 6\SeriesTextSource\clockseries.cpp"
+"E:\Version 6\SeriesTextSource\colorbandtool.cpp"
+"E:\Version 6\SeriesTextSource\colorgridseries.cpp"
+"E:\Version 6\SeriesTextSource\colorlinetool.cpp"
+"E:\Version 6\SeriesTextSource\contourlevel.cpp"
+"E:\Version 6\SeriesTextSource\contourlevels.cpp"
+"E:\Version 6\SeriesTextSource\contourseries.cpp"
+"E:\Version 6\SeriesTextSource\cursortool.cpp"
+"E:\Version 6\SeriesTextSource\curvefittingfunction.cpp"
+"E:\Version 6\SeriesTextSource\donutseries.cpp"
+"E:\Version 6\SeriesTextSource\dragmarkstool.cpp"
+"E:\Version 6\SeriesTextSource\drawline.cpp"
+"E:\Version 6\SeriesTextSource\drawlinelist.cpp"
+"E:\Version 6\SeriesTextSource\drawlinetool.cpp"
+"E:\Version 6\SeriesTextSource\environment.cpp"
+"E:\Version 6\SeriesTextSource\errorbarseries.cpp"
+"E:\Version 6\SeriesTextSource\errorseries.cpp"
+"E:\Version 6\SeriesTextSource\expavgfunction.cpp"
+"E:\Version 6\SeriesTextSource\explodedslices.cpp"
+"E:\Version 6\SeriesTextSource\export.cpp"
+"E:\Version 6\SeriesTextSource\fastlineseries.cpp"
+"E:\Version 6\SeriesTextSource\funnelseries.cpp"
+"E:\Version 6\SeriesTextSource\ganttseries.cpp"
+"E:\Version 6\SeriesTextSource\gifexport.cpp"
+"E:\Version 6\SeriesTextSource\gradient.cpp"
+"E:\Version 6\SeriesTextSource\highlowseries.cpp"
+"E:\Version 6\SeriesTextSource\histogramseries.cpp"
+"E:\Version 6\SeriesTextSource\horizbarseries.cpp"
+"E:\Version 6\SeriesTextSource\horizboxplotseries.cpp"
+"E:\Version 6\SeriesTextSource\horizlineseries.cpp"
+"E:\Version 6\SeriesTextSource\htmlexport.cpp"
+"E:\Version 6\SeriesTextSource\imagebarseries.cpp"
+"E:\Version 6\SeriesTextSource\import.cpp"
+"E:\Version 6\SeriesTextSource\jpegexport.cpp"
+"E:\Version 6\SeriesTextSource\legend.cpp"
+"E:\Version 6\SeriesTextSource\legendsymbol.cpp"
+"E:\Version 6\SeriesTextSource\lineseries.cpp"
+"E:\Version 6\SeriesTextSource\macdfunction.cpp"
+"E:\Version 6\SeriesTextSource\mappolygon.cpp"
+"E:\Version 6\SeriesTextSource\mappolygonlist.cpp"
+"E:\Version 6\SeriesTextSource\mapseries.cpp"
+"E:\Version 6\SeriesTextSource\marks.cpp"
+"E:\Version 6\SeriesTextSource\markstiptool.cpp"
+"E:\Version 6\SeriesTextSource\metafileexport.cpp"
+"E:\Version 6\SeriesTextSource\movingavgfunction.cpp"
+"E:\Version 6\SeriesTextSource\nativeexport.cpp"
+"E:\Version 6\SeriesTextSource\nearesttool.cpp"
+"E:\Version 6\SeriesTextSource\page.cpp"
+"E:\Version 6\SeriesTextSource\pagenumtool.cpp"
+"E:\Version 6\SeriesTextSource\panel.cpp"
+"E:\Version 6\SeriesTextSource\pcxexport.cpp"
+"E:\Version 6\SeriesTextSource\pen.cpp"
+"E:\Version 6\SeriesTextSource\pieotherslice.cpp"
+"E:\Version 6\SeriesTextSource\pieseries.cpp"
+"E:\Version 6\SeriesTextSource\pngexport.cpp"
+"E:\Version 6\SeriesTextSource\point3dseries.cpp"
+"E:\Version 6\SeriesTextSource\pointer.cpp"
+"E:\Version 6\SeriesTextSource\pointseries.cpp"
+"E:\Version 6\SeriesTextSource\polarseries.cpp"
+"E:\Version 6\SeriesTextSource\printer.cpp"
+"E:\Version 6\SeriesTextSource\pyramidseries.cpp"
+"E:\Version 6\SeriesTextSource\radarseries.cpp"
+"E:\Version 6\SeriesTextSource\rmsfunction.cpp"
+"E:\Version 6\SeriesTextSource\rotatetool.cpp"
+"E:\Version 6\SeriesTextSource\rsifunction.cpp"
+"E:\Version 6\SeriesTextSource\scroll.cpp"
+"E:\Version 6\SeriesTextSource\series.cpp"
+"E:\Version 6\SeriesTextSource\seriesmarkposition.cpp"
+"E:\Version 6\SeriesTextSource\seriesmarkspositions.cpp"
+"E:\Version 6\SeriesTextSource\seriestextfield.cpp"
+"E:\Version 6\SeriesTextSource\seriestextfields.cpp"
+"E:\Version 6\SeriesTextSource\seriestextsource.cpp"
+"E:\Version 6\SeriesTextSource\SeriesTxtSrc.cpp"
+"E:\Version 6\SeriesTextSource\SeriesTxtSrcDlg.cpp"
+"E:\Version 6\SeriesTextSource\shapeseries.cpp"
+"E:\Version 6\SeriesTextSource\smithseries.cpp"
+"E:\Version 6\SeriesTextSource\stddeviationfunction.cpp"
+"E:\Version 6\SeriesTextSource\strings.cpp"
+"E:\Version 6\SeriesTextSource\surfaceseries.cpp"
+"E:\Version 6\SeriesTextSource\tchart.cpp"
+"E:\Version 6\SeriesTextSource\teecommander.cpp"
+"E:\Version 6\SeriesTextSource\teefont.cpp"
+"E:\Version 6\SeriesTextSource\teefunction.cpp"
+"E:\Version 6\SeriesTextSource\teeopengl.cpp"
+"E:\Version 6\SeriesTextSource\teepoint2d.cpp"
+"E:\Version 6\SeriesTextSource\teepoint3d.cpp"
+"E:\Version 6\SeriesTextSource\teeshadow.cpp"
+"E:\Version 6\SeriesTextSource\teeshapepanel.cpp"
+"E:\Version 6\SeriesTextSource\textexport.cpp"
+"E:\Version 6\SeriesTextSource\titles.cpp"
+"E:\Version 6\SeriesTextSource\toollist.cpp"
+"E:\Version 6\SeriesTextSource\tools.cpp"
+"E:\Version 6\SeriesTextSource\trisurfaceseries.cpp"
+"E:\Version 6\SeriesTextSource\valuelist.cpp"
+"E:\Version 6\SeriesTextSource\volumeseries.cpp"
+"E:\Version 6\SeriesTextSource\wall.cpp"
+"E:\Version 6\SeriesTextSource\walls.cpp"
+"E:\Version 6\SeriesTextSource\waterfallseries.cpp"
+"E:\Version 6\SeriesTextSource\windroseseries.cpp"
+"E:\Version 6\SeriesTextSource\xlsexport.cpp"
+"E:\Version 6\SeriesTextSource\xmlexport.cpp"
+"E:\Version 6\SeriesTextSource\zoom.cpp"
+]
+Creating command line "cl.exe @C:\Users\Pep\AppData\Local\Temp\RSP57DA.tmp" 
+Creating temporary file "C:\Users\Pep\AppData\Local\Temp\RSP57DB.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/SeriesTxtSrc.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\Version 6\SeriesTextSource\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Pep\AppData\Local\Temp\RSP57DB.tmp" 
+Creating temporary file "C:\Users\Pep\AppData\Local\Temp\RSP57EC.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/SeriesTxtSrc.pdb" /machine:I386 /out:"Release/SeriesTxtSrc.exe" 
+".\Release\adxfunction.obj"
+".\Release\annotationtool.obj"
+".\Release\areaseries.obj"
+".\Release\arrowseries.obj"
+".\Release\aspect.obj"
+".\Release\averagefunction.obj"
+".\Release\axes.obj"
+".\Release\axis.obj"
+".\Release\axisarrowtool.obj"
+".\Release\axislabels.obj"
+".\Release\axistitle.obj"
+".\Release\bar3dseries.obj"
+".\Release\barjoinseries.obj"
+".\Release\barseries.obj"
+".\Release\bezierseries.obj"
+".\Release\bmpexport.obj"
+".\Release\bollingerfunction.obj"
+".\Release\boxplotseries.obj"
+".\Release\brush.obj"
+".\Release\bubbleseries.obj"
+".\Release\calendarcell.obj"
+".\Release\calendarcellupper.obj"
+".\Release\calendarseries.obj"
+".\Release\candleseries.obj"
+".\Release\canvas.obj"
+".\Release\chartfont.obj"
+".\Release\chartimagetool.obj"
+".\Release\circlelabels.obj"
+".\Release\clockseries.obj"
+".\Release\colorbandtool.obj"
+".\Release\colorgridseries.obj"
+".\Release\colorlinetool.obj"
+".\Release\contourlevel.obj"
+".\Release\contourlevels.obj"
+".\Release\contourseries.obj"
+".\Release\cursortool.obj"
+".\Release\curvefittingfunction.obj"
+".\Release\donutseries.obj"
+".\Release\dragmarkstool.obj"
+".\Release\drawline.obj"
+".\Release\drawlinelist.obj"
+".\Release\drawlinetool.obj"
+".\Release\environment.obj"
+".\Release\errorbarseries.obj"
+".\Release\errorseries.obj"
+".\Release\expavgfunction.obj"
+".\Release\explodedslices.obj"
+".\Release\export.obj"
+".\Release\fastlineseries.obj"
+".\Release\funnelseries.obj"
+".\Release\ganttseries.obj"
+".\Release\gifexport.obj"
+".\Release\gradient.obj"
+".\Release\highlowseries.obj"
+".\Release\histogramseries.obj"
+".\Release\horizbarseries.obj"
+".\Release\horizboxplotseries.obj"
+".\Release\horizlineseries.obj"
+".\Release\htmlexport.obj"
+".\Release\imagebarseries.obj"
+".\Release\import.obj"
+".\Release\jpegexport.obj"
+".\Release\legend.obj"
+".\Release\legendsymbol.obj"
+".\Release\lineseries.obj"
+".\Release\macdfunction.obj"
+".\Release\mappolygon.obj"
+".\Release\mappolygonlist.obj"
+".\Release\mapseries.obj"
+".\Release\marks.obj"
+".\Release\markstiptool.obj"
+".\Release\metafileexport.obj"
+".\Release\movingavgfunction.obj"
+".\Release\nativeexport.obj"
+".\Release\nearesttool.obj"
+".\Release\page.obj"
+".\Release\pagenumtool.obj"
+".\Release\panel.obj"
+".\Release\pcxexport.obj"
+".\Release\pen.obj"
+".\Release\pieotherslice.obj"
+".\Release\pieseries.obj"
+".\Release\pngexport.obj"
+".\Release\point3dseries.obj"
+".\Release\pointer.obj"
+".\Release\pointseries.obj"
+".\Release\polarseries.obj"
+".\Release\printer.obj"
+".\Release\pyramidseries.obj"
+".\Release\radarseries.obj"
+".\Release\rmsfunction.obj"
+".\Release\rotatetool.obj"
+".\Release\rsifunction.obj"
+".\Release\scroll.obj"
+".\Release\series.obj"
+".\Release\seriesmarkposition.obj"
+".\Release\seriesmarkspositions.obj"
+".\Release\seriestextfield.obj"
+".\Release\seriestextfields.obj"
+".\Release\seriestextsource.obj"
+".\Release\SeriesTxtSrc.obj"
+".\Release\SeriesTxtSrcDlg.obj"
+".\Release\shapeseries.obj"
+".\Release\smithseries.obj"
+".\Release\StdAfx.obj"
+".\Release\stddeviationfunction.obj"
+".\Release\strings.obj"
+".\Release\surfaceseries.obj"
+".\Release\tchart.obj"
+".\Release\teecommander.obj"
+".\Release\teefont.obj"
+".\Release\teefunction.obj"
+".\Release\teeopengl.obj"
+".\Release\teepoint2d.obj"
+".\Release\teepoint3d.obj"
+".\Release\teeshadow.obj"
+".\Release\teeshapepanel.obj"
+".\Release\textexport.obj"
+".\Release\titles.obj"
+".\Release\toollist.obj"
+".\Release\tools.obj"
+".\Release\trisurfaceseries.obj"
+".\Release\valuelist.obj"
+".\Release\volumeseries.obj"
+".\Release\wall.obj"
+".\Release\walls.obj"
+".\Release\waterfallseries.obj"
+".\Release\windroseseries.obj"
+".\Release\xlsexport.obj"
+".\Release\xmlexport.obj"
+".\Release\zoom.obj"
+".\Release\SeriesTxtSrc.res"
+]
+Creating command line "link.exe @C:\Users\Pep\AppData\Local\Temp\RSP57EC.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+adxfunction.cpp
+annotationtool.cpp
+areaseries.cpp
+arrowseries.cpp
+aspect.cpp
+averagefunction.cpp
+axes.cpp
+axis.cpp
+axisarrowtool.cpp
+axislabels.cpp
+axistitle.cpp
+bar3dseries.cpp
+barjoinseries.cpp
+barseries.cpp
+bezierseries.cpp
+bmpexport.cpp
+bollingerfunction.cpp
+boxplotseries.cpp
+brush.cpp
+bubbleseries.cpp
+Generating Code...
+Compiling...
+calendarcell.cpp
+calendarcellupper.cpp
+calendarseries.cpp
+candleseries.cpp
+canvas.cpp
+chartfont.cpp
+chartimagetool.cpp
+circlelabels.cpp
+clockseries.cpp
+colorbandtool.cpp
+colorgridseries.cpp
+colorlinetool.cpp
+contourlevel.cpp
+contourlevels.cpp
+contourseries.cpp
+cursortool.cpp
+curvefittingfunction.cpp
+donutseries.cpp
+dragmarkstool.cpp
+drawline.cpp
+Generating Code...
+Compiling...
+drawlinelist.cpp
+drawlinetool.cpp
+environment.cpp
+errorbarseries.cpp
+errorseries.cpp
+expavgfunction.cpp
+explodedslices.cpp
+export.cpp
+fastlineseries.cpp
+funnelseries.cpp
+ganttseries.cpp
+gifexport.cpp
+gradient.cpp
+highlowseries.cpp
+histogramseries.cpp
+horizbarseries.cpp
+horizboxplotseries.cpp
+horizlineseries.cpp
+htmlexport.cpp
+imagebarseries.cpp
+Generating Code...
+Compiling...
+import.cpp
+jpegexport.cpp
+legend.cpp
+legendsymbol.cpp
+lineseries.cpp
+macdfunction.cpp
+mappolygon.cpp
+mappolygonlist.cpp
+mapseries.cpp
+marks.cpp
+markstiptool.cpp
+metafileexport.cpp
+movingavgfunction.cpp
+nativeexport.cpp
+nearesttool.cpp
+page.cpp
+pagenumtool.cpp
+panel.cpp
+pcxexport.cpp
+pen.cpp
+Generating Code...
+Compiling...
+pieotherslice.cpp
+pieseries.cpp
+pngexport.cpp
+point3dseries.cpp
+pointer.cpp
+pointseries.cpp
+polarseries.cpp
+printer.cpp
+pyramidseries.cpp
+radarseries.cpp
+rmsfunction.cpp
+rotatetool.cpp
+rsifunction.cpp
+scroll.cpp
+series.cpp
+seriesmarkposition.cpp
+seriesmarkspositions.cpp
+seriestextfield.cpp
+seriestextfields.cpp
+seriestextsource.cpp
+Generating Code...
+Compiling...
+SeriesTxtSrc.cpp
+SeriesTxtSrcDlg.cpp
+shapeseries.cpp
+smithseries.cpp
+stddeviationfunction.cpp
+strings.cpp
+surfaceseries.cpp
+tchart.cpp
+teecommander.cpp
+teefont.cpp
+teefunction.cpp
+teeopengl.cpp
+teepoint2d.cpp
+teepoint3d.cpp
+teeshadow.cpp
+teeshapepanel.cpp
+textexport.cpp
+titles.cpp
+toollist.cpp
+tools.cpp
+Generating Code...
+Compiling...
+trisurfaceseries.cpp
+valuelist.cpp
+volumeseries.cpp
+wall.cpp
+walls.cpp
+waterfallseries.cpp
+windroseseries.cpp
+xlsexport.cpp
+xmlexport.cpp
+zoom.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+SeriesTxtSrc.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
