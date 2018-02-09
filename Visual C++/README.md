@@ -1,4 +1,4 @@
-<a href="https://www.steema.com/downloads/ax">
+<a href="https://www.steema.com/product/ax">
 <img align="right" src="http://www.teechart.net/img/logos/teechart_ax.png">
 </a>
 
