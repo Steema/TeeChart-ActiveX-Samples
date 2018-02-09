@@ -1,4 +1,4 @@
-<img align="right" width="60" height="60" src="http://www.teechart.net/img/logos/teechart_ax.png">
+<img align="right" src="http://www.teechart.net/img/logos/teechart_ax.png">
 
 
  TeeChart Pro ActiveX Visual C++ Examples
