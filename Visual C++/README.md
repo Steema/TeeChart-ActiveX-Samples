@@ -25,4 +25,5 @@ files for all TeeChart Pro's classes and interfaces.
 To enable TeeChart events and custom canvas code, 
 non-statically linked projects must be run in 'Release' 
 mode not 'Debug' mode.
+
 ----------------------------------------------------
