@@ -1,0 +1,53 @@
+<HTML><BODY><PRE>&lt;!--METADATA NAME="TeeChart Pro v2018 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"--&gt;
+&lt;%
+ ' Metadata section above to permit use of TeeChart constants in script
+
+ Function RunChart()
+
+   Set Chart1 = CreateObject("TeeChart.TChart")
+
+   ' We found that APPL_PHYSICAL_PATH returned different paths on 
+   ' different operating platforms! So, just in case .....
+   If InStr(Request.Servervariables("APPL_PHYSICAL_PATH"),"TeeChartAX") then
+     AppPath = Request.Servervariables("APPL_PHYSICAL_PATH")
+   else
+     AppPath = Request.Servervariables("APPL_PHYSICAL_PATH") &amp; "\TeeChartAX\"
+   end if
+
+   Chart1.Import.LoadFromFile(AppPath &amp; "SalesReport.tee")
+   Chart1.Width=500
+   Chart1.Height=350
+   Chart1.Tools(0).asAnnotation.Text="Year 2000"
+
+   'use your methods eg via DB to populate Chart or...
+   For i = 1 to 12
+     Chart1.Series(0).AddXY i, Rnd*10,"",clTeeColor
+   Next
+
+   'example format for PNG export
+   RunChart=(Chart1.Export.asPNG.SaveToStream)
+   Set Chart1=Nothing
+ End Function
+
+ Function CreatePage
+   Response.Expires = 0
+   Response.Write("&lt;html&gt;" &amp; chr(13))
+   Response.Write("&lt;HEAD&gt;&lt;title&gt;TeeChart Pro AX Control using Tee Template files serverside&lt;/title&gt;" &amp; chr(13))
+   Response.Write("&lt;LINK REL=STYLESHEET TYPE=""text/css"" HREF=""Style.css""&gt;&lt;/HEAD&gt;&lt;BODY&gt;" &amp; chr(13))
+   Response.Write("&lt;img src=""TeeChartAX300x66.jpg""&gt;" &amp; chr(13))
+   Response.Write("&lt;br&gt;&lt;br&gt;" &amp; chr(13))
+   Response.Write("&lt;a href=""ASPHome.htm""&gt;Back to Contents page&lt;/a&gt;" &amp; chr(13))
+   Response.Write("&lt;hr&gt;" &amp; chr(13))
+   Response.Write("&lt;img id= Img1src=""ShowSalesYear.asp?CreateChart=1""&gt;" &amp; chr(13))
+   Response.Write("&lt;HR&gt;Copyright © 2018 Steema Software SL" &amp; chr(13))
+   Response.Write("&lt;/body&gt;" &amp; chr(13))
+   Response.Write("&lt;/html&gt;" &amp; chr(13))
+ End Function
+
+ if Request.QueryString("CreateChart")=1 Then
+   Response.BinaryWrite(RunChart)
+ else 
+   CreatePage
+ end if 
+%&gt;
+</PRE></BODY></HTML>

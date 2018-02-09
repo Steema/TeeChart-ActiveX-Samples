@@ -1,0 +1,83 @@
+<HTML><BODY><PRE>&lt;!--METADATA NAME="TeeChart Pro v2018 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"--&gt;
+&lt;%
+ ' Metadata section above to permit use of TeeChart constants in script
+
+ Function RunChart()
+
+   Dim AppPath
+
+   Set Chart1 = CreateObject("TeeChart.TChart")
+   Set SeriesTextSource1 = CreateObject("TeeChart.SeriesTextSource")
+
+   Chart1.Width=500
+   Chart1.Height=350
+   Chart1.Panel.Gradient.Visible=True
+   Chart1.AddSeries(scSurface)
+   Chart1.Series(0).asSurface.IrregularGrid = True
+   Chart1.Axis.Depth.Visible=True
+   Chart1.Axis.Left.Increment = 0.4
+
+   'Set some Chart display characteristics
+   Chart1.Aspect.Orthogonal=False
+   Chart1.Aspect.Rotation=345
+   Chart1.Aspect.Elevation=345
+   Chart1.Aspect.Perspective=37
+   Chart1.Aspect.Zoom=80
+   Chart1.Aspect.Chart3DPercent=60
+   Chart1.Legend.Visible=False
+
+   ' AddField AName refers to the Series ValueList name
+   ' The AIndex refers to the Column index of the text file
+   ' beginning with Column 1
+   SeriesTextSource1.AddField "X", 1
+   SeriesTextSource1.AddField "Y", 2
+   SeriesTextSource1.AddField "Z", 3
+
+   ' We found that APPL_PHYSICAL_PATH returned different paths on 
+   ' different operating platforms! So, just in case .....
+   If InStr(Request.Servervariables("APPL_PHYSICAL_PATH"),"TeeChartAX") then
+     AppPath = Request.Servervariables("APPL_PHYSICAL_PATH")
+   else
+     AppPath = Request.Servervariables("APPL_PHYSICAL_PATH") &amp; "\TeeChartAX\"
+   end if
+    
+   ' This just checks to see how the decimal separator is setup on your server
+   ' then selects the appropriate format file.
+   If Chart1.Environment.DecimalSeparator="," Then
+     SeriesTextSource1.FileName = AppPath &amp; "SampleData.txt"
+   Else
+     SeriesTextSource1.FileName = AppPath &amp; "SampleDataPoint.txt"
+   End If
+
+   SeriesTextSource1.FieldSeparator=";"
+    
+   SeriesTextSource1.Series = Chart1.Series(0)
+    
+   SeriesTextSource1.Active = True
+
+   RunChart=(Chart1.Export.asPNG.SaveToStream)
+   Set Chart1=Nothing
+ End Function
+
+ Function CreatePage
+   Response.Expires = 0
+   Response.Write("&lt;html&gt;")
+   Response.Write("&lt;HEAD&gt;&lt;title&gt;TeeChart Pro AX Control- importing serverside text files&lt;/title&gt;")
+   Response.Write("&lt;LINK REL=STYLESHEET TYPE=""text/css"" HREF=""Style.css""&gt;&lt;/HEAD&gt;&lt;BODY&gt;")
+   Response.Write("&lt;img src=""TeeChartAX300x66.jpg""&gt;")
+   Response.Write("&lt;br&gt;&lt;br&gt;")
+   Response.Write("&lt;a href=""ASPHome.htm""&gt;Back to Contents page&lt;/a&gt;")
+   Response.Write("&lt;hr&gt;")
+   Response.Write("&lt;img id= Img1src=""SeriesTextSrc.asp?CreateChart=1""&gt;")
+   Response.Write("&lt;HR&gt;Copyright (c) 2018 Steema Software SL&lt;/BODY&gt;&lt;/HTML&gt;")
+   Response.Write("&lt;/body&gt;")
+   Response.Write("&lt;/html&gt;")
+ End Function
+
+ if Request.QueryString("CreateChart")=1 Then
+   Response.BinaryWrite(RunChart)
+ else 
+   CreatePage
+ end if 
+%&gt;
+</PRE></BODY></HTML>

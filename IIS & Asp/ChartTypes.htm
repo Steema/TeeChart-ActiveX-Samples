@@ -1,0 +1,87 @@
+<HTML>
+<HEAD><TITLE>Set Chart type</TITLE>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="Style.css">
+<meta http-equiv="x-ua-compatible" content="IE=10">
+</HEAD>
+<BODY onLoad="SetChart()">
+<IMG src="TeeChartAX300x66.jpg">
+<br><br>
+<A href="ASPHome.htm">Back to Contents page</a>
+<hr>
+<p><FONT face=Verdana size=-1></p>
+<h2>Form Combo to set TeeChart ASP output</h2>
+
+<h3>Output as PNG to IFrame</h3>
+<p><FONT face=Verdana size=-1>Select a Chart type from the list to see an example created serverside and exported to your browser as a PNG image. There are 40 Series types in this demo that may be viewed in 2D or 3D. TeeChart supports almost unlimited combinations of differing Series types on one Chart.</p>
+
+<SCRIPT LANGUAGE="JavaScript" FOR="Chart1" EVENT="OnAfterDraw()">
+<!-- --></SCRIPT>
+
+<SCRIPT LANGUAGE=VBSCRIPT>
+Sub Window_Onload()
+   FR1.location="ChartTypes.asp?ChartType=" _
+                 + Form1.Target1.options(0).value _
+                 + "&View=" + Form1.Target2.options(0).value
+End sub
+
+Sub SetChart()
+   FR1.location="ChartTypes.asp?ChartType=" _
+                 + Form1.Target1.options(Form1.Target1.selectedIndex).value _
+                 + "&View=" + Form1.Target2.options(Form1.Target2.selectedIndex).value
+End Sub
+</SCRIPT>
+
+<FORM NAME="Form1" ACTION="">
+<SELECT NAME="Target1" language="VBScript" onchange="SetChart()">
+<OPTION SELECTED VALUE="0">Line</OPTION>
+<OPTION VALUE="1">Bar
+<OPTION VALUE="2">HorizBar
+<OPTION VALUE="3">Area
+<OPTION VALUE="4">Point
+<OPTION VALUE="5">Pie
+<OPTION VALUE="6">FastLine
+<OPTION VALUE="7">Shape
+<OPTION VALUE="8">Gantt
+<OPTION VALUE="9">Bubble
+<OPTION VALUE="10">Arrow
+<OPTION VALUE="11">Candle
+<OPTION VALUE="12">Polar
+<OPTION VALUE="13">Surface
+<OPTION VALUE="14">Volume
+<OPTION VALUE="15">ErrorBar
+<OPTION VALUE="16">Bezier
+<OPTION VALUE="17">Contour
+<OPTION VALUE="18">Error
+<OPTION VALUE="19">Point3D
+<OPTION VALUE="20">Radar
+<OPTION VALUE="21">Clock
+<OPTION VALUE="22">WindRose
+<OPTION VALUE="23">Bar3D
+<OPTION VALUE="24">ImageBar
+<OPTION VALUE="25">Donut
+<OPTION VALUE="26">TriSurface
+<OPTION VALUE="27">Box
+<OPTION VALUE="28">HorizBox
+<OPTION VALUE="29">Histogram
+<OPTION VALUE="30">ColorGrid
+<OPTION VALUE="31">BarJoin
+<OPTION VALUE="32">HighLow
+<OPTION VALUE="33">Waterfall
+<OPTION VALUE="34">Smith
+<OPTION VALUE="35">Pyramid
+<OPTION VALUE="36">Map
+<OPTION VALUE="37">HorizLine
+<OPTION VALUE="38">Funnel
+<OPTION VALUE="39">Calendar</OPTION>
+</SELECT>
+
+<SELECT NAME="Target2" language="VBScript" onchange="SetChart()">
+<OPTION SELECTED VALUE="0">2D</OPTION>
+<OPTION VALUE="1">3D</OPTION>
+</SELECT>
+
+</FORM>
+<div id="Framebox"><IFRAME ID=FR1 WIDTH=465 HEIGHT=310 FRAMEBORDER=0 SCROLLING=no></IFRAME></div>
+
+<HR>
+Copyright © 2018 Steema Software SL</FONT></FONT>     </BODY></HTML>

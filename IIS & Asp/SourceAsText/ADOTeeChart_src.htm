@@ -1,0 +1,88 @@
+<HTML><BODY><PRE>&lt;!--METADATA NAME="TeeChart Pro v2018 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"--&gt;
+&lt;%
+   'Example uses TeeChart's example System ODBC datasource.
+
+
+  'Send output to browser. 1st time in call CreatePage
+  'then call RunChart method to build Chart contents
+  if Request.QueryString("CreateChart")=1 Then
+    Response.BinaryWrite(RunChart)
+  else 
+    CreatePage
+  end if 
+
+  Function RunChart()
+
+    dim img
+    dim Chart
+    dim MyVar
+
+    'Create Chart
+    Set Chart = CreateObject("TeeChart.TChart")
+
+    'Setup Series
+    Chart.AddSeries(scBar)
+    Chart.Series(0).Marks.Visible=False
+    Chart.Series(0).asBar.BarStyle=bsPyramid
+
+    'Chart appearance
+    Chart.Legend.Visible=False
+    Chart.Axis.Bottom.Labels.Angle=90
+    Chart.Height=400
+    Chart.Width=500
+    Chart.Panel.Gradient.Visible=True
+    Chart.Header.Text(0)="TeeChart ADO example"
+    Chart.Header.Font.Bold=True
+    Chart.Axis.Bottom.Title.Caption="Product name"
+    Chart.Axis.Bottom.Title.Font.Bold=True 
+    Chart.Axis.Left.Title.Font.Bold=True 
+
+    'Create a random condition to vary the output
+    Randomize
+    MyVar = (40000)+CInt(rnd*20000)
+     Chart.Axis.Left.Title.Caption="Order Item Totals &gt; " &amp; MyVar
+           
+    'Connect to database
+    Set Conn = Server.CreateObject("ADODB.Connection")
+    Set RSt = Server.CreateObject("ADODB.RecordSet")
+    Conn.Open "DSN=TeeChart Pro System db"
+    Rst.Open "select OrderNo, ItemTotal from orders where ItemTotal &gt; " &amp; MyVar, Conn, 1, 1
+
+    'Connect Series to Recordset
+    if RSt.RecordCount &gt; 0 then 
+      Chart.Series(0).Datasource = RSt
+      Chart.Series(0).LabelsSource="OrderNo"
+      Chart.Series(0).YValues.ValueSource="ItemTotal"
+    else
+      Chart.Series(0).Fillsamplevalues(10)
+      Chart.Header.Text(0)="ADO database returned no values - using random data"
+    end if
+
+    'Cleanup and set Chart to send to browser 
+    Rst.close
+    Conn.close
+    Set Rst=nothing
+    Set Conn=nothing
+    img=Chart.Export.asPNG.SaveToStream
+    Set Chart=nothing
+    RunChart=img
+
+  End function
+
+  Function CreatePage
+    Response.Write("&lt;html&gt;" &amp; chr(13))
+    Response.Write("&lt;HEAD&gt;&lt;title&gt;TeeChart Pro AX Control ADO with ASP example&lt;/title&gt;" &amp; chr(13))
+    Response.Write("&lt;LINK REL=STYLESHEET TYPE=""text/css"" HREF=""Style.css""&gt;&lt;/HEAD&gt;&lt;BODY&gt;" &amp; chr(13))
+    Response.Write("&lt;img src=""TeeChartAX300x66.jpg""&gt;" &amp; chr(13))
+    Response.Write("&lt;br&gt;&lt;br&gt;" &amp; chr(13))
+    Response.Write("&lt;a href=""ASPHome.htm""&gt;Back to Contents page&lt;/a&gt;" &amp; chr(13))
+    Response.Write("&lt;hr&gt;" &amp; chr(13))
+    Response.Write("&lt;img id= Img1src=""ADOTeeChart.asp?CreateChart=1""&gt;" &amp; chr(13))
+    Response.Write("&lt;p&gt;Please note that server Datsources should be System DSNs not User DSNs.&lt;/p&gt;" &amp; chr(13))
+    Response.Write("&lt;HR&gt;Copyright © 2018 Steema Software SL&lt;/BODY&gt;&lt;/HTML&gt;" &amp; chr(13))
+    Response.Write("&lt;/body&gt;" &amp; chr(13))
+    Response.Write("&lt;/html&gt;" &amp; chr(13))
+  End Function
+
+%&gt;
+</PRE></BODY></HTML>

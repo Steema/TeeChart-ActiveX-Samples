@@ -1,0 +1,139 @@
+<HTML><BODY><PRE>
+This example uses 2 files:
+
+<b>Client: ChartTypes.htm</b>
+*************************************************************************
+&lt;HTML&gt;
+&lt;HEAD&gt;&lt;TITLE&gt;Set Chart type&lt;/TITLE&gt;
+&lt;LINK REL=STYLESHEET TYPE="text/css" HREF="Style.css"&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+&lt;img src="TeeChartAX300x66.jpg"&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;a href="ASPHome.htm"&gt;Back to Contents page&lt;/a&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;FONT face=Verdana size=-1&gt;&lt;/p&gt;
+&lt;h2&gt;Form Combo to set TeeChart ASP output&lt;/h2&gt;
+
+&lt;h3&gt;Output as PNG to IFrame&lt;/h3&gt;
+&lt;p&gt;&lt;FONT face=Verdana size=-1&gt;Select a Chart type from the list to see an example created serverside and exported to your browser as a PNG image. There are 40 Series types in this demo that may be viewed in 2D or 3D. TeeChart supports almost unlimited combinations of differing Series types on one Chart.&lt;/p&gt;
+
+&lt;SCRIPT LANGUAGE=
+
+VBSCRIPT&gt; Sub
+   SetChart()FR1.location="ChartTypes.asp?ChartType=" _
+                 + Form1.Target1.options(Form1.Target1.selectedIndex).value _
+                 + "&amp;View= " +
+Form1.Target2.options(Form1.Target2.selectedIndex).value End
+
+Sub Sub
+   Window_Onload()FR1.location="ChartTypes.asp?ChartType=" _
+                 + Form1.Target1.options(0).value _
+                 + "&amp;View=" + Form1.Target2.options(0).value
+End sub
+
+&lt;/SCRIPT&gt;
+
+&lt;FORM NAME="Form1" ACTION=""&gt;
+&lt;SELECT NAME="Target1" language="VBScript" onchange="SetChart()"&gt;
+&lt;OPTION SELECTED VALUE="0"&gt;Line&lt;/option&gt;
+&lt;OPTION VALUE="1"&gt;Bar
+&lt;OPTION VALUE="2"&gt;HorizBar
+&lt;OPTION VALUE="3"&gt;Area
+&lt;OPTION VALUE="4"&gt;Point
+&lt;OPTION VALUE="5"&gt;Pie
+&lt;OPTION VALUE="6"&gt;FastLine
+&lt;OPTION VALUE="7"&gt;Shape
+&lt;OPTION VALUE="8"&gt;Gantt
+&lt;OPTION VALUE="9"&gt;Bubble
+&lt;OPTION VALUE="10"&gt;Arrow
+&lt;OPTION VALUE="11"&gt;Candle
+&lt;OPTION VALUE="12"&gt;Polar
+&lt;OPTION VALUE="13"&gt;Surface
+&lt;OPTION VALUE="14"&gt;Volume
+&lt;OPTION VALUE="15"&gt;ErrorBar
+&lt;OPTION VALUE="16"&gt;Bezier
+&lt;OPTION VALUE="17"&gt;Contour
+&lt;OPTION VALUE="18"&gt;Error
+&lt;OPTION VALUE="19"&gt;Point3D
+&lt;OPTION VALUE="20"&gt;Radar
+&lt;OPTION VALUE="21"&gt;Clock
+&lt;OPTION VALUE="22"&gt;WindRose
+&lt;OPTION VALUE="23"&gt;Bar3D
+&lt;OPTION VALUE="24"&gt;ImageBar
+&lt;OPTION VALUE="25"&gt;Donut
+&lt;OPTION VALUE="26"&gt;TriSurface
+&lt;OPTION VALUE="27"&gt;Box
+&lt;OPTION VALUE="28"&gt;HorizBox
+&lt;OPTION VALUE="29"&gt;Histogram
+&lt;OPTION VALUE="30"&gt;ColorGrid
+&lt;OPTION VALUE="31"&gt;BarJoin
+&lt;OPTION VALUE="32"&gt;HighLow
+&lt;OPTION VALUE="33"&gt;Waterfall
+&lt;OPTION VALUE="34"&gt;Smith
+&lt;OPTION VALUE="35"&gt;Pyramid
+&lt;OPTION VALUE="36"&gt;Map
+&lt;OPTION VALUE="37"&gt;HorizLine
+&lt;OPTION VALUE="38"&gt;Funnel
+&lt;OPTION VALUE="39"&gt;Calendar
+&lt;/SELECT&gt;
+
+&lt;SELECT NAME="Target2" language="VBScript" onchange="SetChart()"&gt;
+&lt;OPTION SELECTED VALUE="0"&gt;2D&lt;/option&gt;
+&lt;OPTION VALUE="1"&gt;3D
+&lt;/SELECT&gt;
+
+&lt;/FORM&gt;
+&lt;div id="Framebox"&gt;&lt;IFRAME ID=FR1 WIDTH=465 HEIGHT=310 FRAMEBORDER=0 SCROLLING=NO&gt;&lt;/IFRAME&gt;&lt;/div&gt;
+
+&lt;HR&gt;Copyright © 2018 Steema Software SL&lt;/BODY&gt;&lt;/HTML&gt;
+*************************************************************************
+
+<b>Server: ChartTypes.asp</b>
+*************************************************************************
+&lt;!--METADATA NAME="TeeChart Pro v2018 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"--&gt;
+&lt;%
+ 'above Metadata line allows TeeChart constants to be used in the serverside script.
+ 'Alternatively include the "Includes/TChartConsts.vbs" constants file.
+
+ Dim ChartType
+ Dim OutputStream
+ Dim ViewType
+
+  '=== Create Chart ======
+  Set Chart1 = CreateObject("TeeChart.TChart")
+
+  '=== Extract Chart type =======
+  ChartType=Request.QueryString("ChartType")
+  ViewType=Request.QueryString("View")
+
+  '=== Add Series ==========
+  Chart1.AddSeries(ChartType)
+
+  '=== Setup Chart view =====
+  Chart1.Aspect.View3D=ViewType
+
+  '=== Do Chart bits and pieces =====
+  Chart1.Header.Text(0)="TeeChart Series Types"
+  Chart1.Walls.Left.Transparent=True
+  Chart1.Walls.Left.Color=RGB(35,70,128)
+  Chart1.Panel.Gradient.Visible=True
+  Chart1.Panel.Gradient.StartColor=&amp;HB3DEF5 '&amp;H8CB4D2
+  Chart1.Panel.Gradient.EndColor=&amp;HFACE87
+
+  '==== Size will be used for image output formats =====
+  Chart1.Width = 450
+  Chart1.Height = 290
+
+  '=== use your methods eg via DB to populate Chart or...
+  Chart1.Series(0).FillSampleValues 20
+
+  '=== Set output format
+  OutputStream=Chart1.Export.asPNG.SaveToStream
+
+  '=== Cleanup the Chart =====
+  Set Chart1=Nothing
+
+  '===Send off the finished product ====
+  Response.Binarywrite OutputStream
+%&gt;
+*************************************************************************
+</PRE></BODY></HTML>

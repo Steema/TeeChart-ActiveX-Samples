@@ -1,0 +1,38 @@
+<HTML><BODY><PRE>&lt;%
+ Function RunChart() 
+   'See TeeChart's VB Examples folder 'ActiveX Control' for the
+   'sourcecode to the TeeChart UserControl
+
+   Set Chart1 = CreateObject("TeeChartVBCtl.TeeChartFrm")
+   RunChart=Chart1.MyStreamChart(0)
+   Set Chart1=Nothing
+ End Function
+
+ Function CreatePage
+   Response.Write("&lt;html&gt;&lt;META HTTP-EQUIV=""Expires"" CONTENT=""0""&gt;" &amp; chr(13))
+   Response.Write("&lt;SCRIPT LANGUAGE= VBSCRIPT&gt;" &amp;
+   chr(13)) Response.Write(" Sub Refresh()" &amp;
+   chr(13))   Response.Write("Img1.src=""UserControl.asp?CreateChart=1""" &amp; chr(13))
+   Response.Write(" End sub" &amp; chr(13))
+   Response.Write("&lt;/SCRIPT&gt;" &amp; chr(13))
+   Response.Write("&lt;HEAD&gt;&lt;title&gt;TeeChart Pro AX Control in VB ActiveX UserControl project&lt;/title&gt;" &amp; chr(13))
+   Response.Write("&lt;LINK REL=STYLESHEET TYPE=""text/css"" HREF=""Style.css""&gt;&lt;/HEAD&gt;&lt;BODY&gt;" &amp; chr(13))
+   Response.Write("&lt;img src=""TeeChartAX300x66.jpg""&gt;" &amp; chr(13))
+   Response.Write("&lt;br&gt;&lt;br&gt;" &amp; chr(13))
+   Response.Write("&lt;a href=""ASPHome.htm""&gt;Back to Contents page&lt;/a&gt;" &amp; chr(13))
+   Response.Write("&lt;hr&gt;" &amp; chr(13))
+   Response.Write("&lt;img id= Img1src=""UserControl.asp?CreateChart=1""&gt;")
+   Response.Write("&lt;p&gt;&lt;input type=""button"" value=""Re-populate Chart"" onclick=""Refresh"" name=""cdmChart1""&gt;&lt;/p&gt;" &amp; chr(13))
+   Response.Write("&lt;HR&gt;Copyright © 2018 Steema Software SL" &amp; chr(13))
+   Response.Write("&lt;/body&gt;" &amp; chr(13))
+   Response.Write("&lt;/html&gt;" &amp; chr(13))
+ End Function
+
+ if Request.QueryString("CreateChart")=1 Then
+   Response.Expires=0
+   Response.BinaryWrite(RunChart)
+ else
+   CreatePage
+ end if 
+%&gt;
+</PRE></BODY></HTML>

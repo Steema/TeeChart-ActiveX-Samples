@@ -1,0 +1,237 @@
+<HTML><BODY><PRE>
+This example uses 2 files:
+
+<b>Client: CompareOutput.inc</b>
+*************************************************************************
+
+&lt;HTML&gt;&lt;HEAD&gt;&lt;title&gt;TeeChart Pro 2018 AX export format comparison&lt;/title&gt;
+&lt;LINK REL=STYLESHEET TYPE="text/css" HREF="Style.css"&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+&lt;img src="TeeChartAX300x66.jpg"&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;a href="ASPHome.htm"&gt;Back to Contents page&lt;/a&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;FONT face=Verdana size=-1&gt;&lt;/p&gt;
+&lt;h2&gt;Example Live format&lt;/h2&gt;
+
+&lt;h3&gt;TeeChart Native Tee templates&lt;/h3&gt;
+&lt;p&gt;&lt;FONT face=Verdana size=-1&gt;You can display Live Charts in ActiveX enabled browsers (Internet Explorer!) by placing the TeeChart OBJECT on the browser page. 
+This Chart may be mousedrag zoomed or scrolled and its Axis labelling and grid have been modified with Custom Canvas events.&lt;/p&gt;
+
+&lt;SCRIPT LANGUAGE=VBSCRIPT&gt;
+
+Sub FillChart()
+  TChart1.Import.LoadFromURL("http://$SERVERPATH$/TeeChartAX/CompareOutput.asp?Type=tee")
+  If TChart1.Canvas.IsScreenHighColor = False Then
+    TChart1.Panel.Gradient.StartColor=vbYellow
+    TChart1.Panel.Gradient.EndColor=vbWhite
+  End If
+  TChart1.Series(0).VerticalAxis = 2 'aBothVertAxis
+  TChart1.Panel.MarginLeft = TChart1.Canvas.TextWidth("  Very bad :-|   ") / TChart1.Canvas.Width * 100
+  TChart1.Axis.Left.Labels.Visible = False
+  TChart1.Axis.Left.GridPen.Visible = False
+  TChart1.Axis.Right.GridPen.Visible = False
+  TChart1.Walls.Back.Pen.Visible = False
+End Sub
+
+Sub TChart1_OnAfterDraw()
+  TChart1.Canvas.Font.Color = RGB(240,240,50)
+  TChart1.Canvas.Font.Bold=True
+  If TChart1.SeriesCount &gt; 0 then
+    If TChart1.Series(0).Count &gt; 0 then
+      TChart1.Canvas.TextOut TChart1.Axis.Left.Position, _
+                     TChart1.Axis.Top.Position - TChart1.Canvas.TextHeight("H") - 10, _
+                     "Max point: " &amp; TChart1.Series(0).YValues.Maximum
+    End if
+  End if
+end sub
+
+Sub Window_Onload()
+  FillChart
+End sub
+
+Sub RefreshPage()
+  Document.Location="CompareOutput.asp"
+End sub
+
+Private Sub TChart1_OnBeforeDrawSeries()
+Dim i, j, k
+
+  Dim a
+  a = Array("Very bad :-|", "Bad", "OK", "Good", "Excellent")
+  
+  j = 0
+  if TChart1.SeriesCount &gt; 0 then
+    k = (TChart1.Series(0).YValues.Maximum - TChart1.Series(0).YValues.Minimum) / 4
+    TChart1.Canvas.Pen.Width=1
+    TChart1.Canvas.Pen.Style = 2 'psDot
+    If TChart1.Canvas.IsScreenHighColor = False Then
+      TChart1.Canvas.Pen.Color = vbBlack
+    else
+      TChart1.Canvas.Pen.Color = RGB(232, 232, 232)
+    end If
+    TChart1.Canvas.Brush.Color = 536870911 'clNone
+    TChart1.Canvas.Brush.Style = 1 'bsClear
+    TChart1.Canvas.ClipRectangle 0, TChart1.Axis.Top.Position-TChart1.Aspect.Height3D, _
+				    TChart1.Axis.Right.Position+TChart1.Aspect.Width3D, _
+                                    TChart1.Axis.Bottom.Position + 10
+    For i = TChart1.Series(0).YValues.Minimum To TChart1.Series(0).YValues.Maximum Step k
+     TChart1.Canvas.TextOut TChart1.Axis.Left.Position - TChart1.Canvas.TextWidth(a(j) &amp; " "), _
+			    TChart1.Axis.Left.CalcYPosValue(TChart1.Series(0).YValues.Minimum + (k * j)) _
+			    - (TChart1.Canvas.TextHeight("H") / 2), A(j)
+     j = j + 1
+    Next
+    j = 0
+    TChart1.Canvas.ClipRectangle 0, TChart1.Axis.Top.Position - 5, TChart1.Axis.Right.Position + TChart1.Aspect.Width3D, TChart1.Axis.Bottom.Position
+    For i = TChart1.Series(0).YValues.Minimum To TChart1.Series(0).YValues.Maximum Step k
+     TChart1.Canvas.MoveTo TChart1.Axis.Left.Position, _
+			   TChart1.Axis.Left.CalcYPosValue(TChart1.Series(0).YValues.Minimum + (k * j))
+     TChart1.Canvas.LineTo TChart1.Axis.Left.Position + TChart1.Aspect.Width3D, _
+			   TChart1.Axis.Left.CalcYPosValue(TChart1.Series(0).YValues.Minimum + (k * j)) _
+			   - TChart1.Aspect.Height3D
+     TChart1.Canvas.LineTo TChart1.Axis.Right.Position + TChart1.Aspect.Width3D, _
+			   TChart1.Axis.Left.CalcYPosValue(TChart1.Series(0).YValues.Minimum + (k * j)) _
+			   - TChart1.Aspect.Height3D
+     j = j + 1
+    Next
+  End if
+  TChart1.Canvas.UnClipRectangle
+End Sub
+
+&lt;/SCRIPT&gt;
+
+&lt;p&gt;Load the Chart with a button, IE Window_Onload event, or TeeChart timer event (here Chart loaded with Window_OnLoad). The first Chart will appear with a yellow gradient if TeeChart detects that the screen is not high colour.&lt;/p&gt;
+&lt;p&gt;&lt;input type="button" value="Refresh page" onclick="RefreshPage" name="cdmChart1"&gt;&lt;/p&gt;
+
+&lt;OBJECT ID="TChart1" WIDTH=450 HEIGHT=290
+ CLASSID="CLSID:CC0427C7-2124-4770-8847-F9EF4C50CDC2"&gt;
+&lt;/OBJECT&gt;
+&lt;p&gt;Left mousebutton drag to zoom (down right=zoom, up left =  undo zoom), right mousebutton drag to 
+
+scroll&lt;/p&gt;
+&lt;hr&gt; &lt;h2&gt;Example Static
+
+formats&lt;/h2&gt;
+
+&lt;h3&gt;PNG&lt;/h3&gt; &lt;IMGSRC="CompareOutput.asp?Type=
+
+png"&gt;
+
+&lt;br&gt;
+
+&lt;h3&gt;JPG&lt;/h3&gt; &lt;IMGSRC="CompareOutput.asp?Type=
+
+jpg"&gt;
+
+&lt;br&gt;
+
+&lt;h3&gt;GIF&lt;/h3&gt; &lt;p&gt;GIF is presently supported with &lt;b&gt;RLE&lt;/b&gt; encoding only so as not to infringe the Unisys &lt;b&gt;LZW&lt;/b&gt; encoding patent. See the TeeChart tutorials or helpfile for more
+
+information.&lt;/p&gt; &lt;IMGSRC="CompareOutput.asp?Type=gif"&gt;
+
+&lt;HR&gt;Copyright © 2018 Steema Software SL
+&lt;/BODY&gt;&lt;/HTML&gt;
+
+
+<b>Server: CompareOutput.asp</b>
+*************************************************************************
+
+&lt;!--METADATA NAME="TeeChart Pro v2018 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"--&gt;
+&lt;%
+ 'above Metadata line allows TeeChart constants to be used in the serverside script.
+ 'Alternatively include the "Includes/TChartConsts.vbs" constants file.
+
+ Dim OutputType
+ Dim OutputStream
+
+  ' === Script Starting point ====
+  ' The script starts here, creating the Chart and page then calling,
+  ' upon request, each Chart format to import to the Client page.
+
+  if Len(Request.QueryString("Type"))&gt;1 Then
+    Response.Expires = 0
+    Response.BinaryWrite(RetrieveImage(Request.QueryString("Type")))
+  else
+    Response.Write(CreateChart)
+  end if
+
+  Function RetrieveImage(OutputType)
+    Select Case OutputType
+      Case "tee" RetrieveImage=Session("ExportTee")
+      Case "png" RetrieveImage=Session("ExportPNG")
+      Case "jpg" RetrieveImage=Session("ExportJPEG")
+      Case "gif" RetrieveImage=Session("ExportGIF")
+    end Select
+  End function
+
+  Function CreateChart()
+
+   Dim fso, f
+   Const ForReading = 1
+
+    Session("ExportTee")=0
+    Session("ExportPNG")=0
+    Session("ExportJPEG")=0
+    Session("ExportGIF")=0
+
+    '=== Create Chart ======
+    Set Chart1 = CreateObject("TeeChart.TChart")
+
+    '=== Do Chart bits and pieces =====
+    Chart1.Header.Text(0)="Performance"
+    Chart1.AddSeries(scLine)
+    Chart1.Walls.Left.Transparent=True
+    Chart1.Walls.Left.Color=RGB(35,70,128)
+    Chart1.Panel.Gradient.Visible=True
+    Chart1.Panel.Gradient.StartColor=&amp;H7AA0FF
+    Chart1.Panel.Gradient.EndColor=&amp;HFACE87
+
+    '==== Size will be used for image output formats =====
+    Chart1.Width = 450
+    Chart1.Height = 290
+
+    '=== use your methods eg via DB to populate Chart or...
+    Randomize
+    For i=0 to 15
+     Chart1.Series(0).Add Rnd*100, "", clTeeColor
+    Next
+
+    '=== Setup required output formats =======
+    Session("ExportTee")=Chart1.Export.asNative.SaveToStream(True)
+    Session("ExportPNG")=Chart1.Export.asPNG.SaveToStream
+    Session("ExportJPEG")=Chart1.Export.asJPEG.SaveToStream
+    Session("ExportGIF")=Chart1.Export.asGIF.SaveToStream
+
+    '=== Find the local server path to the current script ====
+    ' We found that APPL_PHYSICAL_PATH returned different paths on
+    ' different operating platforms! So, just in case .....
+    If InStr(Request.Servervariables("APPL_PHYSICAL_PATH"),"TeeChartAX") then
+     AppPath = Request.Servervariables("APPL_PHYSICAL_PATH")
+    else
+     AppPath = Request.Servervariables("APPL_PHYSICAL_PATH") &amp; "\TeeChartAX\"
+    end if
+
+    '=== Read in the HTML page to present to the client browser ======
+    ' The HTML page recalls the script to return the Chart saved as
+    ' session variables in its various formats. The HTML page also
+    ' includes VbScript to act upon the Chart included as an &lt;OBJECT&gt;
+    ' on the page.
+
+    Set fso = CreateObject("Scripting.FileSystemObject")
+    Set f = fso.OpenTextFile(AppPath &amp; "compareOutput.inc", ForReading)
+
+    CreateChart = f.ReadAll
+    if Request.Servervariables("LOCAL_ADDR")="127.0.0.1" then
+      ServerPath="localhost"
+    else
+      ServerPath=Request.Servervariables("LOCAL_ADDR")
+    end if
+    CreateChart = Replace(CreateChart,"$SERVERPATH$",ServerPath)
+
+    '=== Cleanup =====
+    f.Close
+    Set Chart1=Nothing
+
+  End Function
+
+%&gt;
+</PRE></BODY></HTML>
