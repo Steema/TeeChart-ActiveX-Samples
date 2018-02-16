@@ -2,7 +2,7 @@
 <img align="right" src="http://www.teechart.net/img/logos/teechart_ax.png">
 </a>
 
-TeeChart Pro ActiveX Visual FoxPro notes
+TeeChart Pro ActiveX - Visual FoxPro notes
 =========================
  
 When adding a TeeChart Pro ActiveX
