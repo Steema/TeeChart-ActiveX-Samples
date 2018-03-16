@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{DE7847A7-A266-4AA9-AA68-16676652C9DB}#1.0#0"; "TeeChart2017.ocx"
+Object = "{DE7847A7-A266-4AA9-AA68-16676652C9DB}#1.0#0"; "TeeChart2018.ocx"
 Begin VB.UserControl TeeChartFrm 
    ClientHeight    =   5055
    ClientLeft      =   0
@@ -22,7 +22,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = True
 ' To create use:
-' TeeChart2016VBCtl.TeeChartForm
+' TeeChart2018VBCtl.TeeChartForm
 
 Private Sub TChart1_OnAfterDraw()
   With TChart1
