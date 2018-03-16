@@ -1,7 +1,7 @@
 // DraggingDlg.h : header file
 //
 //{{AFX_INCLUDES()
-#include "tchart.h"
+#include "D:\Data\root\TeeChart_Ax\Installers_Source\TeeChart Pro v2018 ActiveX\Utilities\New VC Classes\tchart.h"
 //}}AFX_INCLUDES
 
 #if !defined(AFX_DRAGGINGDLG_H__3815AE6A_EDBA_11D1_B7B6_A79DF87EBA16__INCLUDED_)

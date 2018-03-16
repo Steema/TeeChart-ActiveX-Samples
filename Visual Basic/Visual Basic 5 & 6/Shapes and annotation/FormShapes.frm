@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{DE7847A7-A266-4AA9-AA68-16676652C9DB}#1.0#0"; "teechart2014.ocx"
+Object = "{DE7847A7-A266-4AA9-AA68-16676652C9DB}#1.0#0"; "teechart2018.ocx"
 Begin VB.Form Form1 
    Caption         =   "TeeChart Pro Shapes Example"
    ClientHeight    =   4905

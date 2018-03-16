@@ -1,7 +1,7 @@
 Type=Exe
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\WINNT\System32\stdole2.tlb#OLE Automation
 Reference=*\G{00000205-0000-0010-8000-00AA006D2EA4}#2.5#0#..\..\..\..\Archivos de programa\Archivos comunes\system\ado\msado15.dll#Microsoft ActiveX Data Objects 2.5 Library
-Object={DE7847A7-A266-4AA9-AA68-16676652C9DB}#1.0#0; teechart2014.ocx
+Object={DE7847A7-A266-4AA9-AA68-16676652C9DB}#1.0#0; teechart2018.ocx
 Form=DatabaseStream1.frm
 Startup="Form1"
 HelpFile=""

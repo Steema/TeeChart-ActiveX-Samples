@@ -1,7 +1,7 @@
 Type=Exe
 Form=FTeeComponents1.frm
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\WINNT\System32\StdOle2.Tlb#OLE Automation
-Object={DE7847A7-A266-4AA9-AA68-16676652C9DB}#1.0#0; teechart2014.ocx
+Object={DE7847A7-A266-4AA9-AA68-16676652C9DB}#1.0#0; teechart2018.ocx
 IconForm="Form1"
 Startup="Form1"
 Command32=""
