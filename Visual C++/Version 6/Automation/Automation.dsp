@@ -90,10 +90,6 @@ LINK32=link.exe
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
-SOURCE="..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\VC98\MFC\SRC\APPMODUL.CPP"
-# End Source File
-# Begin Source File
-
 SOURCE=.\Automation.cpp
 # End Source File
 # Begin Source File
