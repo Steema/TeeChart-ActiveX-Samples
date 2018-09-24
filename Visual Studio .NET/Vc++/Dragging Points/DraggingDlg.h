@@ -10,6 +10,7 @@
 #pragma once
 #endif // _MSC_VER >= 1000
 #include "resource.h"
+#include "tchart.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // CDraggingDlg dialog
