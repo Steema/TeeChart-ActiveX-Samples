@@ -128,7 +128,8 @@ void CPrintingView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 	{
 		int iSavedDC = pDC->SaveDC();	// save the DC
 										// (DC saves with PrintPartialHandle)
-	    m_ctrlChart.Draw(LONG(pDC->m_hDC), 50, iWhere, 
+									
+	    m_ctrlChart.Draw (COleVariant(LONG(pDC->m_hDC)), 50, iWhere, 
 								  pInfo->m_rectDraw.Width() - 50, 
 								  pInfo->m_rectDraw.Height() / 2);
 		pDC->RestoreDC(iSavedDC);
