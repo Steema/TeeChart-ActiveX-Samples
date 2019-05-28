@@ -579,10 +579,6 @@ SOURCE=.\teeshadow.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\teeshapepanel.cpp
-# End Source File
-# Begin Source File
-
 SOURCE=.\textexport.cpp
 # End Source File
 # Begin Source File
@@ -1156,10 +1152,6 @@ SOURCE=.\teeshadow.h
 # Begin Source File
 
 SOURCE=.\teeshape.h
-# End Source File
-# Begin Source File
-
-SOURCE=.\teeshapepanel.h
 # End Source File
 # Begin Source File
 
