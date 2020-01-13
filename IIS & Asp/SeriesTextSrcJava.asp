@@ -1,4 +1,4 @@
-<!--METADATA NAME="TeeChart Pro v2018 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"-->
+<!--METADATA NAME="TeeChart Pro v2019 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"-->
 <%@ LANGUAGE="JavaScript" %>
 
 <%
@@ -111,7 +111,7 @@
     Response.Write('<a href=\'ASPHome.htm\'>Back to Contents page</a>');
     Response.Write('<hr>');
     Response.Write('<img id=Img1 src=\'SeriesTextSrcJava.asp?CreateChart=1\'>');
-    Response.Write('<HR>Copyright (c) 2018 Steema Software SL</BODY></HTML>');
+    Response.Write('<HR>Copyright (c) 2019 Steema Software SL</BODY></HTML>');
     Response.Write('</body>');
     Response.Write('</html>');
   }

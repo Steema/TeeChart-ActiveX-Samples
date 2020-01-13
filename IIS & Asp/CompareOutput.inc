@@ -125,5 +125,5 @@ End Sub
 
 <IMG SRC="CompareOutput.asp?Type=gif">
 
-<HR>Copyright &copy; 2018 Steema Software SL
+<HR>Copyright &copy; 2019 Steema Software SL
 </BODY></HTML>

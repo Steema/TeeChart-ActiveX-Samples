@@ -1,4 +1,4 @@
-<!--METADATA NAME="TeeChart Pro v2018 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"-->
+<!--METADATA NAME="TeeChart Pro v2019 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"-->
 <%
 
   ' ************************************************************
@@ -145,7 +145,7 @@
     result = result + "<AREA shape=" + vbQuote + "default" + vbQuote + " nohref>" + vbCrLf + "</MAP>" + vbCrLf
     result = result + "<br><p>Click on the LineSeries' Points or anywhere on the BarSeries' Bars to interact "
     result = result + "with the Chart image.</p>"
-    result = result + "<HR>Copyright &copy; 2018 Steema Software SL</BODY></HTML></body>" + vbCrLf
+    result = result + "<HR>Copyright &copy; 2019 Steema Software SL</BODY></HTML></body>" + vbCrLf
     result = result + "</html>"
 
     GenerateChartHotSpot = result

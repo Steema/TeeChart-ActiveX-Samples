@@ -1,7 +1,7 @@
 <%
 //=============================
 //== JScript constants for use
-//== with TeeChart Pro AX v2018
+//== with TeeChart Pro AX v2019
 //=============================
 
 //== EAnnotationPosition

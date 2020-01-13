@@ -10,7 +10,7 @@ end if
 
 <META HTTP-EQUIV="Expires" CONTENT="0">
 <HEAD>
-<title>TeeChart v2018 Stream to browser example</title>
+<title>TeeChart v2019 Stream to browser example</title>
 <LINK REL=STYLESHEET TYPE="text/css" HREF="Style.css">
 <meta http-equiv="x-ua-compatible" content="IE=10">
 </HEAD>
@@ -64,5 +64,5 @@ classid=clsid:EBFFF3FC-8805-42F8-8FFB-975AE3F5CE46></OBJECT>
 classid=clsid:CC0427C7-2124-4770-8847-F9EF4C50CDC2><PARAM NAME="Base64" VALUE="VFBGMAtUQ2hhcnRDaGFydAAETGVmdAIAA1RvcAIABVdpZHRoA14CBkhlaWdodAORARJUaXRsZS5U&#13;&#10;ZXh0LlN0cmluZ3MBBghUZWVDaGFydAAAAAAAAAACAAAAAP////8="></OBJECT>
 </p>
 
-<HR>Copyright © 2018 Steema Software SL</BODY>
+<HR>Copyright © 2019 Steema Software SL</BODY>
 </html>

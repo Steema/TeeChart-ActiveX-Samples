@@ -25,7 +25,7 @@
    Response.Write("<p><input type=""button"" value=""Re-populate Chart"" onclick=""Refresh"" name=""cdmChart1""></p>" & chr(13))
    Response.Write("<p>If the UserControl Image does not appear it may be related to rights issues or " & chr(13))
    Response.Write("or a registration problem.<br>To test you could recompile the UserControl in the 'ActiveX Control' VB Example folder and re-register it with regsvr32.</p>" & chr(13))
-   Response.Write("<HR>Copyright &copy; 2018 Steema Software SL" & chr(13))
+   Response.Write("<HR>Copyright &copy; 2019 Steema Software SL" & chr(13))
    Response.Write("</body>" & chr(13))
    Response.Write("</html>" & chr(13))
  End Function
