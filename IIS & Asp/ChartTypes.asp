@@ -1,4 +1,4 @@
-<!--METADATA NAME="TeeChart Pro v2019 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"-->
+<!--METADATA NAME="TeeChart Pro v2021 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"-->
 <%
  'above Metadata line allows TeeChart constants to be used in the serverside script.
  'Alternatively include the "Includes/TChartConsts.vbs" constants file.

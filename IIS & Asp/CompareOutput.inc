@@ -1,4 +1,4 @@
-<HTML><HEAD><title>TeeChart Pro 2018 AX export format comparison</title>
+<HTML><HEAD><title>TeeChart Pro 2021 AX export format comparison</title>
 <LINK REL=STYLESHEET TYPE="text/css" HREF="Style.css">
 <meta http-equiv="x-ua-compatible" content="IE=10">
 </HEAD>
@@ -125,5 +125,5 @@ End Sub
 
 <IMG SRC="CompareOutput.asp?Type=gif">
 
-<HR>Copyright &copy; 2019 Steema Software SL
+<HR>Copyright &copy; 2021 Steema Software SL
 </BODY></HTML>

@@ -1,4 +1,4 @@
-<!--METADATA NAME="TeeChart Pro v2019 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"-->
+<!--METADATA NAME="TeeChart Pro v2021 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"-->
 <%
  ' Metadata section above to permit use of TeeChart constants in script
 
@@ -37,7 +37,7 @@
    Response.Write("<a href=""ASPHome.htm"">Back to Contents page</a>" & chr(13))
    Response.Write("<hr>" & chr(13))
    Response.Write("<img id=Img1 src=""ShowSalesYear.asp?CreateChart=1"">" & chr(13))
-   Response.Write("<HR>Copyright &copy; 2019 Steema Software SL" & chr(13))
+   Response.Write("<HR>Copyright &copy; 2021 Steema Software SL" & chr(13))
    Response.Write("</body>" & chr(13))
    Response.Write("</html>" & chr(13))
  End Function
