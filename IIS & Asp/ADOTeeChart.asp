@@ -1,4 +1,4 @@
-<!--METADATA NAME="TeeChart Pro v2023 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"-->
+<!--METADATA NAME="TeeChart Pro v2024 ActiveX Control" TYPE="TypeLib" UUID="{DE7847A7-A266-4AA9-AA68-16676652C9DB}"-->
 <%
    'Example uses TeeChart's example System ODBC datasource.
 
@@ -79,7 +79,7 @@
     Response.Write("<hr>" & chr(13))
     Response.Write("<img id=Img1 src=""ADOTeeChart.asp?CreateChart=1"">" & chr(13))
     Response.Write("<p>Please note that server Datsources should be System DSNs not User DSNs.</p>" & chr(13))
-    Response.Write("<HR>Copyright &copy; 2019 Steema Software SL</BODY></HTML>" & chr(13))
+    Response.Write("<HR>Copyright &copy; 2024 Steema Software SL</BODY></HTML>" & chr(13))
     Response.Write("</body>" & chr(13))
     Response.Write("</html>" & chr(13))
   End Function
