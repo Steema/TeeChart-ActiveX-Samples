@@ -7,6 +7,7 @@ For more information visit https://www.steema.com/product/ax
 
 ![screenshot](https://steema.com/uploads/products/StandardSeriesDemoAX_9_multi_pies.png " Multi-Pies Charts")
 
+<br>
 
 ### Useful pages
 
@@ -14,7 +15,7 @@ For more information visit https://www.steema.com/product/ax
 
 - [License](https://www.steema.com/licensing/ax)
 
-- [Fully functional Evaluation Download](https://www.steema.com/downloads/ax)
+- [Fully functional evaluation download](https://www.steema.com/downloads/ax)
 
 
 ### Support and Feedback
