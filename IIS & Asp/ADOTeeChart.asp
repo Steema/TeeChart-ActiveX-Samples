@@ -79,7 +79,7 @@
     Response.Write("<hr>" & chr(13))
     Response.Write("<img id=Img1 src=""ADOTeeChart.asp?CreateChart=1"">" & chr(13))
     Response.Write("<p>Please note that server Datsources should be System DSNs not User DSNs.</p>" & chr(13))
-    Response.Write("<HR>Copyright &copy; 2024 Steema Software SL</BODY></HTML>" & chr(13))
+    Response.Write("<HR>Copyright &copy; 2026 Steema Software SL</BODY></HTML>" & chr(13))
     Response.Write("</body>" & chr(13))
     Response.Write("</html>" & chr(13))
   End Function

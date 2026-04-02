@@ -37,7 +37,7 @@
    Response.Write("<a href=""ASPHome.htm"">Back to Contents page</a>" & chr(13))
    Response.Write("<hr>" & chr(13))
    Response.Write("<img id=Img1 src=""ShowSalesYear.asp?CreateChart=1"">" & chr(13))
-   Response.Write("<HR>Copyright &copy; 2024 Steema Software SL" & chr(13))
+   Response.Write("<HR>Copyright &copy; 2026 Steema Software SL" & chr(13))
    Response.Write("</body>" & chr(13))
    Response.Write("</html>" & chr(13))
  End Function

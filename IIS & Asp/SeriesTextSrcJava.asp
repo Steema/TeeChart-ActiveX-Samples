@@ -111,7 +111,7 @@
     Response.Write('<a href=\'ASPHome.htm\'>Back to Contents page</a>');
     Response.Write('<hr>');
     Response.Write('<img id=Img1 src=\'SeriesTextSrcJava.asp?CreateChart=1\'>');
-    Response.Write('<HR>Copyright (c) 2024 Steema Software SL</BODY></HTML>');
+    Response.Write('<HR>Copyright (c) 2026 Steema Software SL</BODY></HTML>');
     Response.Write('</body>');
     Response.Write('</html>');
   }

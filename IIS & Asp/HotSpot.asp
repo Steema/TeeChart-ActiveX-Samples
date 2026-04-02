@@ -145,7 +145,7 @@
     result = result + "<AREA shape=" + vbQuote + "default" + vbQuote + " nohref>" + vbCrLf + "</MAP>" + vbCrLf
     result = result + "<br><p>Click on the LineSeries' Points or anywhere on the BarSeries' Bars to interact "
     result = result + "with the Chart image.</p>"
-    result = result + "<HR>Copyright &copy; 2024 Steema Software SL</BODY></HTML></body>" + vbCrLf
+    result = result + "<HR>Copyright &copy; 2026 Steema Software SL</BODY></HTML></body>" + vbCrLf
     result = result + "</html>"
 
     GenerateChartHotSpot = result
