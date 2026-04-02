@@ -128,6 +128,8 @@ Welcome !,TWelcomeForm,Main
    Polar/Radar/WindRose/Clock
     OnGetCircleLabel event,TSeries_GetCircleLabelEvent,Series_GetCircleLabelEvent
    Treemap Series,TTreemapSeriesForm,SeriesType_Treemap
+   Tornado Series,TTornadoSeriesForm,SeriesType_Tornado
+   Sankey Series,TSankeySeriesForm,SeriesType_Sankey
   Statistical
    Ternary Series,TTernarySeriesForm,SeriesType_Ternary
    High-Low Line,TSeriesType_HighLowLine,SeriesType_HighLowLine
